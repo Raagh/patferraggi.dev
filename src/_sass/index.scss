@@ -1,6 +1,12 @@
+@import "./variables";
+
 html {
-  background-color: rebeccapurple;
-  p {
-    color: white;
-  }
+  background-color: $background-color;
+  color: $primary-color;
+}
+
+.layout {
+  margin: 0 auto;
+  max-width: 900px;
+  padding: 0 1rem;
 }
