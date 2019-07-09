@@ -1,3 +1,3 @@
 import React from "react"
 
-export default () => <div>NAVBAR</div>
+export default () => <div className="navbar__container">NAVBAR</div>

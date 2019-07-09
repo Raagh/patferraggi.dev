@@ -1,4 +1,10 @@
 @import "./variables";
+@import "./navbar";
+
+@font-face {
+  font-family: "Inter Regular";
+  src: url(../assets/fonts/Inter-Regular.otf) format("opentype");
+}
 
 html {
   background-color: $background-color;
@@ -7,6 +13,13 @@ html {
 
 .layout {
   margin: 0 auto;
-  max-width: 900px;
-  padding: 0 1rem;
+  padding: 3rem 4rem 3rem 4rem;
+  font-family: "Inter Regular";
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-areas: "nav content";
+}
+
+.content {
+  grid-area: content;
 }
