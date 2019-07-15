@@ -6,6 +6,11 @@
   src: url(../assets/fonts/Inter-Regular.otf) format("opentype");
 }
 
+@font-face {
+  font-family: "Inter Medium";
+  src: url(../assets/fonts/Inter-Medium.otf) format("opentype");
+}
+
 html {
   background-color: $background-color;
   color: $primary-color;
@@ -14,12 +19,12 @@ html {
 .layout {
   margin: 0 auto;
   padding: 3rem 4rem 3rem 4rem;
-  font-family: "Inter Regular";
   display: grid;
-  grid-template-columns: 30% 70%;
+  grid-template-columns: 20% 80%;
   grid-template-areas: "nav content";
 }
 
 .content {
   grid-area: content;
+  padding-top: 10vh;
 }

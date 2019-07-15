@@ -1,5 +1,28 @@
+@import "./variables";
+
 .navbar__container {
   display: flex;
   flex-direction: column;
+  font-family: "Inter Medium";
   grid-area: nav;
+  height: 100vh;
+}
+
+.navbar__container__title {
+  font-size: 26px;
+}
+
+.navbar__container__subtitle {
+  color: $secondary-color;
+  font-size: 26px;
+}
+
+.navbar__container__links__container {
+  list-style: none;
+  font-size: 18px;
+  padding: 30% 0 0 0;
+}
+
+.navbar__container__links__container__link-active {
+  color: $secondary-color;
 }
