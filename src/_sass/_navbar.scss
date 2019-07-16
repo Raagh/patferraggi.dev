@@ -15,3 +15,17 @@
 .navbar__link--active {
   color: $secondary-color;
 }
+
+.navbar__link--separated {
+  padding-top: 10%;
+}
+
+.navbar__link--separated-extra {
+  padding-top: 15%;
+}
+
+.link--external {
+  padding: 0 1rem 0 0;
+  width: 18px;
+  height: 15px;
+}
