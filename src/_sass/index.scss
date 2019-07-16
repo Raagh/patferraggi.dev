@@ -1,15 +1,6 @@
 @import "./variables";
 @import "./navbar";
-
-@font-face {
-  font-family: "Inter Regular";
-  src: url(../assets/fonts/Inter-Regular.otf) format("opentype");
-}
-
-@font-face {
-  font-family: "Inter Medium";
-  src: url(../assets/fonts/Inter-Medium.otf) format("opentype");
-}
+@import "./logo";
 
 html {
   background-color: $background-color;
@@ -21,10 +12,15 @@ html {
   padding: 3rem 4rem 3rem 4rem;
   display: grid;
   grid-template-columns: 20% 80%;
-  grid-template-areas: "nav content";
+  grid-template-rows: 20% auto;
+  grid-template-areas:
+    "logo ."
+    "nav content";
 }
 
 .content {
   grid-area: content;
-  padding-top: 10vh;
+  font-size: 64px;
+  font-family: $font-family-medium;
+  line-height: 64px;
 }

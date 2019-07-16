@@ -1,7 +1,21 @@
 $black: #0b0b0e;
 $blue: #009bff;
 $white: #ffffff;
+$inter-medium: "Inter Medium";
+$inter-regular: "Inter Regular";
 
 $background-color: $black;
 $primary-color: $white;
 $secondary-color: $blue;
+$font-family-medium: $inter-medium;
+$font-family-regular: $inter-regular;
+
+@font-face {
+  font-family: "Inter Regular";
+  src: url(../assets/fonts/Inter-Regular.otf) format("opentype");
+}
+
+@font-face {
+  font-family: "Inter Medium";
+  src: url(../assets/fonts/Inter-Medium.otf) format("opentype");
+}

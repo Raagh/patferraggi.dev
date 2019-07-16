@@ -3,24 +3,13 @@
 .navbar {
   display: flex;
   flex-direction: column;
-  font-family: "Inter Medium";
+  font-family: $font-family-medium;
   grid-area: nav;
   height: 100vh;
-}
-
-.navbar__title {
-  font-size: 26px;
-}
-
-.navbar__subtitle {
-  color: $secondary-color;
-  font-size: 26px;
-}
-
-.navbar__links {
   list-style: none;
   font-size: 18px;
-  padding: 30% 0 0 0;
+  padding: 0;
+  margin: 0;
 }
 
 .navbar__link--active {

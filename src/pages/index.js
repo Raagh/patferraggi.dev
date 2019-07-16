@@ -4,6 +4,8 @@ import "../_sass/index.scss"
 
 export default () => (
   <Layout>
-    <h1 className="content">I’m the index!</h1>
+    <div className="content">
+      <div>I’m the index!</div>
+    </div>
   </Layout>
 )
