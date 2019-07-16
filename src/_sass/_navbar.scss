@@ -1,6 +1,6 @@
 @import "./variables";
 
-.navbar__container {
+.navbar {
   display: flex;
   flex-direction: column;
   font-family: "Inter Medium";
@@ -8,21 +8,21 @@
   height: 100vh;
 }
 
-.navbar__container__title {
+.navbar__title {
   font-size: 26px;
 }
 
-.navbar__container__subtitle {
+.navbar__subtitle {
   color: $secondary-color;
   font-size: 26px;
 }
 
-.navbar__container__links__container {
+.navbar__links {
   list-style: none;
   font-size: 18px;
   padding: 30% 0 0 0;
 }
 
-.navbar__container__links__container__link-active {
+.navbar__link--active {
   color: $secondary-color;
 }

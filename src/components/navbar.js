@@ -1,14 +1,12 @@
 import React from "react"
 
 export default () => (
-  <div className="navbar__container">
-    <div className="navbar__container__title">patricio</div>
-    <div className="navbar__container__title">ferraggi ares</div>
-    <div className="navbar__container__subtitle">fullstack dev</div>
-    <ul className="navbar__container__links__container">
-      <li className="navbar__container__links__container__link-active">
-        intro
-      </li>
+  <div className="navbar">
+    <div className="navbar__title">patricio</div>
+    <div className="navbar__title">ferraggi ares</div>
+    <div className="navbar__subtitle">fullstack dev</div>
+    <ul className="navbar__links">
+      <li className="navbar__link--active">intro</li>
       <li>blog</li>
       <li>about</li>
       <li>projects</li>
