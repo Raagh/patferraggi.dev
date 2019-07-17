@@ -1,5 +1,6 @@
 import React from "react"
 import Layout from "../components/layout"
+import "../_sass/external/reset.scss"
 import "../_sass/index.scss"
 
 export default () => (

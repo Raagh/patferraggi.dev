@@ -12,15 +12,27 @@ export default () => (
     <li className="navbar__link--active navbar__link--separated">eng</li>
     <li>esp</li>
     <li className="navbar__link--separated-extra">
-      <a href="https://www.linkedin.com/in/patricio-ferraggi-ares/">
+      <a
+        href="https://www.linkedin.com/in/patricio-ferraggi-ares/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
         <img
-          className="link--external"
+          className="navbar__link--external"
           alt="linkedin link"
           src={LinkedinIcon}
         />
       </a>
-      <a href="https://github.com/Raagh/">
-        <img className="link--external" alt="github link" src={GithubIcon} />
+      <a
+        href="https://github.com/Raagh/"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        <img
+          className="navbar__link--external"
+          alt="github link"
+          src={GithubIcon}
+        />
       </a>
     </li>
   </ul>
