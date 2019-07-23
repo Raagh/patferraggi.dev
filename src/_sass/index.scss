@@ -9,10 +9,11 @@ html {
 
 .layout {
   margin: 0 auto;
-  padding: 3rem 4rem 3rem 4rem;
+  padding: 3rem 3rem 3rem 12rem;
   display: grid;
   grid-template-columns: 20% 80%;
-  grid-template-rows: 20% auto;
+  height: 100vh;
+  grid-template-rows: 12% auto;
   grid-template-areas:
     "logo ."
     "nav content";
@@ -23,4 +24,20 @@ html {
   font-size: 64px;
   font-family: $font-family-medium;
   line-height: 64px;
+}
+
+@include media(xs) {
+  .layout {
+    padding: 0.5rem;
+    grid-template-columns: 30% 70%;
+    grid-template-rows: 12% 88%;
+    grid-template-areas:
+      "logo nav"
+      "content content";
+  }
+
+  .content {
+    font-size: 36px;
+    line-height: 48px;
+  }
 }

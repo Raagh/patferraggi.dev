@@ -2,14 +2,6 @@
 
 .logo {
   grid-area: logo;
-  font-family: $font-family-medium;
-}
-
-.logo__title {
-  font-size: 26px;
-}
-
-.logo__subtitle {
-  color: $secondary-color;
-  font-size: 26px;
+  width: 128px;
+  height: 64px;
 }

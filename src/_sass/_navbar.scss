@@ -5,27 +5,50 @@
   flex-direction: column;
   font-family: $font-family-medium;
   grid-area: nav;
-  height: 100vh;
   list-style: none;
   font-size: 18px;
   padding: 0;
   margin: 0;
-}
+  min-height: 100%;
 
-.navbar__link--active {
-  color: $secondary-color;
-}
+  @include media(xs) {
+    flex-direction: row-reverse;
+    &--desktop {
+      display: none !important;
+    }
+  }
 
-.navbar__link--separated {
-  padding-top: 10%;
-}
+  &__link--active {
+    color: $secondary-color;
+  }
 
-.navbar__link--separated-extra {
-  padding-top: 15%;
-}
+  &__link--separated {
+    padding-top: 15px;
+  }
 
-.navbar__link--external {
-  padding: 0 1rem 0 0;
-  width: 18px;
-  height: 15px;
+  &__link--separated-extra {
+    padding-top: 30px;
+  }
+
+  &__link--external {
+    padding: 0 1rem 0 0;
+    width: 18px;
+    height: 15px;
+  }
+
+  &--mobile {
+    width: 32px;
+    height: 32px;
+    @include media(lg) {
+      display: none !important;
+    }
+
+    @include media(md) {
+      display: none !important;
+    }
+
+    @include media(sm) {
+      display: none !important;
+    }
+  }
 }

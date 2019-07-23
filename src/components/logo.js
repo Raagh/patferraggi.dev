@@ -1,9 +1,4 @@
 import React from "react"
+import Logo from "../assets/logo.svg"
 
-export default () => (
-  <div className="logo">
-    <div className="logo__title">patricio</div>
-    <div className="logo__title">ferraggi ares</div>
-    <div className="logo__subtitle">fullstack dev</div>
-  </div>
-)
+export default () => <img alt="logo" className="logo" src={Logo}></img>
