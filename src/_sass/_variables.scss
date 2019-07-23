@@ -3,6 +3,10 @@ $blue: #009bff;
 $white: #ffffff;
 $inter-medium: "Inter Medium";
 $inter-regular: "Inter Regular";
+$breakpoint-xs: 360px;
+$breakpoint-sm: 767px;
+$breakpoint-md: 1023px;
+$breakpoint-lg: 1360px;
 
 $background-color: $black;
 $primary-color: $white;
@@ -19,12 +23,6 @@ $font-family-regular: $inter-regular;
   font-family: "Inter Medium";
   src: url(../assets/fonts/Inter-Medium.otf) format("opentype");
 }
-
-// variables:
-$breakpoint-xs: 360px;
-$breakpoint-sm: 767px;
-$breakpoint-md: 1023px;
-$breakpoint-lg: 1360px;
 
 @mixin media($media) {
   @if $media == xs {
