@@ -1,6 +1,7 @@
 @import "./variables";
 @import "./navbar";
 @import "./logo";
+@import "./about";
 
 html {
   background-color: $background-color;
@@ -16,14 +17,7 @@ html {
   grid-template-rows: 12% auto;
   grid-template-areas:
     "logo ."
-    "nav content";
-}
-
-.content {
-  grid-area: content;
-  font-size: 64px;
-  font-family: $font-family-medium;
-  line-height: 64px;
+    "nav about";
 }
 
 @include media(extra-small) {
@@ -33,7 +27,7 @@ html {
     grid-template-rows: 12% 88%;
     grid-template-areas:
       "logo nav"
-      "content content";
+      "about about";
   }
 
   .content {
