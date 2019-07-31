@@ -9,9 +9,9 @@ html {
 
 .layout {
   margin: 0 auto;
-  padding: 3rem 3rem 3rem 12rem;
+  padding: 6rem 6rem 6rem 6rem;
   display: grid;
-  grid-template-columns: 20% 80%;
+  grid-template-columns: 12rem auto;
   height: 100vh;
   grid-template-rows: 12% auto;
   grid-template-areas:
@@ -26,7 +26,7 @@ html {
   line-height: 64px;
 }
 
-@include media(xs) {
+@include media(extra-small) {
   .layout {
     padding: 0.5rem;
     grid-template-columns: 30% 70%;

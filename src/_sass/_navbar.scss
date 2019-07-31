@@ -11,7 +11,7 @@
   margin: 0;
   min-height: 100%;
 
-  @include media(xs) {
+  @include media(extra-small) {
     flex-direction: row-reverse;
     &--desktop {
       display: none !important;
@@ -39,15 +39,15 @@
   &--mobile {
     width: 32px;
     height: 32px;
-    @include media(lg) {
+    @include media(large) {
       display: none !important;
     }
 
-    @include media(md) {
+    @include media(medium) {
       display: none !important;
     }
 
-    @include media(sm) {
+    @include media(small) {
       display: none !important;
     }
   }

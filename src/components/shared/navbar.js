@@ -1,6 +1,6 @@
 import React from "react"
-import GithubIcon from "../assets/icons/github.png"
-import LinkedinIcon from "../assets/icons/linkedin.png"
+import GithubIcon from "../../assets/icons/github.png"
+import LinkedinIcon from "../../assets/icons/linkedin.png"
 
 export default () => (
   <div id="navbar" className="navbar">

@@ -6,7 +6,7 @@ $inter-regular: "Inter Regular";
 $breakpoint-xs: 360px;
 $breakpoint-sm: 767px;
 $breakpoint-md: 1023px;
-$breakpoint-lg: 1360px;
+$breakpoint-lg: 1440px;
 
 $background-color: $black;
 $primary-color: $white;
@@ -25,19 +25,19 @@ $font-family-regular: $inter-regular;
 }
 
 @mixin media($media) {
-  @if $media == xs {
+  @if $media == extra-small {
     @media (max-width: $breakpoint-sm) {
       @content;
     }
-  } @else if $media == sm {
+  } @else if $media == small {
     @media (min-width: $breakpoint-sm) and (max-width: $breakpoint-md) {
       @content;
     }
-  } @else if $media == md {
+  } @else if $media == medium {
     @media (min-width: $breakpoint-md) and (max-width: $breakpoint-lg) {
       @content;
     }
-  } @else if $media == lg {
+  } @else if $media == large {
     @media (min-width: $breakpoint-lg) {
       @content;
     }
