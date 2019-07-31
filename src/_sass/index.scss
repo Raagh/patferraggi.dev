@@ -1,37 +1,10 @@
 @import "./variables";
-@import "./navbar";
-@import "./logo";
-@import "./intro";
+@import "./shared/navbar";
+@import "./shared/logo";
+@import "./landing/intro";
+@import "./layout";
 
 html {
   background-color: $background-color;
   color: $primary-color;
-}
-
-.layout {
-  margin: 0 auto;
-  padding: 6rem 6rem 6rem 6rem;
-  display: grid;
-  grid-template-columns: 12rem auto;
-  height: 100vh;
-  grid-template-rows: 12% auto;
-  grid-template-areas:
-    "logo ."
-    "nav intro";
-}
-
-@include media(extra-small) {
-  .layout {
-    padding: 0.5rem;
-    grid-template-columns: 30% 70%;
-    grid-template-rows: 12% 88%;
-    grid-template-areas:
-      "logo nav"
-      "intro intro";
-  }
-
-  .content {
-    font-size: 36px;
-    line-height: 48px;
-  }
 }
