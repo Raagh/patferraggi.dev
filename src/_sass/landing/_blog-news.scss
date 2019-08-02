@@ -1,0 +1,25 @@
+.blog-news {
+  grid-area: blog-news;
+  font-size: 64px;
+  font-family: $font-family-medium;
+  line-height: 64px;
+}
+
+.blog-news__text {
+  width: 80%;
+}
+
+.blog-news__link {
+  color: $secondary-color;
+}
+
+@include media(extra-small) {
+  .blog-news {
+    font-size: 32px;
+    line-height: 32px;
+  }
+
+  .blog-news__text {
+    width: 100%;
+  }
+}
