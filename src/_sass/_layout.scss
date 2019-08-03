@@ -15,7 +15,6 @@
   .layout {
     padding: 1.5rem;
     grid-template-columns: 30% 70%;
-    grid-template-rows: 12% 75% auto;
     grid-template-areas:
       "logo nav"
       "intro intro"
