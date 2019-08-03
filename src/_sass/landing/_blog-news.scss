@@ -16,6 +16,9 @@
 
 .blog-news__articles {
   padding-top: 3rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 100%;
 }
 
 @include media(extra-small) {
@@ -26,5 +29,10 @@
 
   .blog-news__text {
     width: 100%;
+  }
+
+  .blog-news__articles {
+    display: flex;
+    flex-direction: column;
   }
 }

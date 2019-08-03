@@ -5,17 +5,9 @@
   line-height: 64px;
 }
 
-.intro__text {
-  width: 80%;
-}
-
 @include media(extra-small) {
   .intro {
     font-size: 32px;
     line-height: 32px;
-  }
-
-  .intro__text {
-    width: 100%;
   }
 }

@@ -1,0 +1,33 @@
+.article-container {
+  padding: 1rem 1rem 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 20rem;
+}
+
+.article-container__title {
+  font-size: 40px;
+  line-height: 40px;
+}
+
+.article-container__title--active {
+  color: $secondary-color;
+}
+
+.article-container__creationDate {
+  font-size: 24px;
+  line-height: 40px;
+  color: $inactive-color;
+}
+
+@include media(extra-small) {
+  .article-container {
+    height: 15rem;
+  }
+
+  .article-container__title {
+    font-size: 26px;
+    line-height: 26px;
+  }
+}
