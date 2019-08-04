@@ -1,10 +1,7 @@
 @import "./variables";
-@import "./shared/navbar";
-@import "./shared/logo";
-@import "./landing/intro";
-@import "./landing/blog-news";
-@import "./landing/article";
 @import "./layout";
+@import "./shared/index";
+@import "./landing/index";
 
 html {
   background-color: $background-color;

@@ -23,15 +23,15 @@ const articles = [
 
 export default () => (
   <div className="blog-news">
-    <p>I also have a blog, you can read</p>
     <p>
+      I also have a blog, you can read <br />
       it{" "}
       <a className="blog-news__link" href="/blog">
         here
       </a>
-      , and these are the latest
+      , and these are the latest <br />
+      articles:
     </p>
-    <p>articles:</p>
     <section className="blog-news__articles">
       {articles.map(article => {
         const articleIndex = articles.indexOf(article)

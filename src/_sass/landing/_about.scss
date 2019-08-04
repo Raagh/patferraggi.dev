@@ -1,0 +1,31 @@
+.about-container {
+  grid-area: about;
+  padding-top: 4rem;
+  height: 35rem;
+  display: grid;
+  grid-template-areas:
+    "back-title back-text"
+    "extra-title extra-text";
+}
+
+.background__title {
+  grid-area: back-title;
+}
+
+.background__text {
+  grid-area: back-text;
+  font-family: $font-family-regular;
+  line-height: 32px;
+  font-size: 18px;
+}
+
+.extra__title {
+  grid-area: extra-title;
+}
+
+.extra__text {
+  grid-area: extra-text;
+  font-family: $font-family-regular;
+  line-height: 32px;
+  font-size: 18px;
+}

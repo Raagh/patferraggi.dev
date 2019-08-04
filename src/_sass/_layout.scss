@@ -4,20 +4,22 @@
   display: grid;
   grid-template-columns: 12rem auto 12rem;
   height: 100vh;
-  grid-template-rows: 12% auto auto;
+  grid-template-rows: 12% auto auto auto;
   grid-template-areas:
     "logo ."
     "nav intro"
-    "nav blog-news";
+    "nav blog-news"
+    "nav about";
 }
 
 @include media(extra-small) {
   .layout {
     padding: 1.5rem;
-    grid-template-columns: 30% auto auto;
+    grid-template-columns: 30% auto auto auto;
     grid-template-areas:
       "logo nav"
       "intro intro"
-      "blog-news blog-news";
+      "blog-news blog-news"
+      "about about";
   }
 }
