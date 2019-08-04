@@ -7,15 +7,18 @@ const getTitleClassNames = isActive => {
 }
 
 export default props => (
-  <article className="article-container">
-    <a
-      href={props.link}
-      className={getTitleClassNames(props.isActive)}
-      target="_blank"
-      rel="noopener noreferrer"
-    >
-      {props.title}
-    </a>
-    <p className="article-container__creationDate">{props.creationDate}</p>
-  </article>
+  <div className="article-display-container">
+    <article className="article-container">
+      <a
+        href={props.link}
+        className={getTitleClassNames(props.isActive)}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        {props.title}
+      </a>
+      <p className="article-container__creationDate">{props.creationDate}</p>
+    </article>
+    {props.addDivider && <div className="articles__divider"></div>}
+  </div>
 )

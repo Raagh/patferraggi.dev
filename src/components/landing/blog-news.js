@@ -34,12 +34,16 @@ export default () => (
     <p>articles:</p>
     <section className="blog-news__articles">
       {articles.map(article => {
+        const articleIndex = articles.indexOf(article)
+        const isLastElement = articleIndex !== articles.length - 1
+
         return (
           <Article
-            key={articles.indexOf(article)}
+            key={articleIndex}
             title={article.title}
             isActive={article.isActive}
             creationDate={article.creationDate}
+            addDivider={isLastElement}
           />
         )
       })}
