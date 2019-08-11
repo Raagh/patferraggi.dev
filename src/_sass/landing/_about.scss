@@ -28,8 +28,8 @@
 }
 
 .extra__title {
-  padding-top: 2rem;
-  opacity: 0.4;
+  padding-top: 1rem;
+  opacity: 0.5;
   grid-area: extra-title;
   font-family: $font-family-medium;
   line-height: 64px;
@@ -38,7 +38,7 @@
 }
 
 .extra__text {
-  padding-top: 2rem;
+  padding-top: 1rem;
   grid-area: extra-text;
   font-family: $font-family-regular;
   line-height: 32px;

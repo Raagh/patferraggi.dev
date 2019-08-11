@@ -30,13 +30,14 @@ export default () => (
     <article className="extra__text">
       <p>
         I love writting on my blog, creating software development courses,
-        giving coaching to other developers <br /> and experimenting with
-        multiple technologies on my open source projects.
+        giving coaching to other developers and experimenting with multiple
+        technologies on my open source projects.
       </p>
       <p>
         I exercise often and I have been practicing Muay Thai for the last 7
         years.
       </p>
+      <p>I also like to travel and take pictures.</p>
     </article>
   </section>
 )
