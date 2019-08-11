@@ -1,18 +1,26 @@
 .about-container {
   grid-area: about;
   padding-top: 4rem;
-  height: 35rem;
+  height: 40rem;
   display: grid;
+  grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
+    "back-title back-text"
+    "back-title back-text"
     "back-title back-text"
     "extra-title extra-text";
 }
 
 .background__title {
   grid-area: back-title;
+  font-family: $font-family-medium;
+  line-height: 64px;
+  font-size: 64px;
 }
 
 .background__text {
+  display: flex;
+  flex-direction: column;
   grid-area: back-text;
   font-family: $font-family-regular;
   line-height: 32px;
@@ -20,12 +28,53 @@
 }
 
 .extra__title {
+  padding-top: 2rem;
+  opacity: 0.4;
   grid-area: extra-title;
+  font-family: $font-family-medium;
+  line-height: 64px;
+  font-size: 64px;
+  color: $inactive-color;
 }
 
 .extra__text {
+  padding-top: 2rem;
   grid-area: extra-text;
   font-family: $font-family-regular;
   line-height: 32px;
   font-size: 18px;
+}
+
+.text--isSecondaryColor {
+  color: $secondary-color;
+}
+
+@include media(extra-small) {
+  .background__title {
+    padding-bottom: 1rem;
+    line-height: 32px;
+    font-size: 32px;
+  }
+
+  .extra__title {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    opacity: 0.4;
+    grid-area: extra-title;
+    font-family: $font-family-medium;
+    line-height: 32px;
+    font-size: 32px;
+    color: $inactive-color;
+  }
+
+  .extra__text {
+    padding-top: 0;
+  }
+
+  .about-container {
+    grid-area: about;
+    padding-top: 4rem;
+    display: flex;
+    flex-direction: column;
+  }
 }
