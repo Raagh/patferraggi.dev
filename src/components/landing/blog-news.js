@@ -35,7 +35,7 @@ export default () => (
     <section className="blog-news__articles">
       {articles.map(article => {
         const articleIndex = articles.indexOf(article)
-        const isLastElement = articleIndex !== articles.length - 1
+        const isLastElement = true
 
         return (
           <Article
