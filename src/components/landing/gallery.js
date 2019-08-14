@@ -7,12 +7,12 @@ export default () => (
   <section className="gallery-container">
     <img className="gallery-container__image" src={Image3} alt="3"></img>
     <img
-      className="gallery-container__image gallery-container__image--vertical"
+      className="gallery-container__image gallery-container__image"
       src={Image1}
       alt="1"
     ></img>
     <img
-      className="gallery-container__image gallery-container__image--vertical"
+      className="gallery-container__image gallery-container__image"
       src={Image2}
       alt="2"
     ></img>

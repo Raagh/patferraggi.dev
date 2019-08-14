@@ -1,7 +1,6 @@
 .about-container {
   grid-area: about;
   padding-top: 4rem;
-  height: 40rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
@@ -11,11 +10,16 @@
     "extra-title extra-text";
 }
 
+p {
+  padding-bottom: 1rem;
+}
+
 .background__title {
   grid-area: back-title;
   font-family: $font-family-medium;
   line-height: 64px;
   font-size: 64px;
+  padding-right: 20px;
 }
 
 .background__text {
@@ -35,6 +39,7 @@
   line-height: 64px;
   font-size: 64px;
   color: $inactive-color;
+  padding-right: 20px;
 }
 
 .extra__text {
@@ -73,7 +78,7 @@
 
   .about-container {
     grid-area: about;
-    padding-top: 4rem;
+    padding-top: 3rem;
     display: flex;
     flex-direction: column;
   }

@@ -3,11 +3,15 @@
   font-size: 64px;
   font-family: $font-family-medium;
   line-height: 64px;
+  width: 90%;
+  padding: 3rem 0 0 0;
 }
 
 @include media(extra-small) {
   .intro {
+    padding: 1rem 0 0 0;
     font-size: 32px;
     line-height: 32px;
+    width: 100%;
   }
 }

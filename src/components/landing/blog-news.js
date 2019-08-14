@@ -23,14 +23,12 @@ const articles = [
 
 export default () => (
   <div className="blog-news">
-    <p>
-      I also have a blog, you can read <br />
-      it{" "}
+    <p className="blog-news__text">
+      I also have a blog, you can read it{" "}
       <a className="blog-news__link" href="/blog">
         here
       </a>
-      , and these are the latest <br />
-      articles:
+      , and these are the latest articles:
     </p>
     <section className="blog-news__articles">
       {articles.map(article => {

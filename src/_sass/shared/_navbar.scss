@@ -8,16 +8,16 @@
   list-style: none;
   font-size: 18px;
   margin: 0;
-  min-height: 100%;
 
   @include media(extra-small) {
     flex-direction: row-reverse;
     &--desktop {
       display: none !important;
     }
+    padding: 0;
   }
 
-  padding: 6rem 0 0 0;
+  padding: 3rem 0 0 0;
   &__link--active {
     color: $secondary-color;
   }
