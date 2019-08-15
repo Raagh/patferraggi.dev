@@ -5,12 +5,12 @@
   min-height: 800px;
 
   .gallery-container__image:nth-of-type(1) {
-    left: 3%;
+    left: 1%;
   }
 
   .gallery-container__image:nth-of-type(2) {
     top: 19%;
-    right: 5%;
+    right: 0%;
   }
 
   .gallery-container__image:nth-of-type(3) {
@@ -47,5 +47,30 @@
 
   .gallery-container__image {
     position: relative;
+  }
+}
+
+@include for-tablet-portrait-only {
+  .gallery-container {
+    padding: 0;
+
+    .gallery-container__image:nth-of-type(1) {
+      left: 0%;
+    }
+
+    .gallery-container__image:nth-of-type(2) {
+      top: 0%;
+      right: 0%;
+    }
+
+    .gallery-container__image:nth-of-type(3) {
+      top: 0%;
+      right: 0%;
+    }
+  }
+
+  .gallery-container__image {
+    position: relative;
+    max-width: 100%;
   }
 }
