@@ -10,7 +10,9 @@
     "nav intro"
     "nav blog-news"
     "nav about"
-    "nav gallery";
+    "nav gallery"
+    "nav projects"
+    "nav contact";
 }
 
 @include for-phone-only {
@@ -22,7 +24,9 @@
       "intro intro"
       "blog-news blog-news"
       "about about"
-      "gallery gallery";
+      "gallery gallery"
+      "projects projects"
+      "contact contact";
   }
 }
 
@@ -35,6 +39,8 @@
       "intro intro"
       "blog-news blog-news"
       "about about"
-      "gallery gallery";
+      "gallery gallery"
+      "projects projects"
+      "contact contact";
   }
 }

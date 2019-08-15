@@ -1,0 +1,52 @@
+.project-container {
+  // position: relative;
+  // display: inline-block;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.project-container__image {
+  // display: block;
+  // float: right;
+  width: 100%;
+  height: auto;
+}
+
+.project-container__project {
+  // position: absolute;
+  // top: 30%;
+  // left: 10%;
+  padding-top: 2rem;
+  font-size: 24px;
+  line-height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 50%;
+
+  & a {
+    padding-top: 1.5rem;
+    color: $primary-color;
+    line-height: 24px;
+    font-size: 18px;
+  }
+}
+
+.project-container__name {
+  color: $primary-color;
+  padding-bottom: 1rem;
+}
+
+.project-container__skills {
+  color: $inactive-color;
+}
+
+@include for-phone-only {
+  .project-container {
+    display: block;
+  }
+
+  .project-container__project {
+    width: 100%;
+  }
+}

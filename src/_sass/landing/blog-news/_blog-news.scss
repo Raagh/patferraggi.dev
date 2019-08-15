@@ -3,7 +3,7 @@
   font-size: 64px;
   font-family: $font-family-medium;
   line-height: 64px;
-  padding-top: 2rem;
+  padding-top: 3.5rem;
 }
 
 .blog-news__text {
@@ -15,7 +15,7 @@
 }
 
 .blog-news__articles {
-  padding-top: 3rem;
+  padding-top: 2rem;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: 100%;
