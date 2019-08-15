@@ -15,6 +15,10 @@
   }
 }
 
+.whitespace {
+  padding-bottom: 6rem;
+}
+
 @include for-phone-only {
   .contact-container {
     padding-top: 4rem;

@@ -24,5 +24,6 @@ export default () => (
     >
       pattferraggi@gmail.com
     </a>{" "}
+    <p className="whitespace"></p>
   </div>
 )
