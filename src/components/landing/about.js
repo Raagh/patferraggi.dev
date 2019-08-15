@@ -10,15 +10,15 @@ export default () => (
       <p>
         Over the last 5 years, I have created of great variety high quality web
         business applications using technologies like C#, asp.net core, HTML5,
-        CSS3, Angular, Javascript and Typescript. <br />I focus on creating high
+        CSS3, Angular, Javascript and Typescript. I focus on creating high
         quality software that is testable, maintainable, reusable and adaptive
         that is required to succeed in Agile environments.
       </p>
       <p>
         I've have experience in startup, medium and large size entreprises and I
-        am used to working on teams but also managing my own projects. <br />
-        Some of the companies I've worked for include: Rydoo, Telefonica
-        Argentina, Cencosud and YPF. Check my LinkedIn for more details.
+        am used to working on teams but also managing my own projects. Some of
+        the companies I've worked for include: Rydoo, Telefonica Argentina,
+        Cencosud and YPF. Check my LinkedIn for more details.
       </p>
       <p>
         As an employee I am proactive, detail oriented and I enjoy playing an

@@ -6,7 +6,7 @@
   height: 64px;
 }
 
-@include media(extra-small) {
+@include for-phone-only {
   .logo {
     height: 48px;
     width: 100px;

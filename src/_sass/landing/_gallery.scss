@@ -11,13 +11,11 @@
   .gallery-container__image:nth-of-type(2) {
     top: 19%;
     right: 5%;
-    transform: rotate(90deg);
   }
 
   .gallery-container__image:nth-of-type(3) {
     top: 50%;
     right: 30%;
-    transform: rotate(90deg);
   }
 }
 
@@ -28,7 +26,7 @@
   position: absolute;
 }
 
-@include media(extra-small) {
+@include for-phone-only {
   .gallery-container {
     padding: 0;
 

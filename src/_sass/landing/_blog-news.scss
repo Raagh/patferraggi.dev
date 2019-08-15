@@ -21,7 +21,7 @@
   grid-template-rows: 100%;
 }
 
-@include media(extra-small) {
+@include for-phone-only {
   .blog-news {
     font-size: 32px;
     line-height: 32px;

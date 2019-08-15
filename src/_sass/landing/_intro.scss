@@ -7,7 +7,7 @@
   padding: 3rem 0 0 0;
 }
 
-@include media(extra-small) {
+@include for-phone-only {
   .intro {
     padding: 1rem 0 0 0;
     font-size: 32px;

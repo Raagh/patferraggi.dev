@@ -8,16 +8,8 @@
   list-style: none;
   font-size: 18px;
   margin: 0;
-
-  @include media(extra-small) {
-    flex-direction: row-reverse;
-    &--desktop {
-      display: none !important;
-    }
-    padding: 0;
-  }
-
   padding: 3rem 0 0 0;
+
   &__link--active {
     color: $secondary-color;
   }
@@ -39,17 +31,37 @@
   &--mobile {
     width: 32px;
     height: 32px;
+    display: none;
+  }
+}
+
+@include for-tablet-portrait-only {
+  .navbar {
+    flex-direction: row-reverse;
     padding: 0;
-    @include media(large) {
+
+    &--desktop {
       display: none !important;
     }
 
-    @include media(medium) {
+    &--mobile {
+      display: flex;
+      padding-right: 1rem;
+    }
+  }
+}
+
+@include for-phone-only {
+  .navbar {
+    flex-direction: row-reverse;
+    padding: 0;
+
+    &--desktop {
       display: none !important;
     }
 
-    @include media(small) {
-      display: none !important;
+    &--mobile {
+      display: flex;
     }
   }
 }

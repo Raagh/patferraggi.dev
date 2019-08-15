@@ -13,9 +13,22 @@
     "nav gallery";
 }
 
-@include media(extra-small) {
+@include for-phone-only {
   .layout {
     padding: 1.5rem;
+    grid-template-columns: 30% auto;
+    grid-template-areas:
+      "logo nav"
+      "intro intro"
+      "blog-news blog-news"
+      "about about"
+      "gallery gallery";
+  }
+}
+
+@include for-tablet-portrait-only {
+  .layout {
+    padding: 3rem;
     grid-template-columns: 30% auto;
     grid-template-areas:
       "logo nav"

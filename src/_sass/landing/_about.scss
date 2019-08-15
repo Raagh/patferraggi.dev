@@ -54,7 +54,7 @@ p {
   color: $secondary-color;
 }
 
-@include media(extra-small) {
+@include for-phone-only {
   .background__title {
     padding-bottom: 1rem;
     line-height: 32px;
