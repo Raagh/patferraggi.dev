@@ -78,6 +78,6 @@
 
   .gallery-container__image {
     position: relative;
-    max-width: 100%;
+    min-width: 0;
   }
 }
