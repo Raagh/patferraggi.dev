@@ -1,21 +1,14 @@
 .project-container {
-  // position: relative;
-  // display: inline-block;
   display: flex;
   flex-direction: row-reverse;
 }
 
 .project-container__image {
-  // display: block;
-  // float: right;
   width: 80%;
   height: auto;
 }
 
 .project-container__project {
-  // position: absolute;
-  // top: 30%;
-  // left: 10%;
   padding-top: 2rem;
   font-size: 24px;
   line-height: 24px;

@@ -2,6 +2,7 @@
   grid-area: contact;
   padding-top: 5rem;
   font-size: 64px;
+  width: 100%;
   font-family: $font-family-medium;
   line-height: 64px;
   color: $primary-color;
@@ -12,6 +13,7 @@
 
   & a {
     color: $secondary-color;
+    word-break: break-all;
   }
 }
 
