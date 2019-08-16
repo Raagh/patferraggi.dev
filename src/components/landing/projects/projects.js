@@ -6,7 +6,17 @@ const projects = [
   {
     name: "Rydoo",
     img: ProjectRydoo,
-    skills: ["C# develoment", "Unit testing", "and some other shit."],
+    skills: [
+      "C#",
+      "Typescript",
+      "Angular",
+      "Unit testing",
+      "Test Driven Development",
+      "Azure Blob Storage",
+      "MongoDB",
+      "SQL Server",
+      "SASS",
+    ],
   },
 ]
 

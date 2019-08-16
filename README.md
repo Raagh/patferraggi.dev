@@ -10,3 +10,5 @@ Technologies used for building this site:
 - Nelify
 - Netlify CMS
 - Jest.
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/be573d40-871f-4b68-a579-28d95ceeeff7/deploy-status)](https://app.netlify.com/sites/patferraggi/deploys)

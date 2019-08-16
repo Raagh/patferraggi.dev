@@ -1,6 +1,6 @@
 {
   "name": "patferraggi.dev",
-  "private": true,
+  "private": false,
   "description": "Personal website and blog",
   "version": "0.0.1",
   "license": "MIT",
