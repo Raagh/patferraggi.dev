@@ -23,10 +23,11 @@ $font-family-regular: $inter-regular;
 }
 
 @mixin for-phone-only {
-  @media (max-width: 599px) {
+  @media (max-width: 667px) {
     @content;
   }
 }
+
 @mixin for-tablet-portrait-up {
   @media (min-width: 768px) {
     @content;
@@ -37,6 +38,7 @@ $font-family-regular: $inter-regular;
     @content;
   }
 }
+
 @mixin for-tablet-landscape-up {
   @media (min-width: 900px) {
     @content;
