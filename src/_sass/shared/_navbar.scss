@@ -11,7 +11,12 @@
   padding: 3rem 0 0 0;
 
   &__link--active {
-    color: $secondary-color;
+    color: $secondary-color !important;
+  }
+
+  &__link--nodecoration {
+    color: $primary-color;
+    text-decoration: none;
   }
 
   &__link--separated {

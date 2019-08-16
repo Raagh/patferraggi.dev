@@ -19,11 +19,43 @@ export default () => (
     </svg>
 
     <nav id="nav-desktop" className="navbar--desktop">
-      <li className="navbar__link--active">intro</li>
+      <li>
+        <a
+          href="#intro"
+          className="navbar__link--nodecoration navbar__link--active"
+          rel="noopener noreferrer"
+        >
+          intro
+        </a>
+      </li>
       <li>blog</li>
-      <li>about</li>
-      <li>projects</li>
-      <li>contact</li>
+      <li>
+        <a
+          href="#about"
+          className="navbar__link--nodecoration"
+          rel="noopener noreferrer"
+        >
+          about
+        </a>
+      </li>
+      <li>
+        <a
+          href="#projects"
+          className="navbar__link--nodecoration"
+          rel="noopener noreferrer"
+        >
+          projects
+        </a>
+      </li>
+      <li>
+        <a
+          href="#contact"
+          className="navbar__link--nodecoration"
+          rel="noopener noreferrer"
+        >
+          contact
+        </a>
+      </li>
       <li className="navbar__link--active navbar__link--separated">eng</li>
       <li>esp</li>
       <li className="navbar__link--separated-extra">

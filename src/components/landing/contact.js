@@ -1,7 +1,7 @@
 import React from "react"
 
 export default () => (
-  <div className="contact-container">
+  <section id="contact" className="contact-container">
     <p>
       But I do so much more, you can check out my{" "}
       <a
@@ -25,5 +25,5 @@ export default () => (
       pattferraggi@gmail.com
     </a>{" "}
     <p className="whitespace"></p>
-  </div>
+  </section>
 )

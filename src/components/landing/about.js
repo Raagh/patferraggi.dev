@@ -1,7 +1,7 @@
 import React from "react"
 
 export default () => (
-  <section className="about-container">
+  <section id="about" className="about-container">
     <div className="background__title">
       So <span className="text--isSecondaryColor">about me!</span>, what's my
       background

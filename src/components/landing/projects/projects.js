@@ -21,7 +21,7 @@ const projects = [
 ]
 
 export default () => (
-  <section className="projects-container">
+  <section id="projects" className="projects-container">
     <p className="projects-container__text">
       Some examples of my{" "}
       <span className="projects-container__text--isSecondaryColor">work</span>
