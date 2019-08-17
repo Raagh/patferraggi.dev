@@ -3,21 +3,12 @@ import Article from "./article"
 
 const articles = [
   {
-    title: "We live in a fast world and we want everything to be fast.",
-    isActive: true,
-    creationDate: "May 25, 2018",
-  },
-  {
-    title:
-      "Below is the live preview of what we re going to build in the last preview.",
-    isActive: false,
-    creationDate: "May 29, 2018",
-  },
-  {
     title:
       "How I found a problem with Angular unit testing and decided to fix it myself.",
-    isActive: false,
+    isActive: true,
     creationDate: "July 1, 2019",
+    link:
+      "https://medium.com/@pattferraggi/how-i-found-a-problem-with-angular-unit-testing-and-decided-to-fix-it-myself-7c00b58d57a7",
   },
 ]
 
@@ -39,6 +30,7 @@ export default () => (
           <Article
             key={articleIndex}
             title={article.title}
+            link={article.link}
             isActive={article.isActive}
             creationDate={article.creationDate}
             addDivider={isLastElement}

@@ -22,7 +22,7 @@ export default () => (
       target="_blank"
       rel="noopener noreferrer"
     >
-      pattferraggi@gmail.com
+      patferraggi@gmail.com
     </a>{" "}
     <p className="whitespace"></p>
   </section>

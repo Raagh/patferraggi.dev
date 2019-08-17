@@ -8,9 +8,9 @@ const projects = [
     img: ProjectRydoo,
     skills: [
       "C#",
+      "ASP.net core",
       "Typescript",
       "Angular",
-      "Unit testing",
       "Test Driven Development",
       "Azure Blob Storage",
       "MongoDB",
