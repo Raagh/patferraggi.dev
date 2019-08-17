@@ -10,13 +10,14 @@
   margin: 0;
   padding: 3rem 0 0 0;
 
-  &__link--active {
-    color: $secondary-color !important;
+  & a {
+    text-decoration: none;
+    color: $primary-color;
+    padding: 0.1rem 0 0;
   }
 
-  &__link--nodecoration {
-    color: $primary-color;
-    text-decoration: none;
+  &__link--active {
+    color: $secondary-color !important;
   }
 
   &__link--separated {
@@ -31,6 +32,12 @@
     padding: 0 1rem 0 0;
     width: 18px;
     height: 15px;
+  }
+
+  &--desktop {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
   }
 
   &--mobile {

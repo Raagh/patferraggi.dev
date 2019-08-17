@@ -11,7 +11,9 @@ export default props => (
       <div className="project-container__name">{props.name}</div>
       <ul className="project-container__skills">
         {props.skills.map(skill => {
-          return <li>{skill}</li>
+          const skillIndex = props.skills.indexOf(skill)
+
+          return <li key={skillIndex}>{skill}</li>
         })}
       </ul>
       <a href="https://rydoo.com" target="_blank" rel="noopener noreferrer">

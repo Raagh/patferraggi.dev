@@ -44,6 +44,7 @@ $font-family-regular: $inter-regular;
     @content;
   }
 }
+
 @mixin for-desktop-up {
   @media (min-width: 1366px) {
     @content;
@@ -51,6 +52,12 @@ $font-family-regular: $inter-regular;
 }
 @mixin for-big-desktop-up {
   @media (min-width: 1800px) {
+    @content;
+  }
+}
+
+@mixin for-big-desktop-down-except-mobile {
+  @media (min-width: 667px) and (max-width: 1800px) {
     @content;
   }
 }

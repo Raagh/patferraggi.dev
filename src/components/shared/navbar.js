@@ -1,6 +1,33 @@
 import React from "react"
 import GithubIcon from "../../assets/icons/github.png"
 import LinkedinIcon from "../../assets/icons/linkedin.png"
+import { Link } from "gatsby"
+const scrollToElement = require("scroll-to-element")
+
+const activeClassName = "navbar__link--active"
+
+const setActiveLinkStyling = e => {
+  const elements = document.getElementsByClassName(activeClassName)
+  for (const element of elements) {
+    element.classList.remove(activeClassName)
+  }
+  e.target.classList.add(activeClassName)
+}
+
+const handleLinkClick = (e, target) => {
+  if (typeof window !== undefined) {
+    if (window.location.pathname === "/") {
+      e.preventDefault()
+
+      setActiveLinkStyling(e)
+
+      scrollToElement(target, {
+        offset: -95,
+        duration: 1000,
+      })
+    }
+  }
+}
 
 export default () => (
   <div id="navbar" className="navbar">
@@ -19,46 +46,28 @@ export default () => (
     </svg>
 
     <nav id="nav-desktop" className="navbar--desktop">
-      <li>
-        <a
-          href="#intro"
-          className="navbar__link--nodecoration navbar__link--active"
-          rel="noopener noreferrer"
-        >
-          intro
-        </a>
+      <Link
+        to="/#top"
+        className="navbar__link--active"
+        onClick={e => handleLinkClick(e, "#logo")}
+      >
+        intro
+      </Link>
+      <Link to="/blog">blog</Link>
+      <Link to="/#about" onClick={e => handleLinkClick(e, "#about")}>
+        about
+      </Link>
+      <Link to="/#projects" onClick={e => handleLinkClick(e, "#projects")}>
+        projects
+      </Link>
+      <Link to="/#contact" onClick={e => handleLinkClick(e, "#contact")}>
+        contact
+      </Link>
+      <li key="eng" className="navbar__link--active navbar__link--separated">
+        eng
       </li>
-      <li>blog</li>
-      <li>
-        <a
-          href="#about"
-          className="navbar__link--nodecoration"
-          rel="noopener noreferrer"
-        >
-          about
-        </a>
-      </li>
-      <li>
-        <a
-          href="#projects"
-          className="navbar__link--nodecoration"
-          rel="noopener noreferrer"
-        >
-          projects
-        </a>
-      </li>
-      <li>
-        <a
-          href="#contact"
-          className="navbar__link--nodecoration"
-          rel="noopener noreferrer"
-        >
-          contact
-        </a>
-      </li>
-      <li className="navbar__link--active navbar__link--separated">eng</li>
-      <li>esp</li>
-      <li className="navbar__link--separated-extra">
+      {/* <li key="esp">esp</li> */}
+      <li key="icons" className="navbar__link--separated-extra">
         <a
           href="https://www.linkedin.com/in/patricio-ferraggi-ares/"
           target="_blank"
