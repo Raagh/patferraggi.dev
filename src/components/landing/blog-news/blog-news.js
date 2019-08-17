@@ -13,7 +13,7 @@ const articles = [
 ]
 
 export default () => (
-  <div className="blog-news">
+  <div id="blog" className="blog-news">
     <p className="blog-news__text">
       I also have a blog, you can read it{" "}
       <a className="blog-news__link" href="/blog">

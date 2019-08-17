@@ -53,7 +53,9 @@ export default () => (
       >
         intro
       </Link>
-      <Link to="/blog">blog</Link>
+      <Link to="/#blog" onClick={e => handleLinkClick(e, "#blog")}>
+        blog
+      </Link>
       <Link to="/#about" onClick={e => handleLinkClick(e, "#about")}>
         about
       </Link>
