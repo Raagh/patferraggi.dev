@@ -5,6 +5,9 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    siteUrl: "https://www.patferraggi.dev",
+  },
   plugins: [
     `gatsby-plugin-sass`,
     {
@@ -17,6 +20,8 @@ module.exports = {
     "gatsby-transformer-sharp",
     "gatsby-plugin-sharp",
     "gatsby-image",
-    `gatsby-plugin-netlify`,
+    "gatsby-plugin-netlify",
+    "gatsby-plugin-react-helmet",
+    "gatsby-plugin-robots-txt",
   ],
 }
