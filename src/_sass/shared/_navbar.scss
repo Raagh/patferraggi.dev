@@ -8,7 +8,8 @@
   list-style: none;
   font-size: 18px;
   margin: 0;
-  padding: 3rem 0 0 0;
+  position: fixed;
+  padding-top: 3rem;
 
   & a {
     color: $primary-color;
@@ -36,43 +37,48 @@
   &--desktop {
     display: flex;
     flex-direction: column;
-    position: fixed;
+    padding-top: 4.5rem;
   }
 
   &--mobile {
     width: 32px;
     height: 32px;
     display: none;
+    padding-right: 11%;
+  }
+}
+
+@mixin navbar-mobile-tablet {
+  .navbar {
+    flex-direction: row;
+    height: 5rem;
+    justify-content: space-between;
+    background-color: $background-color;
+    position: fixed;
+    margin: 0 auto;
+    align-items: center;
+    z-index: 1000;
+    width: 100%;
+    padding-top: 0;
+
+    &--desktop {
+      display: none !important;
+    }
+
+    &--mobile {
+      display: block;
+    }
   }
 }
 
 @include for-tablet-portrait-only {
-  .navbar {
-    flex-direction: row-reverse;
-    padding: 0;
+  @include navbar-mobile-tablet();
+}
 
-    &--desktop {
-      display: none !important;
-    }
-
-    &--mobile {
-      display: flex;
-      padding-right: 1rem;
-    }
-  }
+@include for-tablet-landscape-until-desktop {
+  @include navbar-mobile-tablet();
 }
 
 @include for-phone-only {
-  .navbar {
-    flex-direction: row-reverse;
-    padding: 0;
-
-    &--desktop {
-      display: none !important;
-    }
-
-    &--mobile {
-      display: flex;
-    }
-  }
+  @include navbar-mobile-tablet();
 }

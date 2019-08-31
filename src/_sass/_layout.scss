@@ -1,12 +1,13 @@
 .layout {
   margin: 0 auto;
-  padding: 3rem 6rem 3rem 6rem;
+  padding: 0 6rem 3rem 6rem;
   display: grid;
   grid-template-columns: 10% auto 15%;
   height: 100vh;
+  position: relative;
   grid-template-rows: 12% auto;
   grid-template-areas:
-    "logo ."
+    "nav ."
     "nav intro"
     "nav blog-news"
     "nav about"
@@ -17,10 +18,10 @@
 
 @include for-phone-only {
   .layout {
-    padding: 1.5rem;
+    padding: 0 1.5rem 1.5rem 1.5rem;
     grid-template-columns: 30% auto;
     grid-template-areas:
-      "logo nav"
+      "nav nav"
       "intro intro"
       "blog-news blog-news"
       "about about"
@@ -32,10 +33,10 @@
 
 @include for-tablet-portrait-only {
   .layout {
-    padding: 3rem;
+    padding: 0rem 3rem 3rem 3rem;
     grid-template-columns: 30% auto;
     grid-template-areas:
-      "logo nav"
+      "nav nav"
       "intro intro"
       "blog-news blog-news"
       "about about"

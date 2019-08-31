@@ -47,8 +47,14 @@ $internal-padding: 3rem;
   }
 }
 
+@mixin for-tablet-landscape-until-desktop {
+  @media (min-width: 900px) and (max-width: 1367px) {
+    @content;
+  }
+}
+
 @mixin for-desktop-up {
-  @media (min-width: 1366px) {
+  @media (min-width: 1367px) {
     @content;
   }
 }

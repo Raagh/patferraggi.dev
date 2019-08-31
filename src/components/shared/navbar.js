@@ -1,6 +1,7 @@
-import React from "react"
+import React, { useEffect } from "react"
 import GithubIcon from "../../assets/icons/github.png"
 import LinkedinIcon from "../../assets/icons/linkedin.png"
+import Logo from "../../assets/logo.svg"
 import { Link } from "gatsby"
 const scrollToElement = require("scroll-to-element")
 
@@ -29,8 +30,26 @@ const handleLinkClick = (e, target) => {
   }
 }
 
+const handleScroll = () => {
+  const { scrollPos } = this.state
+  this.setState({
+    scrollPos: document.body.getBoundingClientRect().top,
+    show: document.body.getBoundingClientRect().top > scrollPos,
+  })
+}
+
+// useEffect(() => {
+//   window.addEventListener("scroll", handleScroll)
+
+//   // returned function will be called on component unmount
+//   return () => {
+//     window.removeEventListener("scroll", handleScroll)
+//   }
+// }, [])
+
 export default () => (
-  <div id="navbar" className="navbar">
+  <nav id="navbar" className="navbar">
+    <img id="logo" alt="logo" className="logo" src={Logo}></img>
     <svg
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 32 32"
@@ -45,7 +64,7 @@ export default () => (
       <path d="M4 8h24M4 16h24M4 24h24" />
     </svg>
 
-    <nav id="nav-desktop" className="navbar--desktop">
+    <div id="nav-desktop" className="navbar--desktop">
       <Link
         to="/#top"
         className="navbar__link--active"
@@ -93,6 +112,6 @@ export default () => (
           />
         </a>
       </li>
-    </nav>
-  </div>
+    </div>
+  </nav>
 )

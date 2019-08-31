@@ -4,13 +4,11 @@
   grid-area: logo;
   width: 128px;
   height: 64px;
-  position: fixed;
 }
 
 @include for-phone-only {
   .logo {
     height: 48px;
     width: 100px;
-    position: relative;
   }
 }
