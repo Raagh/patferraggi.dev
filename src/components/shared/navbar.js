@@ -29,6 +29,26 @@ const handleLinkClick = (e, target) => {
   }
 }
 
+const links = [
+  { name: "logo", to: "/#top", className: "navbar__link--active" },
+  { name: "blog", to: "/#blog" },
+  { name: "about", to: "/#about" },
+  { name: "projects", to: "/#projects" },
+  { name: "contact", to: "/#contact" },
+]
+
+const renderLinks = linksToRender => {
+  return linksToRender.map(link => (
+    <Link
+      to={link.to}
+      onClick={e => handleLinkClick(e, `#${link.name}`)}
+      className={link.className}
+    >
+      {link.name}
+    </Link>
+  ))
+}
+
 export default () => (
   <nav id="navbar" className="navbar">
     <img id="logo" alt="logo" className="logo" src={Logo}></img>
@@ -44,28 +64,11 @@ export default () => (
       className="navbar--mobile"
     >
       <path d="M4 8h24M4 16h24M4 24h24" />
+      {renderLinks(links)}
     </svg>
 
     <div id="nav-desktop" className="navbar--desktop">
-      <Link
-        to="/#top"
-        className="navbar__link--active"
-        onClick={e => handleLinkClick(e, "#logo")}
-      >
-        intro
-      </Link>
-      <Link to="/#blog" onClick={e => handleLinkClick(e, "#blog")}>
-        blog
-      </Link>
-      <Link to="/#about" onClick={e => handleLinkClick(e, "#about")}>
-        about
-      </Link>
-      <Link to="/#projects" onClick={e => handleLinkClick(e, "#projects")}>
-        projects
-      </Link>
-      <Link to="/#contact" onClick={e => handleLinkClick(e, "#contact")}>
-        contact
-      </Link>
+      {renderLinks(links)}
       <li key="eng" className="navbar__link--active navbar__link--separated">
         eng
       </li>
