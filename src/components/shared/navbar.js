@@ -1,13 +1,12 @@
-import React, { useEffect } from "react"
+import React from "react"
 import GithubIcon from "../../assets/icons/github.png"
 import LinkedinIcon from "../../assets/icons/linkedin.png"
 import Logo from "../../assets/logo.svg"
 import { Link } from "gatsby"
 const scrollToElement = require("scroll-to-element")
 
-const activeClassName = "navbar__link--active"
-
 const setActiveLinkStyling = e => {
+  const activeClassName = "navbar__link--active"
   const elements = document.getElementsByClassName(activeClassName)
   for (const element of elements) {
     element.classList.remove(activeClassName)
@@ -29,23 +28,6 @@ const handleLinkClick = (e, target) => {
     }
   }
 }
-
-const handleScroll = () => {
-  const { scrollPos } = this.state
-  this.setState({
-    scrollPos: document.body.getBoundingClientRect().top,
-    show: document.body.getBoundingClientRect().top > scrollPos,
-  })
-}
-
-// useEffect(() => {
-//   window.addEventListener("scroll", handleScroll)
-
-//   // returned function will be called on component unmount
-//   return () => {
-//     window.removeEventListener("scroll", handleScroll)
-//   }
-// }, [])
 
 export default () => (
   <nav id="navbar" className="navbar">
