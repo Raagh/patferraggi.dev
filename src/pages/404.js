@@ -1,6 +1,8 @@
 import React from "react"
 import Layout from "../components/layout"
 import Helmet from "../components/shared/helmet"
+import "../_sass/external/reset.scss"
+import "../_sass/index.scss"
 
 const NotFoundPage = () => (
   <Layout>
