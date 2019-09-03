@@ -10,5 +10,12 @@
   .logo {
     height: 48px;
     width: 100px;
+    padding-bottom: 0;
+  }
+}
+
+@include for-desktop-up {
+  .logo {
+    padding-bottom: 3.2rem;
   }
 }

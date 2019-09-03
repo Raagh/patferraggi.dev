@@ -1,102 +1,134 @@
-import React from "react"
+import React, { useState } from "react"
 import GithubIcon from "../../assets/icons/github.png"
 import LinkedinIcon from "../../assets/icons/linkedin.png"
 import Logo from "../../assets/logo.svg"
 import { Link } from "gatsby"
 const scrollToElement = require("scroll-to-element")
 
-const setActiveLinkStyling = e => {
-  const activeClassName = "navbar__link--active"
-  const elements = document.getElementsByClassName(activeClassName)
-  for (const element of elements) {
-    element.classList.remove(activeClassName)
-  }
-  e.target.classList.add(activeClassName)
-}
-
-const handleLinkClick = (e, target) => {
-  if (typeof window !== undefined) {
-    if (window.location.pathname === "/") {
-      e.preventDefault()
-
-      setActiveLinkStyling(e)
-
-      scrollToElement(target, {
-        offset: -95,
-        duration: 1000,
-      })
-    }
-  }
-}
-
 const links = [
-  { name: "logo", to: "/#top", className: "navbar__link--active" },
+  { name: "intro", to: "/#top", className: "navbar__link--active" },
   { name: "blog", to: "/#blog" },
   { name: "about", to: "/#about" },
   { name: "projects", to: "/#projects" },
   { name: "contact", to: "/#contact" },
 ]
 
-const renderLinks = linksToRender => {
-  return linksToRender.map(link => (
-    <Link
-      to={link.to}
-      onClick={e => handleLinkClick(e, `#${link.name}`)}
-      className={link.className}
-    >
-      {link.name}
-    </Link>
-  ))
+export default () => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const renderLinks = (linksToRender, isMobile) => {
+    return linksToRender.map(link => {
+      const className =
+        (isMobile ? "navbar__link--mobile " : "") +
+        (link.className ? link.className : "")
+
+      return (
+        <Link
+          to={link.to}
+          onClick={e => handleLinkClick(e, `#${link.name}`)}
+          className={className}
+        >
+          {link.name}
+        </Link>
+      )
+    })
+  }
+
+  const setActiveLinkStyling = e => {
+    const activeClassName = "navbar__link--active"
+    const elements = document.getElementsByClassName(activeClassName)
+    for (const element of elements) {
+      element.classList.remove(activeClassName)
+    }
+    e.target.classList.add(activeClassName)
+  }
+
+  const handleLinkClick = (e, target) => {
+    if (typeof window !== undefined) {
+      if (window.location.pathname === "/") {
+        e.preventDefault()
+
+        setActiveLinkStyling(e)
+
+        scrollToElement(target, {
+          offset: -95,
+          duration: 1000,
+        })
+
+        handleOpenCloseBurgerIcon()
+      }
+    }
+  }
+
+  const handleOpenCloseBurgerIcon = () => {
+    const container = document.getElementsByClassName(
+      "navbar-links-container"
+    )[0]
+
+    if (container !== undefined && !isOpen) {
+      container.classList.add("navbar-links-container--isOpen")
+      setIsOpen(true)
+    } else if (container !== undefined && isOpen) {
+      container.classList.remove("navbar-links-container--isOpen")
+      setIsOpen(false)
+    }
+  }
+
+  return (
+    <nav id="navbar-container" className="navbar">
+      <nav id="nav-mobile" className="navbar--mobile">
+        <div className="navbar-stretch">
+          <img id="logo" alt="logo" className="logo" src={Logo}></img>
+          <a onClick={handleOpenCloseBurgerIcon}>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 32 32"
+              fill="none"
+              stroke="currentcolor"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              id="burger-menu"
+            >
+              <path d="M4 8h24M4 16h24M4 24h24" />
+            </svg>
+          </a>
+        </div>
+        <div className="navbar-links-container">{renderLinks(links, true)}</div>
+      </nav>
+
+      <div id="nav-desktop" className="navbar--desktop">
+        <img id="logo" alt="logo" className="logo" src={Logo}></img>
+        {renderLinks(links)}
+        <li key="eng" className="navbar__link--active navbar__link--separated">
+          eng
+        </li>
+        {/* <li key="esp">esp</li> */}
+        <li key="icons" className="navbar__link--separated-extra">
+          <a
+            href="https://www.linkedin.com/in/patricio-ferraggi-ares/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              className="navbar__link--external"
+              alt="linkedin link"
+              src={LinkedinIcon}
+            />
+          </a>
+          <a
+            href="https://github.com/Raagh/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              className="navbar__link--external"
+              alt="github link"
+              src={GithubIcon}
+            />
+          </a>
+        </li>
+      </div>
+    </nav>
+  )
 }
-
-export default () => (
-  <nav id="navbar" className="navbar">
-    <img id="logo" alt="logo" className="logo" src={Logo}></img>
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      viewBox="0 0 32 32"
-      fill="none"
-      stroke="currentcolor"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-      strokeWidth="2"
-      id="nav-mobile"
-      className="navbar--mobile"
-    >
-      <path d="M4 8h24M4 16h24M4 24h24" />
-      {renderLinks(links)}
-    </svg>
-
-    <div id="nav-desktop" className="navbar--desktop">
-      {renderLinks(links)}
-      <li key="eng" className="navbar__link--active navbar__link--separated">
-        eng
-      </li>
-      {/* <li key="esp">esp</li> */}
-      <li key="icons" className="navbar__link--separated-extra">
-        <a
-          href="https://www.linkedin.com/in/patricio-ferraggi-ares/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            className="navbar__link--external"
-            alt="linkedin link"
-            src={LinkedinIcon}
-          />
-        </a>
-        <a
-          href="https://github.com/Raagh/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <img
-            className="navbar__link--external"
-            alt="github link"
-            src={GithubIcon}
-          />
-        </a>
-      </li>
-    </div>
-  </nav>
-)

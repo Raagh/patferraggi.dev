@@ -4,7 +4,6 @@
   font-family: $font-family-medium;
   line-height: 64px;
   width: 90%;
-  padding: 3rem 0 0 0;
 }
 
 @include for-phone-only {
@@ -13,5 +12,11 @@
     font-size: 32px;
     line-height: 32px;
     width: 100%;
+  }
+}
+
+@include for-desktop-up {
+  .intro {
+    padding: 3rem 0 0 0;
   }
 }
