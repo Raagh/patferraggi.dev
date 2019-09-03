@@ -17,6 +17,7 @@ export default () => (
     <p className="blog-news__text">
       I also have a blog, you can
       <a className="blog-news__link" href="/blog">
+        {" "}
         read it here
       </a>
       , and these are the latest articles:
