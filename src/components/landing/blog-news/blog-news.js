@@ -20,7 +20,6 @@ export default () => (
         {" "}
         read it here
       </a>
-      , and these are the latest articles:
     </p>
     <section className="blog-news__articles">
       {articles.map(article => {
