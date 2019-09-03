@@ -3,7 +3,7 @@ import React from "react"
 export default () => (
   <section id="contact" className="contact-container">
     <p>
-      But I do so much more, you can check out my{" "}
+      You can check my{" "}
       <a
         href="https://github.com/Raagh"
         target="_blank"
@@ -11,11 +11,11 @@ export default () => (
       >
         Github
       </a>{" "}
-      for more!
+      for more projects
     </p>
     <p>
-      If you have a project or initiative you think I can help you with contact
-      me here:
+      If you have a project or initiative you think I can help you can find me
+      at{" "}
     </p>
     <a
       href="mailto: pattferraggi@gmail.com"

@@ -8,20 +8,30 @@ export default () => (
     </div>
     <article className="background__text">
       <p>
-        Over the last 5 years, I have created of great variety high quality web
-        business applications using technologies like C#, asp.net core, HTML5,
-        CSS3, Angular, Javascript and Typescript. I focus on creating high
-        quality software that is testable, maintainable, reusable and adaptive
-        that is required to succeed in Agile environments.
+        Over the past 5 years, I have created a great variety of high quality
+        web business applications using technologies like C#, asp.net core,
+        HTML5, CSS3, Angular, Javascript and Typescript. I focus on creating
+        software that is testable, maintainable, reusable and adaptive,
+        requirements for success in Agile environments.
       </p>
       <p>
-        I've have experience in startup, medium and large size entreprises and I
-        am used to working on teams but also managing my own projects. Some of
+        I've have experience in startup, medium and large size enterprises and
+        I'm used to working in teams but also managing my own projects. Some of
         the companies I've worked for include: Rydoo, Telefonica Argentina,
-        Cencosud and YPF. Check my LinkedIn for more details.
+        Cencosud and YPF. Check my
+        <a
+          className="blog-news__link"
+          href="https://www.linkedin.com/in/patricio-ferraggi-ares/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {" "}
+          LinkedIn{" "}
+        </a>
+        for more details.
       </p>
       <p>
-        As an employee I am proactive, detail oriented and I enjoy playing an
+        As an employee I'm proactive, detail oriented and I enjoy playing an
         active role in improving business.
       </p>
     </article>
@@ -34,10 +44,12 @@ export default () => (
         technologies on my open source projects.
       </p>
       <p>
-        I exercise often and I have been practicing Muay Thai for the last 7
-        years.
+        I exercise often and I've been practicing Muay Thai for over 7 years.
       </p>
-      <p>I also like to travel and take pictures.</p>
+      <p>
+        I also like to travel and taking pictures, specially from my cat who
+        hates me for it.
+      </p>
     </article>
   </section>
 )

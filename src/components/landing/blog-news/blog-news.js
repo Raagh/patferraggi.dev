@@ -15,7 +15,7 @@ const articles = [
 export default () => (
   <div id="blog" className="blog-news">
     <p className="blog-news__text">
-      I also have a blog, you can
+      I also have a blog,
       <a className="blog-news__link" href="/blog">
         {" "}
         read it here
