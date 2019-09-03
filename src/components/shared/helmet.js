@@ -12,7 +12,7 @@ const defaultProps = {
 export default () => (
   <Helmet>
     <meta charSet="utf-8" />
-    <title>{defaultProps.url}</title>
+    <title>{defaultProps.title}</title>
     <meta name="description" content={defaultProps.description}></meta>
     <meta property="og:description" content={defaultProps.description} />
     <meta
