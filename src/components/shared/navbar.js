@@ -36,10 +36,18 @@ export default () => {
 
   const setActiveLinkStyling = e => {
     const activeClassName = "navbar__link--active"
-    const elements = document.getElementsByClassName(activeClassName)
-    for (const element of elements) {
-      element.classList.remove(activeClassName)
+    const previousSelectedLinks = document.getElementsByClassName(
+      activeClassName
+    )
+
+    const previousSelectedLink = Array.from(previousSelectedLinks).find(
+      x => x.classList.length === 1
+    )
+
+    if (previousSelectedLink) {
+      previousSelectedLink.classList.remove(activeClassName)
     }
+
     e.target.classList.add(activeClassName)
   }
 
@@ -79,7 +87,7 @@ export default () => {
       <nav id="nav-mobile" className="navbar--mobile">
         <div className="navbar-stretch">
           <img id="logo" alt="logo" className="logo" src={Logo}></img>
-          <a onClick={handleOpenCloseBurgerIcon}>
+          <button onClick={handleOpenCloseBurgerIcon}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 32 32"
@@ -92,7 +100,7 @@ export default () => {
             >
               <path d="M4 8h24M4 16h24M4 24h24" />
             </svg>
-          </a>
+          </button>
         </div>
         <div className="navbar-links-container">{renderLinks(links, true)}</div>
       </nav>

@@ -15,6 +15,12 @@
     padding: 0.1rem 0 0;
   }
 
+  & button {
+    background: none !important;
+    border: none;
+    color: $primary-color;
+  }
+
   &__link {
     &--active {
       color: $secondary-color !important;

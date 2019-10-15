@@ -8,7 +8,14 @@ const articles = [
     isActive: true,
     creationDate: "July 1, 2019",
     link:
-      "https://medium.com/@pattferraggi/how-i-found-a-problem-with-angular-unit-testing-and-decided-to-fix-it-myself-7c00b58d57a7",
+      "https://medium.com/@patferraggi/how-i-found-a-problem-with-angular-unit-testing-and-decided-to-fix-it-myself-7c00b58d57a7",
+  },
+  {
+    title: "Stop focusing on Programming Languages and Frameworks!",
+    isActive: false,
+    creationDate: "Sep 9, 2019",
+    link:
+      "https://medium.com/@patferraggi/stop-focusing-on-programming-languages-and-frameworks-8a5f19eb70c9",
   },
 ]
 
