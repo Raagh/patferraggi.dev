@@ -27,6 +27,7 @@ export default () => {
           to={link.to}
           onClick={e => handleLinkClick(e, `#${link.name}`)}
           className={className}
+          key={link.name}
         >
           {link.name}
         </Link>

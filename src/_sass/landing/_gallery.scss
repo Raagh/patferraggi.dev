@@ -25,7 +25,7 @@
   width: 100%;
   max-width: 600px;
   height: auto;
-  position: absolute;
+  position: absolute !important;
   padding: 0 0 0.5rem 0;
 }
 
@@ -51,7 +51,7 @@
   }
 
   .gallery-container__image {
-    position: relative;
+    position: relative !important;
   }
 }
 
@@ -78,7 +78,7 @@
   }
 
   .gallery-container__image {
-    position: relative;
+    position: relative !important;
     min-width: 0;
   }
 }

@@ -1,11 +1,9 @@
 import React from "react"
 import Project from "./project"
-import ProjectRydoo from "../../../assets/images/project-rydoo.png"
 
 const projects = [
   {
     name: "Rydoo",
-    img: ProjectRydoo,
     skills: [
       "C#",
       "ASP.net core",
@@ -33,7 +31,6 @@ export default () => (
         <Project
           key={projectIndex}
           name={project.name}
-          image={project.img}
           skills={project.skills}
         />
       )

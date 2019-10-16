@@ -1,20 +1,40 @@
 import React from "react"
-import Image1 from "./../../assets/images/1.jpg"
-import Image2 from "./../../assets/images/2.jpg"
-import Image3 from "./../../assets/images/3.jpg"
+import { useStaticQuery, graphql } from "gatsby"
+import Img from "gatsby-image"
 
-export default () => (
-  <section className="gallery-container">
-    <img className="gallery-container__image" src={Image3} alt="3"></img>
-    <img
-      className="gallery-container__image gallery-container__image"
-      src={Image1}
-      alt="1"
-    ></img>
-    <img
-      className="gallery-container__image gallery-container__image"
-      src={Image2}
-      alt="2"
-    ></img>
-  </section>
-)
+export default () => {
+  const data = useStaticQuery(graphql`
+    query {
+      allFile(
+        filter: { relativePath: { regex: "/(jpg)/" } }
+        sort: { fields: name }
+      ) {
+        nodes {
+          childImageSharp {
+            fluid(maxWidth: 600) {
+              aspectRatio
+              base64
+              sizes
+              src
+              srcSet
+            }
+          }
+          name
+        }
+      }
+    }
+  `)
+
+  return (
+    <section className="gallery-container">
+      {data.allFile.nodes.map(x => (
+        <Img
+          className="gallery-container__image"
+          fluid={x.childImageSharp.fluid}
+          alt={x.name}
+          key={x.name}
+        ></Img>
+      ))}
+    </section>
+  )
+}
