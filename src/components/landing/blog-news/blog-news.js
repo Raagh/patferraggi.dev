@@ -6,7 +6,13 @@ const articles = [
     title: "How to become an amazing software developer!.",
     creationDate: "Oct 24, 2019",
     link:
-      "https://medium.com/@patferraggi/how-to-be-an-amazing-software-developer-things-i-wish-i-knew-when-i-started-33dd9be373b9",
+      "https://dev.to/patferraggi/how-to-become-an-amazing-software-developer-things-i-wish-i-knew-when-i-started-28c5",
+  },
+  {
+    title: "Stop focusing on Programming Languages and Frameworks!.",
+    creationDate: "Sep 9, 2019",
+    link:
+      "https://medium.com/@patferraggi/stop-focusing-on-programming-languages-and-frameworks-8a5f19eb70c9",
   },
   {
     title:
@@ -14,12 +20,6 @@ const articles = [
     creationDate: "July 1, 2019",
     link:
       "https://medium.com/@patferraggi/how-i-found-a-problem-with-angular-unit-testing-and-decided-to-fix-it-myself-7c00b58d57a7",
-  },
-  {
-    title: "Stop focusing on Programming Languages and Frameworks!.",
-    creationDate: "Sep 9, 2019",
-    link:
-      "https://medium.com/@patferraggi/stop-focusing-on-programming-languages-and-frameworks-8a5f19eb70c9",
   },
 ]
 
