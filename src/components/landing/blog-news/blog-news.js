@@ -9,10 +9,10 @@ const articles = [
       "https://dev.to/patferraggi/how-to-become-an-amazing-software-developer-things-i-wish-i-knew-when-i-started-28c5",
   },
   {
-    title: "Stop focusing on Programming Languages and Frameworks!.",
-    creationDate: "Sep 9, 2019",
+    title: "5 books every developer should read, and some extras.",
+    creationDate: "Nov 2, 2019",
     link:
-      "https://medium.com/@patferraggi/stop-focusing-on-programming-languages-and-frameworks-8a5f19eb70c9",
+      "https://dev.to/patferraggi/5-books-every-developer-should-read-and-some-extras-377n",
   },
   {
     title:

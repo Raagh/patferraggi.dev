@@ -37,17 +37,10 @@ export default () => {
 
   const setActiveLinkStyling = e => {
     const activeClassName = "navbar__link--active"
-    const previousSelectedLinks = document.getElementsByClassName(
-      activeClassName
-    )
 
-    const previousSelectedLink = Array.from(previousSelectedLinks).find(
-      x => x.classList.length === 1
+    Array.from(document.getElementsByClassName(activeClassName)).map(x =>
+      x.classList.remove(activeClassName)
     )
-
-    if (previousSelectedLink) {
-      previousSelectedLink.classList.remove(activeClassName)
-    }
 
     e.target.classList.add(activeClassName)
   }
@@ -109,7 +102,7 @@ export default () => {
       <div id="nav-desktop" className="navbar--desktop">
         <img id="logo" alt="logo" className="logo" src={Logo}></img>
         {renderLinks(links)}
-        <li key="eng" className="navbar__link--active navbar__link--separated">
+        <li key="eng" className="navbar__link--separated">
           eng
         </li>
         {/* <li key="esp">esp</li> */}
