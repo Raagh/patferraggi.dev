@@ -2,7 +2,7 @@
   grid-area: about;
   padding-top: 5rem;
   display: grid;
-  z-index: -1;
+  z-index: 1;
   grid-template-columns: repeat(2, 1fr);
   grid-template-areas:
     "back-title back-text"

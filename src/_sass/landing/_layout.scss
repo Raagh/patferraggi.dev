@@ -1,11 +1,12 @@
-.layout {
+.landing {
+  background-color: $background-color !important;
+  color: $primary-color !important;
   margin: 0 auto;
   padding: 0 6rem 3rem 6rem;
   display: grid;
   grid-template-columns: 10% auto 15%;
-  height: 100vh;
   position: relative;
-  grid-template-rows: 12% auto;
+  grid-template-rows: 12vh auto;
   grid-template-areas:
     "nav ."
     "nav intro"
@@ -17,7 +18,7 @@
 }
 
 @include for-phone-only {
-  .layout {
+  .landing {
     padding: 0 1.5rem 1.5rem 1.5rem;
     grid-template-columns: 30% auto;
     grid-template-areas:
@@ -32,7 +33,7 @@
 }
 
 @include for-tablet-portrait-only {
-  .layout {
+  .landing {
     padding: 0rem 3rem 3rem 3rem;
     grid-template-columns: 30% auto;
     grid-template-areas:

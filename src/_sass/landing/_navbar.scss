@@ -1,5 +1,3 @@
-@import "./variables";
-
 .navbar {
   display: flex;
   flex-direction: column;
@@ -9,6 +7,7 @@
   font-size: 18px;
   margin: 0;
   position: fixed;
+  z-index: 9999;
 
   & a {
     color: $primary-color;
@@ -46,7 +45,6 @@
       display: block;
       padding: 0 0 0.5rem 0 !important;
       line-height: 30px;
-      z-index: 1000;
       text-align: center;
     }
   }
@@ -75,7 +73,6 @@
     background-color: $background-color;
     position: fixed;
     margin: 0 auto;
-    z-index: 1000;
     width: 100%;
     padding-top: 0;
     display: none;
