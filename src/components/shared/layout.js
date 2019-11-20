@@ -1,3 +1,5 @@
 import React from "react"
 
-export default ({ children }) => <main className="layout">{children}</main>
+export default ({ children, innerClassName }) => (
+  <main className={innerClassName}>{children}</main>
+)

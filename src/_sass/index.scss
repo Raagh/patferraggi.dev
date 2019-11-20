@@ -1,12 +1,2 @@
-@import "./variables";
 @import "./shared/index";
 @import "./landing/index";
-
-html {
-  background-color: $background-color;
-  color: $primary-color;
-}
-
-a {
-  text-decoration: none;
-}
