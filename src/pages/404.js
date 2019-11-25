@@ -1,18 +1,32 @@
 import React from "react"
-import Helmet from "../components/shared/helmet"
-import Layout from "../components/shared/layout"
-import Navbar from "../components/landing/navbar"
-import "../_sass/external/reset.scss"
-import "../_sass/404.scss"
+import { graphql } from "gatsby"
 
-const NotFoundPage = () => (
-  <Layout innerClassName="not-found">
-    <Helmet></Helmet>
-    <Navbar></Navbar>
-    <section class="not-found__message">
-      <p>Hi, this page is not ready yet but it will be soon. Sorry</p>
-    </section>
-  </Layout>
-)
+import Layout from "../components/blog/layout"
+import SEO from "../components/blog/seo"
+
+class NotFoundPage extends React.Component {
+  render() {
+    // const { data } = this.props
+    // const siteTitle = data.site.siteMetadata.title
+
+    return (
+      <Layout location={this.props.location} title="404">
+        <SEO title="404: Not Found" />
+        <h1>Not Found</h1>
+        <p>You just hit a route that doesn&#39;t exist... the sadness.</p>
+      </Layout>
+    )
+  }
+}
 
 export default NotFoundPage
+
+export const pageQuery = graphql`
+  query {
+    site {
+      siteMetadata {
+        title
+      }
+    }
+  }
+`

@@ -12,6 +12,7 @@
   & a {
     color: $primary-color;
     padding: 0.1rem 0 0;
+    line-height: 18px;
   }
 
   & button {
@@ -36,8 +37,6 @@
 
     &--external {
       padding: 0 1rem 0 0;
-      width: 18px;
-      height: 15px;
     }
 
     &--mobile {
@@ -97,6 +96,10 @@
   .navbar {
     &--desktop {
       display: none !important;
+    }
+
+    & a {
+      line-height: 30px;
     }
 
     &--mobile {

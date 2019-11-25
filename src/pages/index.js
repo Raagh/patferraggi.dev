@@ -7,7 +7,6 @@ import Projects from "../components/landing/projects/projects"
 import Contact from "../components/landing/contact"
 import Navbar from "../components/landing/navbar"
 import Helmet from "../components/shared/helmet"
-import "../_sass/external/reset.scss"
 import "../_sass/index.scss"
 
 export default () => (

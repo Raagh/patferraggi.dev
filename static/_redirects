@@ -1,2 +1,0 @@
-# Redirect default Netlify subdomain to primary domain
-https://patferraggi.netlify.com/* https://www.patferraggi.dev/:splat 301!

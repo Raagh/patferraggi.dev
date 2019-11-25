@@ -5,7 +5,7 @@ import Img from "gatsby-image"
 export default props => {
   const data = useStaticQuery(graphql`
     query {
-      file(relativePath: { regex: "/(png)/" }) {
+      file: file(absolutePath: { regex: "/project-rydoo.png/" }) {
         childImageSharp {
           fluid {
             base64
@@ -13,6 +13,14 @@ export default props => {
             sizes
             src
             srcSet
+          }
+        }
+      }
+      site {
+        siteMetadata {
+          author
+          social {
+            twitter
           }
         }
       }

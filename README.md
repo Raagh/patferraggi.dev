@@ -6,7 +6,7 @@ Technologies used for building this site:
 
 - Gatsby
 - React
-- Sass
+- Sass -> migrating to styled components
 - Nelify
 - Netlify CMS
 - Jest.

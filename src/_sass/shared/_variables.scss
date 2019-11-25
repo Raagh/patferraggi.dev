@@ -16,12 +16,12 @@ $internal-padding: 3rem;
 
 @font-face {
   font-family: "Inter Regular";
-  src: url(../assets/fonts/Inter-Regular.otf) format("opentype");
+  src: url(../../content/assets/fonts/Inter-Regular.otf) format("opentype");
 }
 
 @font-face {
   font-family: "Inter Medium";
-  src: url(../assets/fonts/Inter-Medium.otf) format("opentype");
+  src: url(../../content/assets/fonts/Inter-Medium.otf) format("opentype");
 }
 
 @mixin for-phone-only {

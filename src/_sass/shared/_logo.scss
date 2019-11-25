@@ -2,14 +2,11 @@
 
 .logo {
   grid-area: logo;
-  width: 128px;
-  height: 64px;
+  padding-top: 2rem;
 }
 
 @include for-phone-only {
   .logo {
-    height: 48px;
-    width: 100px;
     padding-bottom: 0;
   }
 }

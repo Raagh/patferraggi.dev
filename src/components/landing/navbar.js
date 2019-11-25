@@ -1,7 +1,7 @@
 import React, { useState } from "react"
-import GithubIcon from "../../assets/icons/github.png"
-import LinkedinIcon from "../../assets/icons/linkedin.png"
-import Logo from "../../assets/logo.svg"
+import GithubIcon from "../../../content/assets/icons/github.png"
+import LinkedinIcon from "../../../content/assets/icons/linkedin.png"
+import Logo from "../../../content/assets/logo.svg"
 import { Link } from "gatsby"
 const scrollToElement = require("scroll-to-element")
 
