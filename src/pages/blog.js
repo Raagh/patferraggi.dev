@@ -2,7 +2,6 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 
 import SEO from "../components/blog/seo"
-import Bio from "../components/blog/bio"
 import Layout from "../components/blog/layout"
 import Button from "../components/blog/button"
 import { rhythm } from "../utils/typography"
@@ -10,13 +9,13 @@ import { rhythm } from "../utils/typography"
 class Blog extends React.Component {
   render() {
     const { data } = this.props
-    const siteTitle = "Welcome to my blog"
+    const siteTitle =
+      "You are entering the Developer's Dungeon, mind your steps"
     const posts = data.allMdx.edges
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="All posts" />
-        <Bio />
         <div style={{ margin: "20px 0 40px" }}>
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
