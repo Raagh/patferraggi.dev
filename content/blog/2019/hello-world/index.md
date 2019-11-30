@@ -1,5 +1,5 @@
 ---
-path: "hello-world/index"
+path: "{{year}}/{{slug}}/index"
 title: Hello World
 date: "2019-11-26T22:12:03.284Z"
 description: "This is the hello world for my new blog"
