@@ -1,5 +1,5 @@
 ---
-path: test-path/path
+path: path
 date: 2019-11-30T20:28:13.000Z
 title: Test path
 description: testing the path
