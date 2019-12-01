@@ -34,9 +34,10 @@ function Bio() {
               }}
             />
             <p>
-              Written by <strong>{author}</strong> a self-taught developer from
-              Argentina currently living in Belgium. I am passionate about
-              improving my technical skills and helping others do the same.
+              Written by me - <strong>{author}</strong> - I am a self-taught
+              developer from Argentina currently living in Belgium. I am
+              passionate about improving my technical skills and helping others
+              do the same.
               {` `}
               <a href={`https://twitter.com/${social.twitter}`}>
                 You should follow me on Twitter
