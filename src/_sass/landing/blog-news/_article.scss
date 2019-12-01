@@ -35,11 +35,11 @@
 
 @include for-phone-only {
   .article-container {
-    height: 10rem;
     padding: 1rem 0 0 0;
   }
 
   .article-container__title {
+    padding-bottom: 2rem;
     font-size: 26px;
     line-height: 26px;
   }
