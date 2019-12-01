@@ -21,7 +21,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/content/blog/2019`,
+        path: `${__dirname}/content/blog`,
         name: `blog`,
       },
     },
@@ -71,7 +71,7 @@ module.exports = {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `Patricio Ferraggi Ares`,
-        short_name: `PFA`,
+        short_name: `Patricio Ferraggi`,
         start_url: `/`,
         background_color: `#ffffff`,
         theme_color: `#663399`,

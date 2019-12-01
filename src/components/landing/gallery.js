@@ -6,7 +6,7 @@ export default () => {
   const data = useStaticQuery(graphql`
     query {
       allFile(
-        filter: { relativePath: { regex: "/(1)|(2)|(3)/" } }
+        filter: { name: { regex: "/(1)|(2)|(3)/" } }
         sort: { fields: name }
       ) {
         nodes {
