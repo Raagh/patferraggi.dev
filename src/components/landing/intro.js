@@ -1,11 +1,12 @@
 import React from "react"
 import styled from "styled-components"
 import device from "../shared/device"
+import globalStyles from "../shared/global-styles"
 
 const IntroWrapper = styled.section`
   grid-area: intro;
   font-size: 64px;
-  font-family: "Inter Medium";
+  font-family: ${globalStyles.fontFamilyMedium};
   line-height: 64px;
   width: 90%;
 

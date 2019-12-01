@@ -1,7 +1,39 @@
 import React from "react"
+import styled from "styled-components"
+import globalStyles from "../shared/global-styles"
+import device from "../shared/device"
+
+const ContactWrapper = styled.section`
+  grid-area: contact;
+  padding-top: 5rem;
+  font-size: 64px;
+  width: 100%;
+  font-family: ${globalStyles.fontFamilyMedium};
+  line-height: 64px;
+  color: ${globalStyles.primaryColor};
+
+  & p:nth-child(1) {
+    padding-bottom: 3rem;
+  }
+
+  & a {
+    color: ${globalStyles.secondaryColor};
+    word-break: break-all;
+  }
+
+  @media ${device.phone} {
+    padding-top: 4rem;
+    font-size: 32px;
+    line-height: 32px;
+
+    & p:nth-child(1) {
+      padding-bottom: 2rem;
+    }
+  }
+`
 
 export default () => (
-  <section id="contact" className="contact-container">
+  <ContactWrapper id="contact">
     <p>
       You can check my{" "}
       <a
@@ -25,5 +57,5 @@ export default () => (
       patferraggi@gmail.com
     </a>{" "}
     <p className="whitespace"></p>
-  </section>
+  </ContactWrapper>
 )
