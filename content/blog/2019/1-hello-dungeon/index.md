@@ -1,7 +1,7 @@
 ---
 path: "{{year}}/{{slug}}/index"
 title: Hello Dungeon
-date: "2019-11-26"
+date: "0001-01-01"
 description: "This is the hello world for my new dungeon"
 ---
 

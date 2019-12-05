@@ -40,7 +40,11 @@ export default props => {
           {props.skills.map(skill => {
             const skillIndex = props.skills.indexOf(skill)
 
-            return <li key={skillIndex}>{skill}</li>
+            return (
+              <li key={skillIndex} rel="nofollow">
+                {skill}
+              </li>
+            )
           })}
         </ul>
         <a href="https://rydoo.com" target="_blank" rel="noopener noreferrer">
