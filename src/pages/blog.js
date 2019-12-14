@@ -10,12 +10,12 @@ class Blog extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle =
-      "You are entering the Developer's Dungeon, mind your steps"
+      "Estas entrando al Calabozo del Desarrollador, cuida tus pasos"
     const posts = data.allMdx.edges
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="All posts" />
+        <SEO title="Todos los artículos" />
         <div style={{ margin: "20px 0 40px" }}>
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
@@ -44,7 +44,7 @@ class Blog extends React.Component {
           })}
         </div>
         <Link to="/">
-          <Button marginTop="85px">Go Home</Button>
+          <Button marginTop="85px">Home</Button>
         </Link>
       </Layout>
     )

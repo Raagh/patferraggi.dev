@@ -34,13 +34,13 @@ function Bio() {
               }}
             />
             <p>
-              Written by me - <strong>{author}</strong> - I am a self-taught
-              developer from Argentina currently living in Belgium. I am
-              passionate about improving my technical skills and helping others
-              do the same.
+              Escrito por mi - <strong>{author}</strong> - Soy un desarrollador
+              autodidacta de Argentina que actualmente vive y trabaja en
+              Bélgica. Mi pasión es autosuperarme mientras ayudo a los demás a
+              hacer lo mismo.
               {` `}
               <a href={`https://twitter.com/${social.twitter}`}>
-                You should follow me on Twitter
+                Deberías seguirme en Twitter
               </a>
             </p>
           </Container>
