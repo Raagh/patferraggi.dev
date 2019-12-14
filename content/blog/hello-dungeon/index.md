@@ -1,5 +1,5 @@
 ---
-path: "{{year}}/{{slug}}/index"
+path: "{{year}}/{{month}}/{{slug}}/index"
 title: Hello Dungeon
 date: "0001-01-01"
 description: "This is the hello world for my new dungeon"

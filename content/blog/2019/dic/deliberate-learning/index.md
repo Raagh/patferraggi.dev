@@ -1,5 +1,5 @@
 ---
-path: "{{year}}/{{slug}}/index"
+path: "{{year}}/{{month}}/{{slug}}/index"
 title: Deliberate Learning!, take control of your career.
 date: "2019-12-01"
 description: "Don't fall behind, is up to you to improve"
