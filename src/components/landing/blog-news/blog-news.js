@@ -3,6 +3,7 @@ import Article from "./article"
 import styled from "styled-components"
 import device from "../../shared/device"
 import globalStyles from "../../shared/global-styles"
+import { useStaticQuery, graphql } from "gatsby"
 
 const BlogNewsWrapper = styled.div`
   grid-area: blog-news;
@@ -42,50 +43,56 @@ const BlogNewsArticles = styled.section`
   }
 `
 
-export default () => (
-  <BlogNewsWrapper id="blog">
-    <BlogNewsText>
-      I also have a blog,
-      <BlogNewsLink href="/blog"> read it here</BlogNewsLink>
-    </BlogNewsText>
-    <BlogNewsArticles>
-      {articles.map(article => {
-        const articleIndex = articles.indexOf(article)
-        const isLastElement = true
+export default () => {
+  const articles = useStaticQuery(graphql`
+    query {
+      site {
+        siteMetadata {
+          title
+        }
+      }
+      allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+        edges {
+          node {
+            excerpt
+            fields {
+              slug
+            }
+            frontmatter {
+              date(formatString: "MMMM DD, YYYY")
+              title
+              description
+            }
+          }
+        }
+      }
+    }
+  `).allMdx.edges
 
-        return (
-          <Article
-            key={articleIndex}
-            title={article.title}
-            link={article.link}
-            isActive={articleIndex === 0}
-            creationDate={article.creationDate}
-            addDivider={isLastElement}
-          />
-        )
-      })}
-    </BlogNewsArticles>
-  </BlogNewsWrapper>
-)
+  return (
+    <BlogNewsWrapper id="blog">
+      <BlogNewsText>
+        I also have a blog in Spanish, if you re interested you can
+        <BlogNewsLink href="/blog"> read it here</BlogNewsLink>
+      </BlogNewsText>
+      <BlogNewsArticles>
+        {articles.slice(0, 3).map(item => {
+          const node = item.node
+          const articleIndex = articles.indexOf(item)
+          const isLastElement = true
 
-const articles = [
-  {
-    title: "How to become an amazing software developer!.",
-    creationDate: "Oct 24, 2019",
-    link:
-      "https://dev.to/patferraggi/how-to-become-an-amazing-software-developer-things-i-wish-i-knew-when-i-started-28c5",
-  },
-  {
-    title: "5 books every developer should read, and some extras.",
-    creationDate: "Nov 2, 2019",
-    link:
-      "https://dev.to/patferraggi/5-books-every-developer-should-read-and-some-extras-377n",
-  },
-  {
-    title:
-      "How I found a problem with Angular unit testing and decided to fix it myself.",
-    creationDate: "July 1, 2019",
-    link:
-      "https://medium.com/@patferraggi/how-i-found-a-problem-with-angular-unit-testing-and-decided-to-fix-it-myself-7c00b58d57a7",
-  },
-]
+          return (
+            <Article
+              key={articleIndex}
+              title={node.frontmatter.title}
+              link={`/blog` + node.fields.slug}
+              isActive={articleIndex === 0}
+              creationDate={node.frontmatter.date}
+              addDivider={isLastElement}
+            />
+          )
+        })}
+      </BlogNewsArticles>
+    </BlogNewsWrapper>
+  )
+}

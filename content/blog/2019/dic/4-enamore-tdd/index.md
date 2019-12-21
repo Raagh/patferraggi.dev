@@ -24,7 +24,7 @@ Fue entonces cuando lei Test Driven Development By Example [Kent Beck], y mi men
 
 ---
 
-Comencemos de a poco:
+Un poco de contexto:
 
 TDD es un método para dejar que tus tests guíen el diseño de tu software, de seguir este proceso tu código se volverá Desacoplado y Testeable. Usualmente cuando queremos desarrollar algo nuevo nos metemos directamente a teclear y tratamos de sacar algo funcionando y luego escribimos un test para "probar" que funciona, en TDD arrancamos al revés.
 
@@ -38,24 +38,24 @@ TDD es un método para dejar que tus tests guíen el diseño de tu software, de 
 
 Ahora que entendemos el proceso básico veamos esos momentos en los que me enamore:
 
-** Primer Amor **
+** Amor a primera vista **
 
 Básicamente por seguir este método nosotros comenzamos siempre con un escenario que sabemos que no funciona y logramos hacerlo funcionar, esto presenta el primer beneficio que amo de TDD, ** CONFIANZA **
 
 Cuando vos viste fallar tu código y luego al realizar los cambios correspondientes lo ves pasar, esto te da plena confianza de que tu implementation hace lo que vos esperas que haga, es una diferencia sutil pero que notas inmediatamente al momento de hacer un gran Refactor, tu suite de test te genera tal confianza que sabes que si rompes algo, los tests te lo van a informar.
 
-** Segundo Amor **
+** Segunda cita **
 
 Usualmente al desarrollar una nueva tarea, tienes que modificar código preexistente, cambias numerosas cosas y luego llega a una parte del proceso en que algo que se encontraba funcionando, ya no lo hace mas, lo peor es que nunca sabemos exactamente qué cambio o en qué momento eso dejo de andar, pasas mucho tiempo buscando ese cambio equivocado e incluso a veces terminas volviendo todos tus cambios atrás y comenzando de cero.
 Es en esta situación cuando se me presentó otro beneficio de TDD, ** ERRORES DE CORTO PLAZO**. Al encontrarse constantemente en un proceso de Red Green Refactor, en el que escribes tests y estos guían la implementación de tu solución, es un proceso rápido en el que los cambios se hacen en pequeños incrementos, hasta hace solo unos cambios, el código daba Verde y ahora da Rojo, entonces se vuelve trivial el encontrar que parte fue la que causó el error, ya que solo tienes que recordar los cambios que hiciste hace unos pocos segundos.
 
-** Tercer Amor **
+** Tercera cita **
 
 Cuando pase por esa etapa en la que escribía los tests después, muchas veces se presentaba un error que provocaba que mi confianza en la suite de tests bajase, con el paso del tiempo note que esto sucedía debido a que los tests se encontraban mal planteados desde el comienzo, al escribir los tests después del código inconscientemente estos unicamente pasaban por los "Caminos Fáciles", lugares felices del código donde todo funciona, o lo hace la mayoría del tiempo, esta situación me dio otro beneficio de TDD, ** PENSAR EN CASOS EXTREMOS **.
 
 TDD te obliga primero a pensar en los tests, esto hace que puedas concentrarte en cómo debería funcionar tu programa, y también cómo no debería hacerlo, al utilizar el testing como prueba comprobable es mucho más sencillo pensar en estos casos extremos en los que el código tiene que comportarse de maneras específicas, nuestra mente trata de buscar esos lugares y verlos dar Verde.
 
-** Cuarto Amor **
+** Mudándonos juntos **
 
 Por último, y este se encuentra relacionado al anterior. Cuando empecé a realizar los tests luego de la implementation, mi tarea como desarrollador se volvió tediosa y aburrida, por momentos maldije el sentir esa responsabilidad de testear mi código, este aburrimiento provocó que deje de testear caminos complicados o ignore ciertos casos específicos en mi desarrollo. TDD llegó al rescate para solucionar ese problema, hacer los tests primero y verlos fallar género en mi una adicción, la adicción de encontrar errores y luego corregirlos, saber con certeza que esos errores no volverían a aparecer (al menos no de la misma manera) y fue aquí que se me presentó el último beneficio, TDD hizo que ** EL TESTING SEA DIVERTIDO **.
 
