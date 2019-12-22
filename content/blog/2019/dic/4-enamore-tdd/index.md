@@ -1,6 +1,6 @@
 ---
 path: "{{year}}/{{month}}/{{slug}}/index"
-title: 4 razones por las que me enamore del Test Driven Development.
+title: 4 razones por las que me enamoré del Test Driven Development.
 date: "2019-12-20"
 description: "y vos también te vas enamorar"
 ---
@@ -36,7 +36,7 @@ TDD es un método para dejar que tus tests guíen el diseño de tu software, de 
 
 ![Red Green Refactor](./red-green-refactor.jpg)
 
-Ahora que entendemos el proceso básico veamos esos momentos en los que me enamore:
+Ahora que entendemos el proceso básico veamos esos momentos en los que me enamoré:
 
 ** Amor a primera vista **
 
