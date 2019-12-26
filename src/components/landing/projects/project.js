@@ -1,6 +1,9 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
+import styled from "styled-components"
+import globalStyles from "../../shared/global-styles"
+import device from "../../shared/device"
 
 export default props => {
   const data = useStaticQuery(graphql`
@@ -27,16 +30,66 @@ export default props => {
     }
   `)
 
+  const ProjectWrapper = styled.section`
+    display: flex;
+    flex-direction: row-reverse;
+
+    @media ${device.phone} {
+      display: block;
+    }
+  `
+
+  const ProjectWrapperImage = styled(Img)`
+    width: 80%;
+    height: auto;
+    max-width: 600px;
+    z-index: 1;
+
+    @media ${device.phone} {
+      width: 100%;
+    }
+  `
+
+  const ProjectWrapperProject = styled.div`
+    padding-top: 2rem;
+    font-size: 24px;
+    line-height: 24px;
+    display: flex;
+    flex-direction: column;
+    font-family: ${globalStyles.fontFamilyRegular};
+    justify-content: center;
+    width: 50%;
+
+    & a {
+      padding-top: 1.5rem;
+      color: ${globalStyles.primaryColor};
+      line-height: 24px;
+      font-size: 18px;
+    }
+
+    @media ${device.phone} {
+      width: 100%;
+    }
+  `
+
+  const ProjectName = styled.div`
+    color: ${globalStyles.primaryColor};
+    padding-bottom: 1rem;
+  `
+
+  const ProjectSkills = styled.ul`
+    color: ${globalStyles.inactiveColor};
+  `
+
   return (
-    <div className="project-container">
-      <Img
-        className="project-container__image"
+    <ProjectWrapper>
+      <ProjectWrapperImage
         fluid={data.file.childImageSharp.fluid}
         alt="project-example"
-      ></Img>
-      <div className="project-container__project">
-        <div className="project-container__name">{props.name}</div>
-        <ul className="project-container__skills">
+      ></ProjectWrapperImage>
+      <ProjectWrapperProject>
+        <ProjectName>{props.name}</ProjectName>
+        <ProjectSkills>
           {props.skills.map(skill => {
             const skillIndex = props.skills.indexOf(skill)
 
@@ -46,11 +99,11 @@ export default props => {
               </li>
             )
           })}
-        </ul>
+        </ProjectSkills>
         <a href="https://rydoo.com" target="_blank" rel="noopener noreferrer">
           See project
         </a>
-      </div>
-    </div>
+      </ProjectWrapperProject>
+    </ProjectWrapper>
   )
 }
