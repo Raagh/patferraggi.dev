@@ -70,6 +70,6 @@ Uff ahora que lo escribo en papel parece ser muchísimo verdad? de cualquier man
 
 Si te parece que mis metas son interesantes y te gustaría seguirlas te invito a hacerlo y ayudarnos en el proceso.
 Si tienes metas distintas te invito a detallar acciones concretas de cómo pensás lograrlas y a compartirlas conmigo.
-Si pensás que hay cosas que podría hacer diferente para tener un mejor resultado, no dudes en decírmelo :smiley:
+Si pensás que hay cosas que podría hacer diferente para tener un mejor resultado, no dudes en decírmelo &#128512;
 
-Finalmente gracias por tomarte tu tiempo para leer este post, te deseo un muy feliz año nuevo :tada:.
+Finalmente gracias por tomarte tu tiempo para leer este post, te deseo un muy feliz año nuevo.
