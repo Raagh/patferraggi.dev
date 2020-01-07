@@ -3,7 +3,22 @@ import GithubIcon from "../../../content/assets/icons/github.png"
 import LinkedinIcon from "../../../content/assets/icons/linkedin.png"
 import Logo from "../../../content/assets/logo.svg"
 import { Link } from "gatsby"
+import styled from "styled-components"
+import device from "../shared/device"
 const scrollToElement = require("scroll-to-element")
+
+const LogoWrapper = styled.img`
+  grid-area: logo;
+  padding-top: 2rem;
+
+  @media ${device.phone} {
+    padding-bottom: 0;
+  }
+
+  @media ${device.desktop} {
+    padding-bottom: 3.2rem;
+  }
+`
 
 const links = [
   { name: "intro", to: "/#top", className: "navbar__link--active" },
@@ -80,7 +95,7 @@ export default () => {
     <nav id="navbar-container" className="navbar">
       <nav id="nav-mobile" className="navbar--mobile">
         <div className="navbar-stretch">
-          <img id="logo" alt="logo" className="logo" src={Logo}></img>
+          <LogoWrapper id="logo" alt="logo" src={Logo}></LogoWrapper>
           <button onClick={handleOpenCloseBurgerIcon}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -100,7 +115,7 @@ export default () => {
       </nav>
 
       <div id="nav-desktop" className="navbar--desktop">
-        <img id="logo" alt="logo" className="logo" src={Logo}></img>
+        <LogoWrapper id="logo" alt="logo" src={Logo}></LogoWrapper>
         {renderLinks(links)}
         <li key="eng" className="navbar__link--separated">
           eng

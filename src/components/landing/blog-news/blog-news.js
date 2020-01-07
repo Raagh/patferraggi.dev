@@ -72,9 +72,11 @@ export default () => {
   return (
     <BlogNewsWrapper id="blog">
       <BlogNewsText>
-        I also have a blog in Spanish, if you re interested you can
-        <BlogNewsLink href="/blog"> read it here</BlogNewsLink>
+        I also have a blog, you can read it in Spanish
+        <BlogNewsLink href="/blog"> here</BlogNewsLink> or in English on
+        <BlogNewsLink href="https://dev.to/patferraggi"> Dev.to</BlogNewsLink>
       </BlogNewsText>
+      <BlogNewsText>This are my latest blog posts:</BlogNewsText>
       <BlogNewsArticles>
         {articles.slice(0, 3).map(item => {
           const node = item.node
