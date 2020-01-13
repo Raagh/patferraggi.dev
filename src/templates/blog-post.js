@@ -5,7 +5,26 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import Bio from "../components/blog/bio"
 import Layout from "../components/blog/layout"
 import SEO from "../components/blog/seo"
-import { rhythm, scale } from "../utils/typography"
+
+import { createGlobalStyle } from "styled-components"
+import InterRegular from "./../../content/assets/fonts/Inter-Regular.otf"
+import InterMedium from "../../content/assets/fonts/Inter-Medium.otf"
+
+const BasicStyle = createGlobalStyle`
+  body{
+    font-family: "Inter Medium"
+  }
+
+  @font-face {
+    font-family: "Inter Regular";
+    src: url(${InterRegular}) format("opentype");
+  }
+
+  @font-face {
+    font-family: "Inter Medium";
+    src: url(${InterMedium}) format("opentype");
+  }
+`
 
 class BlogPostTemplate extends React.Component {
   render() {
@@ -15,6 +34,7 @@ class BlogPostTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
+        <BasicStyle></BasicStyle>
         <SEO
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
@@ -22,20 +42,13 @@ class BlogPostTemplate extends React.Component {
         <h1>{post.frontmatter.title}</h1>
         <p
           style={{
-            ...scale(-1 / 5),
             display: `block`,
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
           }}
         >
           {post.frontmatter.date}
         </p>
         <MDXRenderer>{post.body}</MDXRenderer>
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
+        <hr />
         <Bio />
 
         <ul
