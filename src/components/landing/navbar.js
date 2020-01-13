@@ -5,6 +5,7 @@ import Logo from "../../../content/assets/logo.svg"
 import { Link } from "gatsby"
 import styled from "styled-components"
 import device from "../shared/device"
+import globalStyles from "../shared/global-styles"
 const scrollToElement = require("scroll-to-element")
 
 const LogoWrapper = styled.img`
@@ -27,6 +28,124 @@ const links = [
   { name: "projects", to: "/#projects" },
   { name: "contact", to: "/#contact" },
 ]
+
+const navbarMobileStyles = () => `
+  .navbar--desktop {
+    display: none !important;
+  }
+
+  & a {
+    line-height: 30px;
+  }
+
+  .navbar--mobile {
+    display: block;
+  }
+`
+
+const NavbarContainer = styled.nav`
+  display: flex;
+  flex-direction: column;
+  font-family: ${globalStyles.fontFamilyMedium};
+  grid-area: nav;
+  list-style: none;
+  font-size: 18px;
+  margin: 0;
+  position: fixed;
+  z-index: 9999;
+
+  & a {
+    color: ${globalStyles.primaryColor};
+    padding: 0.1rem 0 0;
+    line-height: 18px;
+  }
+
+  & button {
+    background: none !important;
+    border: none;
+    color: ${globalStyles.primaryColor};
+  }
+
+  .navbar__link--active {
+    color: ${globalStyles.secondaryColor} !important;
+  }
+
+  .navbar__link--separated {
+    padding-top: 15px;
+    color: ${globalStyles.secondaryColor} !important;
+  }
+
+  .navbar__link--separated-extra {
+    padding-top: 30px;
+  }
+
+  .navbar__link--external {
+    padding: 0 1rem 0 0;
+  }
+
+  .navbar__link--mobile {
+    width: 100%;
+    display: block;
+    padding: 0 0 0.5rem 0 !important;
+    line-height: 30px;
+    text-align: center;
+  }
+
+  .navbar-links-container {
+    background-color: ${globalStyles.backgroundColor};
+    flex-direction: column;
+    position: fixed;
+    width: 100vw;
+    left: 0;
+    display: none;
+  }
+
+  .navbar-links-container--isOpen {
+    display: flex;
+  }
+
+  .navbar--desktop {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4.5rem;
+  }
+
+  .navbar--mobile {
+    height: 5rem;
+    background-color: ${globalStyles.backgroundColor};
+    position: fixed;
+    margin: 0 auto;
+    width: 100%;
+    padding-top: 0;
+    display: none;
+
+    & svg {
+      width: 32px;
+      height: 32px;
+    }
+  }
+
+  .navbar-stretch {
+    display: flex;
+    flex-direction: row;
+    padding-right: 11%;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+  }
+
+  @media ${device.phone} {
+    ${navbarMobileStyles}
+  }
+
+  @media ${device.tableLandscapeUntilDesktop} {
+    ${navbarMobileStyles}
+  }
+
+  @media ${device.tabletPortrait} {
+    ${navbarMobileStyles}
+  }
+`
 
 export default () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -92,7 +211,7 @@ export default () => {
   }
 
   return (
-    <nav id="navbar-container" className="navbar">
+    <NavbarContainer id="navbar-container">
       <nav id="nav-mobile" className="navbar--mobile">
         <div className="navbar-stretch">
           <LogoWrapper id="logo" alt="logo" src={Logo}></LogoWrapper>
@@ -146,6 +265,6 @@ export default () => {
           </a>
         </li>
       </div>
-    </nav>
+    </NavbarContainer>
   )
 }
