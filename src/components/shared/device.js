@@ -5,4 +5,5 @@ export default {
   laptop: `(min-width: 1024px)`,
   laptopL: `(min-width: 1440px)`,
   desktop: `(min-width: 2560px)`,
+  forBigDesktopDownExceptMobile: `(min-width: 667px) and (max-width: 1800px)`,
 }
