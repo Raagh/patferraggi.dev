@@ -2,7 +2,6 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 
-import Bio from "../components/blog/bio"
 import Layout from "../components/blog/layout"
 import SEO from "../components/blog/seo"
 import { rhythm, scale } from "../utils/typography"
@@ -44,7 +43,6 @@ class BlogPostTemplate extends React.Component {
         />
         <CommentCount config={disqusConfig} />
         <Disqus config={disqusConfig} />
-        <Bio />
         <ul
           style={{
             display: `flex`,

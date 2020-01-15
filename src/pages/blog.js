@@ -1,6 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-
+import Bio from "../components/blog/bio"
 import SEO from "../components/blog/seo"
 import Layout from "../components/blog/layout"
 import Button from "../components/blog/button"
@@ -16,6 +16,7 @@ class Blog extends React.Component {
     return (
       <Layout location={this.props.location} title={siteTitle}>
         <SEO title="Todos los artículos" />
+        <Bio />
         <div style={{ margin: "20px 0 40px" }}>
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug
