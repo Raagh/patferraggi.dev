@@ -1,6 +1,6 @@
 ---
 path: "{{year}}/{{month}}/{{slug}}/index"
-title: Programación Funcional para el desarrollador Orientado a Objectos
+title: Programación Funcional para el desarrollador Orientado a Objetos
 date: "2020-01-14"
 description: "Parte[0]"
 ---
