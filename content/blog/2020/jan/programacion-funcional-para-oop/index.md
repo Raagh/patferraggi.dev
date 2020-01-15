@@ -52,7 +52,7 @@ Debido a esto, cada vez que pasemos a esta función un número mayor a 3, nos va
 De este concepto sale una palabra mágica que escuchas mucho cuando alguien habla sobre la PF, las "Funciones Puras", me dirás, ¿que son las funciones puras? las funciones puras no son más que las funciones regulares en la PF, son funciones que no dependen o modifican el estado afuera de ellas mismas cuando se ejecutan, igual que la función que escribimos hace unos momentos, recibe un parámetro, computa y devuelve un resultado, eso es todo.
 Se lo que estás pensando:
 
-#####¿Y esto para que me sirve?
+#### ¿Y esto para que me sirve?
 
 1. Si una función siempre devuelve el mismo resultado para un mismo parámetro, entonces hacer _unit testing_ se vuelve una tarea extremadamente sencilla
 2. Si una función siempre devuelve el mismo resultado para un mismo parámetro, entonces lo resultados pueden ser "cacheados" para mejorar la _performance_, esto se conoce como [Memoization](https://en.wikipedia.org/wiki/Memoization), es un concepto muy común en la PF y muchas librerías incluyen funciones para hacer esto, como por ejemplo [memoizeWith en Ramda.js](https://ramdajs.com/docs/#memoizeWith)

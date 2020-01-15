@@ -6,12 +6,18 @@ import Bio from "../components/blog/bio"
 import Layout from "../components/blog/layout"
 import SEO from "../components/blog/seo"
 import { rhythm, scale } from "../utils/typography"
+import { Disqus, CommentCount } from "gatsby-plugin-disqus"
 
 class BlogPostTemplate extends React.Component {
   render() {
     const post = this.props.data.mdx
     const siteTitle = "El calabozo del desarrollador"
     const { previous, next } = this.props.pageContext
+
+    let disqusConfig = {
+      identifier: post.id,
+      title: post.title,
+    }
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -36,8 +42,9 @@ class BlogPostTemplate extends React.Component {
             marginBottom: rhythm(1),
           }}
         />
+        <CommentCount config={disqusConfig} />
+        <Disqus config={disqusConfig} />
         <Bio />
-
         <ul
           style={{
             display: `flex`,
@@ -81,6 +88,9 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       body
+      fields {
+        slug
+      }
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
