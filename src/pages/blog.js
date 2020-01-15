@@ -6,26 +6,6 @@ import Layout from "../components/blog/layout"
 import Button from "../components/blog/button"
 import { rhythm } from "../utils/typography"
 
-import { createGlobalStyle } from "styled-components"
-import InterRegular from "./../../content/assets/fonts/Inter-Regular.otf"
-import InterMedium from "../../content/assets/fonts/Inter-Medium.otf"
-
-const BasicStyle = createGlobalStyle`
-  body{
-    font-family: "Inter Medium"
-  }
-
-  @font-face {
-    font-family: "Inter Regular";
-    src: url(${InterRegular}) format("opentype");
-  }
-
-  @font-face {
-    font-family: "Inter Medium";
-    src: url(${InterMedium}) format("opentype");
-  }
-`
-
 class Blog extends React.Component {
   render() {
     const { data } = this.props
@@ -35,7 +15,6 @@ class Blog extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <BasicStyle></BasicStyle>
         <SEO title="Todos los artículos" />
         <div style={{ margin: "20px 0 40px" }}>
           {posts.map(({ node }) => {
