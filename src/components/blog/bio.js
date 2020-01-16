@@ -43,7 +43,7 @@ function Bio() {
                 data-show-count="false"
                 data-size="large"
               >
-                Seguir a @patferraggi
+                Seguir a @${social.twitter}
               </a>
             </TextContainer>
           </Container>

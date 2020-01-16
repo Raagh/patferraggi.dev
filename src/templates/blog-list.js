@@ -5,12 +5,18 @@ import Layout from "../components/blog/layout"
 import Button from "../components/blog/button"
 import { rhythm } from "../utils/typography"
 
-class Blog extends React.Component {
+class BlogListTemplate extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle =
       "Estas entrando al Calabozo del Programador, cuida tus pasos"
     const posts = data.allMdx.edges
+    const { currentPage, numPages } = this.props.pageContext
+    const isFirst = currentPage === 1
+    const isLast = currentPage === numPages
+    const prevPage =
+      currentPage - 1 === 1 ? "/blog/" : "/blog/" + (currentPage - 1).toString()
+    const nextPage = "/blog/" + (currentPage + 1).toString()
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
@@ -42,6 +48,27 @@ class Blog extends React.Component {
             )
           })}
         </div>
+        <ul
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "space-between",
+            alignItems: "center",
+            listStyle: "none",
+            padding: 0,
+          }}
+        >
+          {!isFirst && (
+            <Link to={prevPage} rel="prev">
+              ← Anterior
+            </Link>
+          )}
+          {!isLast && (
+            <Link to={nextPage} rel="next">
+              Siguiente →
+            </Link>
+          )}
+        </ul>
         <Link to="/">
           <Button marginTop="85px">Home</Button>
         </Link>
@@ -50,16 +77,20 @@ class Blog extends React.Component {
   }
 }
 
-export default Blog
+export default BlogListTemplate
 
 export const pageQuery = graphql`
-  query {
+  query blogListQuery($skip: Int!, $limit: Int!) {
     site {
       siteMetadata {
         title
       }
     }
-    allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+    allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: $limit
+      skip: $skip
+    ) {
       edges {
         node {
           excerpt
