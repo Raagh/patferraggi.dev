@@ -5,7 +5,7 @@ date: "2019-12-31"
 description: "Metas y planes."
 ---
 
-![New year celebration](https://blogmedia.evbstatic.com/wp-content/uploads/wpmulti/sites/3/2016/10/19171356/new-years-eve1.jpg)
+![New year celebration](./2020.jpg)
 
 Bueno, otro año se termina. Si bien no creo en que las resoluciones de año nuevo sirvan para lograr cosas, si creo en ponerme compromisos.
 
