@@ -56,6 +56,7 @@ class BlogListTemplate extends React.Component {
             alignItems: "center",
             listStyle: "none",
             padding: 0,
+            margin: 0,
           }}
         >
           {!isFirst && (
