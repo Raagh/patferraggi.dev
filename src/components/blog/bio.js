@@ -26,16 +26,26 @@ function Bio() {
                 borderRadius: `50%`,
               }}
             />
-            <p>
-              Escrito por mi - <strong>{author}</strong> - Soy un desarrollador
-              autodidacta de Argentina que actualmente vive y trabaja en
-              Bélgica. Mi pasión es autosuperarme mientras ayudo a los demás a
-              hacer lo mismo.
-              {` `}
-              <a href={`https://twitter.com/${social.twitter}`}>
-                Deberías seguirme en Twitter
+            <TextContainer>
+              <div>
+                <strong>{author}</strong>
+              </div>
+              <p>
+                Soy un desarrollador autodidacta Argentino que actualmente vive
+                y trabaja en Bélgica. Intento mejorar diariamente para
+                convertirme en un mejor desarrollador, mientras ayudo a otros a
+                hacer lo mismo.
+                {` `}
+              </p>
+              <a
+                className="twitter-follow-button"
+                href="https://twitter.com/patferraggi"
+                data-show-count="false"
+                data-size="large"
+              >
+                Seguir a @patferraggi
               </a>
-            </p>
+            </TextContainer>
           </Container>
         )
       }}
@@ -65,6 +75,11 @@ const bioQuery = graphql`
 
 const Container = styled.div`
   display: flex;
+`
+
+const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
 `
 
 export default Bio

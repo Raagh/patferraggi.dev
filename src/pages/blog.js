@@ -1,6 +1,5 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Bio from "../components/blog/bio"
 import SEO from "../components/blog/seo"
 import Layout from "../components/blog/layout"
 import Button from "../components/blog/button"
@@ -10,13 +9,12 @@ class Blog extends React.Component {
   render() {
     const { data } = this.props
     const siteTitle =
-      "Estas entrando al Calabozo del Desarrollador, cuida tus pasos"
+      "Estas entrando al Calabozo del Programador, cuida tus pasos"
     const posts = data.allMdx.edges
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="El calabozo del desarrollador" />
-        <Bio />
+        <SEO title="El calabozo del programador" />
         <div style={{ margin: "20px 0 40px" }}>
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug

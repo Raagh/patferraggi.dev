@@ -1,13 +1,20 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
-
+import Bio from "../components/blog/bio"
 import Layout from "../components/blog/layout"
 import SEO from "../components/blog/seo"
 import { rhythm, scale } from "../utils/typography"
 import { Disqus, CommentCount } from "gatsby-plugin-disqus"
 
 class BlogPostTemplate extends React.Component {
+  componentDidMount() {
+    const twttr = window.twttr
+    if (typeof twttr.widgets !== "undefined") {
+      twttr.widgets.load()
+    }
+  }
+
   render() {
     const post = this.props.data.mdx
     const siteTitle = "El calabozo del desarrollador"
@@ -67,6 +74,7 @@ class BlogPostTemplate extends React.Component {
             )}
           </li>
         </ul>
+        <Bio />
       </Layout>
     )
   }
