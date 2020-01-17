@@ -7,10 +7,6 @@ import { rhythm, scale } from "../../utils/typography"
 class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props
-    const pageNumber = location.pathname
-      .split("/")
-      .filter(Boolean)
-      .pop()
     const header = (
       <h3
         style={{

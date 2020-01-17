@@ -89,7 +89,7 @@ export default () => {
   const data = useStaticQuery(graphql`
     query {
       allFile(
-        filter: { name: { regex: "/(1)|(2)|(3)/" } }
+        filter: { name: { regex: "/(gallery-1)|(gallery-2)|(gallery-3)/" } relativeDirectory: {eq: "images"}}
         sort: { fields: name }
       ) {
         nodes {
