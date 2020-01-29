@@ -6,13 +6,13 @@ import Gallery from "../components/landing/gallery"
 import Projects from "../components/landing/projects/projects"
 import Contact from "../components/landing/contact"
 import Navbar from "../components/landing/navbar"
-import Helmet from "../components/shared/helmet"
 import styled from "styled-components"
 import device from "../components/shared/device"
 import globalStyles from "../components/shared/global-styles"
 import { createGlobalStyle } from "styled-components"
 import InterRegular from "./../../content/assets/fonts/Inter-Regular.otf"
 import InterMedium from "../../content/assets/fonts/Inter-Medium.otf"
+import SEO from "../components/blog/seo"
 
 const BasicStyle = createGlobalStyle`
   a {
@@ -23,6 +23,7 @@ const BasicStyle = createGlobalStyle`
   html,
   body {
     height: 100%;
+    background-color: ${globalStyles.backgroundColor}
   }
 
   @font-face {
@@ -45,6 +46,7 @@ const LandingMain = styled.main`
   grid-template-columns: 10% auto 15%;
   position: relative;
   grid-template-rows: 12vh auto;
+  grid-column-gap: 2rem;
   grid-template-areas:
     "nav ."
     "nav intro"
@@ -83,9 +85,9 @@ const LandingMain = styled.main`
 
 export default () => (
   <LandingMain>
+    <SEO title="Patricio Ferraggi"></SEO>
     <BasicStyle></BasicStyle>
     <Navbar></Navbar>
-    <Helmet></Helmet>
     <Intro></Intro>
     <BlogNews></BlogNews>
     <About></About>

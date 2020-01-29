@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Patricio Ferraggi Ares`,
+    title: `Patricio Ferraggi`,
     author: `Patricio Ferraggi`,
     description: `Personal website and blog`,
     siteUrl: "https://www.patferraggi.dev",

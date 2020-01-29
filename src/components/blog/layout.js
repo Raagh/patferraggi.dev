@@ -6,7 +6,7 @@ import { rhythm, scale } from "../../utils/typography"
 
 class Layout extends React.Component {
   render() {
-    const { location, title, children } = this.props
+    const { title, children } = this.props
     const header = (
       <h3
         style={{

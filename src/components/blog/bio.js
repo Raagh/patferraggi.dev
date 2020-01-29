@@ -31,10 +31,8 @@ function Bio() {
                 <strong>{author}</strong>
               </div>
               <p>
-                Soy un desarrollador autodidacta Argentino que actualmente vive
-                y trabaja en Bélgica. Intento mejorar diariamente para
-                convertirme en un mejor desarrollador, mientras ayudo a otros a
-                hacer lo mismo.
+              Soy un desarrollador autodidacta Argentino que actualmente vive y trabaja en Bélgica. 
+              Intento mejorar diariamente para convertirme en un mejor desarrollador, mientras ayudo a otros a hacer lo mismo.
                 {` `}
               </p>
               <a

@@ -76,7 +76,7 @@ export default () => {
         <BlogNewsLink href="/blog"> here</BlogNewsLink> or in English on
         <BlogNewsLink href="https://dev.to/patferraggi"> Dev.to</BlogNewsLink>
       </BlogNewsText>
-      <BlogNewsText>This are my latest blog posts:</BlogNewsText>
+      <BlogNewsText>These are my latest blog posts:</BlogNewsText>
       <BlogNewsArticles>
         {articles.slice(0, 3).map(item => {
           const node = item.node
