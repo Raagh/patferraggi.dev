@@ -3,7 +3,6 @@ import { Link, graphql } from "gatsby"
 import SEO from "../components/blog/seo"
 import Layout from "../components/blog/layout"
 import Button from "../components/blog/button"
-import { rhythm } from "../utils/typography"
 
 class BlogListTemplate extends React.Component {
   render() {
@@ -26,11 +25,7 @@ class BlogListTemplate extends React.Component {
             const title = node.frontmatter.title || node.fields.slug
             return (
               <div key={node.fields.slug}>
-                <h3
-                  style={{
-                    marginBottom: rhythm(1 / 4),
-                  }}
-                >
+                <h3>
                   <Link
                     style={{ boxShadow: `none` }}
                     to={`blog${node.fields.slug}`}

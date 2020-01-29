@@ -4,7 +4,6 @@ import { MDXRenderer } from "gatsby-plugin-mdx"
 import Bio from "../components/blog/bio"
 import Layout from "../components/blog/layout"
 import SEO from "../components/blog/seo"
-import { rhythm, scale } from "../utils/typography"
 import { Disqus, CommentCount } from "gatsby-plugin-disqus"
 
 class BlogPostTemplate extends React.Component {
@@ -34,20 +33,13 @@ class BlogPostTemplate extends React.Component {
         <h1>{post.frontmatter.title}</h1>
         <p
           style={{
-            ...scale(-1 / 5),
             display: `block`,
-            marginBottom: rhythm(1),
-            marginTop: rhythm(-1),
           }}
         >
           {post.frontmatter.date}
         </p>
         <MDXRenderer>{post.body}</MDXRenderer>
-        <hr
-          style={{
-            marginBottom: rhythm(1),
-          }}
-        />
+        <hr/>
         <CommentCount config={disqusConfig} />
         <Disqus config={disqusConfig} />
         <ul

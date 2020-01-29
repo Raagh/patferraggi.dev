@@ -36,17 +36,13 @@
     "gatsby-source-filesystem": "^2.0.29",
     "gatsby-transformer-sharp": "^2.1.18",
     "netlify-cms-app": "^2.9.1",
+    "normalize.css": "^8.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
     "react-helmet": "^5.2.0",
     "react-switch": "^5.0.0",
-    "react-typography": "^0.16.19",
     "scroll-to-element": "^2.0.3",
-    "styled-components": "^4.2.0",
-    "typeface-merriweather": "0.0.72",
-    "typeface-montserrat": "0.0.54",
-    "typography": "^0.16.19",
-    "typography-theme-wordpress-2016": "^0.16.19"
+    "styled-components": "^4.2.0"
   },
   "devDependencies": {
     "prettier": "^1.17.0"
