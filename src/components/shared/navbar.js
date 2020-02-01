@@ -114,7 +114,7 @@ export default () => {
           </button>
         </NavbarIconsContainer>
 
-        <Sidebar links={links} isOpen={isOpen}></Sidebar>
+        <Sidebar links={links} isOpen={isOpen} setIsOpen={setIsOpen}></Sidebar>
       </NavbarContainer>
     </Headroom>
   )
