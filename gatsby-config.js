@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
-    title: `Patricio Ferraggi`,
-    author: `Patricio Ferraggi`,
+    title: `Patricio Ferraggi Ares`,
+    author: `Patricio Ferraggi Ares`,
     description: `Personal website and blog`,
     siteUrl: "https://www.patferraggi.dev",
     social: {
@@ -76,7 +76,7 @@ module.exports = {
         theme_color: `#663399`,
         display: `minimal-ui`,
         // edit below
-        icon: `content/assets/images/gatsby-icon.png`,
+        icon: `content/assets/images/pfa-icon.png`,
       },
     },
     {

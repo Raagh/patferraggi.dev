@@ -12,6 +12,4 @@ export default {
   inactiveColor: grey,
   fontFamilyMedium: interMedium,
   fontFamilyRegular: interRegular,
-  externalPadding: "5rem",
-  internalPadding: "3rem",
 }

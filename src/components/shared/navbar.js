@@ -2,7 +2,7 @@ import React from "react"
 // import { Link } from "gatsby"
 import Headroom from "react-headroom"
 import styled from "styled-components"
-import GithubIcon from "../../../content/assets/icons/github.png"
+import GithubIcon from "../../../content/assets/icons/github.svg"
 import LinkedinIcon from "../../../content/assets/icons/linkedin.png"
 import BurgerMenu from "../../../content/assets/icons/hamburger-menu.svg"
 import Logo from "../../../content/assets/logo.svg"
@@ -28,7 +28,7 @@ const NavbarContainer = styled.nav`
   margin-left: auto;
   margin-right: auto;
   max-width: 1660px;
-  padding: 1.5rem;
+  padding: 2rem;
 
   & svg {
     width: 32px;
@@ -65,6 +65,7 @@ const NavbarIconsContainer = styled.div`
 `
 
 const NavbarIconPadding = { padding: "0 2rem 0 0" }
+const IconSize = { width: "18px", height: "18px" }
 
 export default () => {
   return (
@@ -82,6 +83,7 @@ export default () => {
               className="navbar__link--external"
               alt="linkedin link"
               src={LinkedinIcon}
+              style={IconSize}
             />
           </a>
           <a
@@ -94,6 +96,7 @@ export default () => {
               className="navbar__link--external"
               alt="github link"
               src={GithubIcon}
+              style={IconSize}
             />
           </a>
           <button style={NavbarIconPadding}>

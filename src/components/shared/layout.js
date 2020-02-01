@@ -47,12 +47,12 @@ const MainContainer = styled.main`
 const InternalContainer = styled.div`
   max-width: 1660px;
   margin: auto;
-  padding: 1.5rem;
+  padding: 2rem;
 `
 
 export default ({ children }) => (
   <MainContainer>
-    <SEO title="Patricio Ferraggi"></SEO>
+    <SEO title="Patricio Ferraggi Ares"></SEO>
     <GlobalStyle></GlobalStyle>
     <Navbar></Navbar>
     <InternalContainer>{children}</InternalContainer>

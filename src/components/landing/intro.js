@@ -14,10 +14,10 @@ const IntroWrapper = styled.section`
   line-height: 64px;
   letter-spacing: -2.2528px;
   width: 80%;
-  padding: 6rem 0 6rem 0;
+  padding-top: 3.5rem;
 
   @media ${device.small} {
-    padding: 2rem 0 2rem 0;
+    padding-top: 0;
     font-size: 1.5em;
     line-height: 30px;
     letter-spacing: -1.13806px;
