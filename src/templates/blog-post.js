@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Bio from "../components/blog/bio"
 import Layout from "../components/blog/layout"
-import SEO from "../components/blog/seo"
+import SEO from "../components/shared/seo"
 import { Disqus, CommentCount } from "gatsby-plugin-disqus"
 
 class BlogPostTemplate extends React.Component {
@@ -39,7 +39,7 @@ class BlogPostTemplate extends React.Component {
           {post.frontmatter.date}
         </p>
         <MDXRenderer>{post.body}</MDXRenderer>
-        <hr/>
+        <hr />
         <CommentCount config={disqusConfig} />
         <Disqus config={disqusConfig} />
         <ul

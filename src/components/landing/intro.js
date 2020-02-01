@@ -1,7 +1,7 @@
 import React from "react"
 import styled from "styled-components"
-import device from "../shared/device"
-import globalStyles from "../shared/global-styles"
+import device from "../../config/device"
+import globalStyles from "../../config/style-variables"
 import iconSet from "../../../content/assets/icons/selection.json"
 import IcomoonReact from "icomoon-react"
 

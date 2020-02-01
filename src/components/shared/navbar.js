@@ -6,8 +6,8 @@ import GithubIcon from "../../../content/assets/icons/github.png"
 import LinkedinIcon from "../../../content/assets/icons/linkedin.png"
 import BurgerMenu from "../../../content/assets/icons/hamburger-menu.svg"
 import Logo from "../../../content/assets/logo.svg"
-import globalStyles from "../shared/global-styles"
-import device from "../shared/device"
+import globalStyles from "../../config/style-variables"
+import device from "../../config/device"
 
 const LogoWrapper = styled.img`
   grid-area: logo;
