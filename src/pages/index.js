@@ -47,7 +47,7 @@ const LandingMain = styled.main`
 `
 
 const LandingInternalContainer = styled.div`
-  max-width: 1452px;
+  max-width: 1660px;
   margin: auto;
   padding: 1.5rem;
 `

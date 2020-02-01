@@ -27,7 +27,7 @@ const NavbarContainer = styled.nav`
   background-color: ${globalStyles.backgroundColor};
   margin-left: auto;
   margin-right: auto;
-  max-width: 1452px;
+  max-width: 1660px;
   padding: 1.5rem;
 
   & svg {
