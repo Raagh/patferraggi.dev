@@ -18,10 +18,8 @@ const BasicStyle = createGlobalStyle`
 
   html,
   body {
-    height: 100%;
+    height: 1920px;
     background-color: ${globalStyles.backgroundColor};
-    margin:auto;
-    max-width: 1660px;
   }
 
   @font-face {
@@ -43,13 +41,15 @@ const BasicStyle = createGlobalStyle`
 const LandingMain = styled.main`
   background-color: ${globalStyles.backgroundColor} !important;
   color: ${globalStyles.primaryColor} !important;
-  margin: 3rem 6.5rem auto 6.5rem;
+  margin-bottom: auto;
   display: flex;
   flex-direction: column;
+`
 
-  @media ${device.small} {
-    margin: 2rem;
-  }
+const LandingInternalContainer = styled.div`
+  max-width: 1452px;
+  margin: auto;
+  padding: 1.5rem;
 `
 
 export default () => (
@@ -57,6 +57,8 @@ export default () => (
     <SEO title="Patricio Ferraggi"></SEO>
     <BasicStyle></BasicStyle>
     <Navbar></Navbar>
-    <Intro></Intro>
+    <LandingInternalContainer>
+      <Intro></Intro>
+    </LandingInternalContainer>
   </LandingMain>
 )

@@ -1,6 +1,6 @@
 import React from "react"
 // import { Link } from "gatsby"
-// import Headroom from "react-headroom"
+import Headroom from "react-headroom"
 import styled from "styled-components"
 import GithubIcon from "../../../content/assets/icons/github.png"
 import LinkedinIcon from "../../../content/assets/icons/linkedin.png"
@@ -25,9 +25,10 @@ const NavbarContainer = styled.nav`
   display: flex;
   justify-content: space-between;
   background-color: ${globalStyles.backgroundColor};
-  margin: 0 auto;
-  width: 100%;
-  padding-top: 0;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 1452px;
+  padding: 1.5rem;
 
   & svg {
     width: 32px;
@@ -67,37 +68,39 @@ const NavbarIconPadding = { padding: "0 2rem 0 0" }
 
 export default () => {
   return (
-    <NavbarContainer id="navbar-container">
-      <LogoWrapper id="logo" alt="logo" src={Logo}></LogoWrapper>
-      <NavbarIconsContainer>
-        <a
-          href="https://www.linkedin.com/in/patricio-ferraggi-ares/"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={NavbarIconPadding}
-        >
-          <img
-            className="navbar__link--external"
-            alt="linkedin link"
-            src={LinkedinIcon}
-          />
-        </a>
-        <a
-          href="https://github.com/Raagh/"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ ...NavbarIconPadding, paddingTop: "3px" }}
-        >
-          <img
-            className="navbar__link--external"
-            alt="github link"
-            src={GithubIcon}
-          />
-        </a>
-        <button style={NavbarIconPadding}>
-          <img alt="burger-menu" id="burger-menu" src={BurgerMenu}></img>
-        </button>
-      </NavbarIconsContainer>
-    </NavbarContainer>
+    <Headroom>
+      <NavbarContainer id="navbar-container">
+        <LogoWrapper id="logo" alt="logo" src={Logo}></LogoWrapper>
+        <NavbarIconsContainer>
+          <a
+            href="https://www.linkedin.com/in/patricio-ferraggi-ares/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={NavbarIconPadding}
+          >
+            <img
+              className="navbar__link--external"
+              alt="linkedin link"
+              src={LinkedinIcon}
+            />
+          </a>
+          <a
+            href="https://github.com/Raagh/"
+            target="_blank"
+            rel="noopener noreferrer"
+            style={{ ...NavbarIconPadding, paddingTop: "3px" }}
+          >
+            <img
+              className="navbar__link--external"
+              alt="github link"
+              src={GithubIcon}
+            />
+          </a>
+          <button style={NavbarIconPadding}>
+            <img alt="burger-menu" id="burger-menu" src={BurgerMenu}></img>
+          </button>
+        </NavbarIconsContainer>
+      </NavbarContainer>
+    </Headroom>
   )
 }
