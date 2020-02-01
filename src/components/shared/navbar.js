@@ -1,5 +1,4 @@
-import React from "react"
-// import { Link } from "gatsby"
+import React, { useState } from "react"
 import Headroom from "react-headroom"
 import styled from "styled-components"
 import GithubIcon from "../../../content/assets/icons/github.svg"
@@ -8,6 +7,7 @@ import BurgerMenu from "../../../content/assets/icons/hamburger-menu.svg"
 import Logo from "../../../content/assets/logo.svg"
 import globalStyles from "../../config/style-variables"
 import device from "../../config/device"
+import Sidebar from "./sidebar"
 
 const LogoWrapper = styled.img`
   grid-area: logo;
@@ -67,7 +67,23 @@ const NavbarIconsContainer = styled.div`
 const NavbarIconPadding = { padding: "0 2rem 0 0" }
 const IconSize = { width: "18px", height: "18px" }
 
+const links = [
+  { name: "intro", to: "/#top" },
+  { name: "blog", to: "/#blog" },
+  { name: "about", to: "/#about" },
+  { name: "projects", to: "/#projects" },
+  { name: "contact", to: "/#contact" },
+]
+
 export default () => {
+  const [isOpen, setIsOpen] = useState(false)
+
+  const RenderSidebarIfIsOpen = props => {
+    if (props.isOpen)
+      return <Sidebar links={links} setIsOpen={setIsOpen}></Sidebar>
+    else return null
+  }
+
   return (
     <Headroom>
       <NavbarContainer id="navbar-container">
@@ -99,10 +115,12 @@ export default () => {
               style={IconSize}
             />
           </a>
-          <button style={NavbarIconPadding}>
+          <button onClick={() => setIsOpen(true)} style={NavbarIconPadding}>
             <img alt="burger-menu" id="burger-menu" src={BurgerMenu}></img>
           </button>
         </NavbarIconsContainer>
+
+        <RenderSidebarIfIsOpen isOpen={isOpen}></RenderSidebarIfIsOpen>
       </NavbarContainer>
     </Headroom>
   )

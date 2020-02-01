@@ -14,7 +14,7 @@ const IntroWrapper = styled.section`
   line-height: 64px;
   letter-spacing: -2.2528px;
   width: 80%;
-  padding-top: 3.5rem;
+  padding-top: 1rem;
 
   @media ${device.small} {
     padding-top: 0;
