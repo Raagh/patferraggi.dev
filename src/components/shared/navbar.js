@@ -78,12 +78,6 @@ const links = [
 export default () => {
   const [isOpen, setIsOpen] = useState(false)
 
-  const RenderSidebarIfIsOpen = props => {
-    if (props.isOpen)
-      return <Sidebar links={links} setIsOpen={setIsOpen}></Sidebar>
-    else return null
-  }
-
   return (
     <Headroom>
       <NavbarContainer id="navbar-container">
@@ -120,7 +114,7 @@ export default () => {
           </button>
         </NavbarIconsContainer>
 
-        <RenderSidebarIfIsOpen isOpen={isOpen}></RenderSidebarIfIsOpen>
+        <Sidebar links={links} isOpen={isOpen}></Sidebar>
       </NavbarContainer>
     </Headroom>
   )
