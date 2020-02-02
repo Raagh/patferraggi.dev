@@ -67,7 +67,7 @@ const HeaderExplanation = styled.div`
 const BlogNewsArticles = styled.section`
   display: flex;
   flex-direction: row;
-  padding: 2rem 3rem 2rem 3rem;
+  padding: 3rem;
 
   @media ${device.small} {
     padding: 1rem;

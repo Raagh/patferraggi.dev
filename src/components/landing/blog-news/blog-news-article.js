@@ -32,7 +32,7 @@ const ArticleTitle = styled.div`
 
 const StyledPreview = styled.img`
   height: 412px;
-  padding: 2rem 2.5rem 2rem 2.5rem;
+  padding: 0 2.5rem 0 0;
 
   @media ${device.small} {
     max-width: 100%;
@@ -46,7 +46,12 @@ const StyledPreview = styled.img`
 `
 
 const ArticleTextContainer = styled.div`
-  padding-top: 3rem;
+  padding-top: 1.5rem;
+  padding-right: 4rem;
+
+  @media ${device.small} {
+    padding-right: 0;
+  }
 `
 
 const RenderPreviewIfItMatters = props => {
