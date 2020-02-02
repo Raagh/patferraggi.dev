@@ -35,6 +35,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
   }
+
 `
 
 const MainContainer = styled.main`

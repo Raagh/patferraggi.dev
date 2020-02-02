@@ -101,7 +101,10 @@ export default () => {
               style={IconSize}
             />
           </a>
-          <button onClick={() => setIsOpen(true)} style={NavbarIconPadding}>
+          <button
+            onClick={() => setIsOpen(true)}
+            style={(NavbarIconPadding, { height: "100%" })}
+          >
             <img alt="burger-menu" id="burger-menu" src={BurgerMenu}></img>
           </button>
         </NavbarIconsContainer>

@@ -7,7 +7,10 @@ import device from "../../config/device"
 import iconSet from "../../../content/assets/icons/selection.json"
 import CloseButton from "../../../content/assets/icons/close.svg"
 
-const mediaQuery = window.matchMedia(device.small)
+const mediaQuery =
+  typeof window !== `undefined`
+    ? window.matchMedia(device.small)
+    : { matches: false }
 
 export default props => {
   const sidebarWidth = mediaQuery.matches ? "100%" : "70%"
@@ -98,14 +101,14 @@ export default props => {
     <SidebarWrapper className={props.isOpen && "slideIn"}>
       <LinksWrapper>
         <LinksList>
-          <StyledLink
-            href="https://www.patferraggi.dev/blog/"
+          <StyledGatsbyLink
+            to="/blog/"
             key="blog"
             target="_blank"
             rel="noopener noreferrer"
           >
             blog en <StyledLinkText>*español*</StyledLinkText>
-          </StyledLink>
+          </StyledGatsbyLink>
           <StyledLink
             href="https://dev.to/patferraggi"
             key="dev.to"
@@ -121,7 +124,7 @@ export default props => {
           <StyledGatsbyLink to="#projects" key="projects">
             projects
           </StyledGatsbyLink>
-          <StyledLink href="mail:to" key="blog">
+          <StyledLink href="mailto:patferraggi@gmail.com" key="mail">
             contact me{" "}
             {<IcomoonReact iconSet={iconSet} size={"1em"} icon="email" />} at
             <p>
@@ -132,7 +135,7 @@ export default props => {
         <LinksList>
           <StyledLink
             href="https://www.linkedin.com/in/patricio-ferraggi-ares/"
-            key="github"
+            key="linkedin"
             target="_blank"
             rel="noopener noreferrer"
             style={{ justifySelf: "flex-end" }}
