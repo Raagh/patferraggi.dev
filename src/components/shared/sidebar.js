@@ -12,8 +12,19 @@ const mediaQuery =
     ? window.matchMedia(device.small)
     : { matches: false }
 
+const disableScrollingIfSidebarOpen = props => {
+  const body =
+    typeof document !== `undefined`
+      ? document.getElementsByTagName("body")[0]
+      : { style: { overflow: "" } }
+
+  body.style.overflow = props.isOpen ? "hidden" : "visible"
+}
+
 export default props => {
   const sidebarWidth = mediaQuery.matches ? "100%" : "70%"
+
+  disableScrollingIfSidebarOpen(props)
 
   const SidebarWrapper = styled.section`
     position: fixed;
@@ -74,6 +85,10 @@ export default props => {
       line-height: 30px !important;
       letter-spacing: -1.13806px;
     }
+
+    :hover {
+      color: ${globalStyles.secondaryColor} !important;
+    }
   `
 
   const StyledLink = styled.a`
@@ -89,6 +104,10 @@ export default props => {
       font-size: 1.5em;
       line-height: 30px !important;
       letter-spacing: -1.13806px;
+    }
+
+    :hover {
+      color: ${globalStyles.secondaryColor} !important;
     }
   `
 
