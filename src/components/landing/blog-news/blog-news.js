@@ -145,8 +145,8 @@ export default () => {
     <BlogNewsWrapper id="blog">
       <BlogNewsHeader>
         <HeaderShowOff>
-          {<IcomoonReact iconSet={iconSet} size={"1em"} icon="face" />}I have a
-          Blog
+          {<IcomoonReact iconSet={iconSet} size={"1em"} icon="face" />} {"  "}I
+          have a Blog
         </HeaderShowOff>
         <HeaderExplanation>
           <p>
