@@ -1,44 +1,76 @@
 import React from "react"
-import Article from "./article"
-import styled from "styled-components"
-import device from "../../shared/device"
-import globalStyles from "../../shared/global-styles"
 import { useStaticQuery, graphql } from "gatsby"
+import styled from "styled-components"
+import IcomoonReact from "icomoon-react"
+import device from "../../../config/device"
+import styleVariables from "../../../config/style-variables"
+import Article from "./blog-news-article"
+import iconSet from "../../../../content/assets/icons/selection.json"
+import DefaultTemporaryBlogNewsImage from "../../../../content/assets/images/2020.jpg"
 
-const BlogNewsWrapper = styled.div`
-  grid-area: blog-news;
-  font-size: 64px;
-  font-family: ${globalStyles.fontFamilyMedium};
-  line-height: 64px;
-  padding-top: 1.5rem;
+const BlogNewsWrapper = styled.section`
+  border: 2px solid ${styleVariables.primaryColor};
+  font-family: ${styleVariables.fontFamilyMedium};
 
-  @media ${device.phone} {
-    font-size: 32px;
-    line-height: 32px;
+  @media ${device.small} {
+    border: 1px solid ${styleVariables.primaryColor};
   }
 `
 
-const BlogNewsText = styled.p`
-  width: 90%;
+const BlogNewsHeader = styled.header`
+  background: ${styleVariables.primaryColor};
+  color: ${styleVariables.backgroundColor};
+  display: flex;
+  flex-direction: row;
+  letter-spacing: -2.2528px;
+  font-weight: 500;
+  font-style: normal;
+  padding: 1rem 3rem 1rem 3rem;
 
-  @media ${device.phone} {
-    width: 100%;
+  @media ${device.small} {
+    padding: 1rem;
+    flex-direction: column;
+    justify-content: flex-start;
+    letter-spacing: -1.5px;
+  }
+`
+const StyledHeaderLink = styled.a`
+  color: ${styleVariables.secondaryColor};
+  text-decoration: underline !important;
+`
+
+const HeaderShowOff = styled.p`
+  font-size: 54px;
+  line-height: 120px;
+  padding-right: 30%;
+
+  @media ${device.small} {
+    padding-bottom: 2rem;
+    font-size: 24px;
+    line-height: 30px;
   }
 `
 
-const BlogNewsLink = styled.a`
-  color: ${globalStyles.secondaryColor};
+const HeaderExplanation = styled.div`
+  font-size: 32px;
+  line-height: 38px;
+  align-self: center;
+
+  @media ${device.small} {
+    align-self: flex-start;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: -0.904507px;
+  }
 `
 
 const BlogNewsArticles = styled.section`
-  padding-top: 2rem;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: 100%;
+  display: flex;
+  flex-direction: row;
+  padding: 2rem 3rem 2rem 3rem;
 
-  @media ${device.phone} {
-    padding: 0;
-    display: flex;
+  @media ${device.small} {
+    padding: 1rem;
     flex-direction: column;
   }
 `
@@ -51,7 +83,7 @@ export default () => {
           title
         }
       }
-      allMdx(sort: { fields: [frontmatter___date], order: DESC }) {
+      allMdx(sort: { fields: [frontmatter___date], order: DESC }, limit: 2) {
         edges {
           node {
             excerpt
@@ -71,26 +103,33 @@ export default () => {
 
   return (
     <BlogNewsWrapper id="blog">
-      <BlogNewsText>
-        I also have a blog, you can read it in Spanish
-        <BlogNewsLink href="/blog"> here</BlogNewsLink> or in English on
-        <BlogNewsLink href="https://dev.to/patferraggi"> Dev.to</BlogNewsLink>
-      </BlogNewsText>
-      <BlogNewsText>These are my latest blog posts:</BlogNewsText>
+      <BlogNewsHeader>
+        <HeaderShowOff>
+          {<IcomoonReact iconSet={iconSet} size={"1em"} icon="face" />} I have a
+          Blog
+        </HeaderShowOff>
+        <HeaderExplanation>
+          <p>
+            ¿En Español? <StyledHeaderLink>Por aquí.</StyledHeaderLink>
+          </p>
+          <p>
+            Or find me on <StyledHeaderLink>Dev.to</StyledHeaderLink> for
+            English articles.
+          </p>
+        </HeaderExplanation>
+      </BlogNewsHeader>
       <BlogNewsArticles>
-        {articles.slice(0, 3).map(item => {
+        {articles.map(item => {
           const node = item.node
           const articleIndex = articles.indexOf(item)
-          const isLastElement = true
-
           return (
             <Article
-              key={articleIndex}
+              id={articleIndex}
+              preview={DefaultTemporaryBlogNewsImage}
               title={node.frontmatter.title}
               link={`/blog` + node.fields.slug}
-              isActive={articleIndex === 0}
+              showPreview={articleIndex === 0}
               creationDate={node.frontmatter.date}
-              addDivider={isLastElement}
             />
           )
         })}
