@@ -81,12 +81,7 @@ export default () => {
             rel="noopener noreferrer"
             style={NavbarIconPadding}
           >
-            <img
-              className="navbar__link--external"
-              alt="linkedin link"
-              src={LinkedinIcon}
-              style={IconSize}
-            />
+            <img alt="linkedin link" src={LinkedinIcon} style={IconSize} />
           </a>
           <a
             href="https://github.com/Raagh/"
@@ -94,12 +89,7 @@ export default () => {
             rel="noopener noreferrer"
             style={{ ...NavbarIconPadding, paddingTop: "3px" }}
           >
-            <img
-              className="navbar__link--external"
-              alt="github link"
-              src={GithubIcon}
-              style={IconSize}
-            />
+            <img alt="github link" src={GithubIcon} style={IconSize} />
           </a>
           <button
             onClick={() => setIsOpen(true)}
