@@ -13,15 +13,32 @@ export default props => {
     color: ${globalStyles.backgroundColor} !important;
   `
 
+  const sidebarWidth = "70%"
+
   const SidebarWrapper = styled.section`
     position: fixed;
     top: 0;
     right: 0;
     background-color: ${globalStyles.primaryColor};
-    width: 50%;
     height: 100vh;
+    width: ${sidebarWidth};
     opacity: ${props.isOpen ? "1" : "0"};
     z-index: ${props.isOpen ? "99999" : "-1"};
+
+    &.slideIn {
+      animation-name: slideIn;
+      animation-duration: 0.4s;
+    }
+
+    @keyframes slideIn {
+      from {
+        width: 0;
+      }
+
+      to {
+        width: ${sidebarWidth};
+      }
+    }
   `
 
   const renderLinks = linksToRender => {
@@ -35,11 +52,11 @@ export default props => {
   }
 
   return (
-    <SidebarWrapper>
+    <SidebarWrapper className={props.isOpen && "slideIn"}>
       <LinksWrapper>{renderLinks(props.links, true)}</LinksWrapper>
       <button
         onClick={() => props.setIsOpen(false)}
-        style={{ color: "black" }}
+        style={{ color: globalStyles.backgroundColor }}
         id="exit"
       >
         &times;
