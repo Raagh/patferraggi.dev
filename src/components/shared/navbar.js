@@ -68,7 +68,7 @@ const NavbarIconPadding = { padding: "0 2rem 0 0" }
 const IconSize = { width: "18px", height: "18px" }
 
 const links = [
-  { name: "intro", to: "/#top" },
+  { name: "blog", to: "/#top" },
   { name: "blog", to: "/#blog" },
   { name: "about", to: "/#about" },
   { name: "projects", to: "/#projects" },
@@ -114,7 +114,7 @@ export default () => {
           </button>
         </NavbarIconsContainer>
 
-        <Sidebar links={links} isOpen={isOpen} setIsOpen={setIsOpen}></Sidebar>
+        <Sidebar isOpen={isOpen} setIsOpen={setIsOpen}></Sidebar>
       </NavbarContainer>
     </Headroom>
   )
