@@ -12,6 +12,14 @@ const ArticleWrapper = styled.article`
   @media ${device.small} {
     flex-direction: column;
   }
+
+  @media ${device.medium} {
+    flex-direction: column;
+  }
+
+  @media ${device.large} {
+    flex-direction: column;
+  }
 `
 
 const ArticleLink = styled.a`
@@ -28,6 +36,12 @@ const ArticleTitle = styled.div`
   font-size: 32px;
   line-height: 40px;
   letter-spacing: -1.28px;
+
+  @media ${device.small} {
+    font-size: 1.5em;
+    line-height: 30px;
+    letter-spacing: -1.13806px;
+  }
 `
 
 const StyledPreview = styled.img`
@@ -35,6 +49,26 @@ const StyledPreview = styled.img`
   padding: 0 2.5rem 0 0;
 
   @media ${device.small} {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem 0 2rem 0;
+  }
+
+  @media ${device.medium} {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem 0 2rem 0;
+  }
+
+  @media ${device.large} {
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;

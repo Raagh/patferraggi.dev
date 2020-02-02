@@ -14,6 +14,10 @@ const GlobalStyle = createGlobalStyle`
     box-shadow: none !important;
   }
 
+  button:focus {
+    outline:0;
+  }
+
   html,
   body {
     height: 100vh;

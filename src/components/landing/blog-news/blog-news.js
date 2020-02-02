@@ -49,6 +49,22 @@ const HeaderShowOff = styled.p`
     font-size: 24px;
     line-height: 30px;
   }
+
+  @media ${device.medium} {
+    font-size: 32px;
+    line-height: 38px;
+    padding-right: 0;
+    width: 70%;
+    align-self: center;
+  }
+
+  @media ${device.large} {
+    font-size: 32px;
+    line-height: 38px;
+    padding-right: 0;
+    width: 50%;
+    align-self: center;
+  }
 `
 
 const HeaderExplanation = styled.div`
@@ -58,8 +74,22 @@ const HeaderExplanation = styled.div`
 
   @media ${device.small} {
     align-self: flex-start;
-    font-size: 14px;
-    line-height: 16px;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.904507px;
+  }
+
+  @media ${device.medium} {
+    align-self: flex-start;
+    font-size: 32px;
+    line-height: 38px;
+    letter-spacing: -0.904507px;
+  }
+
+  @media ${device.large} {
+    align-self: flex-start;
+    font-size: 32px;
+    line-height: 38px;
     letter-spacing: -0.904507px;
   }
 `
@@ -70,6 +100,16 @@ const BlogNewsArticles = styled.section`
   padding: 3rem;
 
   @media ${device.small} {
+    padding: 1rem;
+    flex-direction: column;
+  }
+
+  @media ${device.medium} {
+    padding: 1rem;
+    flex-direction: column;
+  }
+
+  @media ${device.large} {
     padding: 1rem;
     flex-direction: column;
   }
@@ -105,7 +145,7 @@ export default () => {
     <BlogNewsWrapper id="blog">
       <BlogNewsHeader>
         <HeaderShowOff>
-          {<IcomoonReact iconSet={iconSet} size={"1em"} icon="face" />} I have a
+          {<IcomoonReact iconSet={iconSet} size={"1em"} icon="face" />}I have a
           Blog
         </HeaderShowOff>
         <HeaderExplanation>
