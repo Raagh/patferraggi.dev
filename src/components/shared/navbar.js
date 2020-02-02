@@ -67,14 +67,6 @@ const NavbarIconsContainer = styled.div`
 const NavbarIconPadding = { padding: "0 2rem 0 0" }
 const IconSize = { width: "18px", height: "18px" }
 
-const links = [
-  { name: "blog", to: "/#top" },
-  { name: "blog", to: "/#blog" },
-  { name: "about", to: "/#about" },
-  { name: "projects", to: "/#projects" },
-  { name: "contact", to: "/#contact" },
-]
-
 export default () => {
   const [isOpen, setIsOpen] = useState(false)
 
