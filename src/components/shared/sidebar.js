@@ -49,7 +49,7 @@ export default props => {
 
     &.slideIn {
       animation-name: slideIn;
-      animation-duration: 0.4s;
+      animation-duration: 0.3s;
     }
 
     @keyframes slideIn {
@@ -142,11 +142,19 @@ export default props => {
           >
             <StyledLinkText>dev.to</StyledLinkText> english blog
           </StyledLink>
-          <StyledGatsbyLink to="#about" key="about">
+          <StyledGatsbyLink
+            to="#about"
+            key="about"
+            onClick={e => props.setIsOpen(false)}
+          >
             {<IcomoonReact iconSet={iconSet} size={"1em"} icon="avatar" />}{" "}
             about
           </StyledGatsbyLink>
-          <StyledGatsbyLink to="#projects" key="projects">
+          <StyledGatsbyLink
+            to="#projects"
+            key="projects"
+            onClick={e => props.setIsOpen(false)}
+          >
             projects
           </StyledGatsbyLink>
           <StyledLink href="mailto:patferraggi@gmail.com" key="mail">

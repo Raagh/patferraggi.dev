@@ -2,7 +2,7 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import Bio from "../components/blog/bio"
-import Layout from "../components/blog/layout"
+import Layout from "../components/shared/layout"
 import SEO from "../components/shared/seo"
 import { Disqus, CommentCount } from "gatsby-plugin-disqus"
 

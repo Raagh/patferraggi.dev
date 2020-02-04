@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import SEO from "../components/shared/seo"
-import Layout from "../components/blog/layout"
+import Layout from "../components/shared/layout"
 import Button from "../components/blog/button"
 
 class BlogListTemplate extends React.Component {
@@ -19,7 +18,6 @@ class BlogListTemplate extends React.Component {
 
     return (
       <Layout location={this.props.location} title={siteTitle}>
-        <SEO title="El calabozo del programador" />
         <div style={{ margin: "20px 0 40px" }}>
           {posts.map(({ node }) => {
             const title = node.frontmatter.title || node.fields.slug

@@ -2,8 +2,8 @@ import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import Img from "gatsby-image"
 import styled from "styled-components"
-import globalStyles from "../../shared/global-styles"
-import device from "../../shared/device"
+import globalStyles from "../../../config/style-variables"
+import device from "../../../config/device"
 
 export default props => {
   const data = useStaticQuery(graphql`
@@ -30,24 +30,13 @@ export default props => {
     }
   `)
 
-  const ProjectWrapper = styled.section`
-    display: flex;
-    flex-direction: row-reverse;
-
-    @media ${device.phone} {
-      display: block;
-    }
-  `
+  const ProjectWrapper = styled.section``
 
   const ProjectWrapperImage = styled(Img)`
     width: 80%;
     height: auto;
     max-width: 600px;
     z-index: 1;
-
-    @media ${device.phone} {
-      width: 100%;
-    }
   `
 
   const ProjectWrapperProject = styled.div`
@@ -65,10 +54,6 @@ export default props => {
       color: ${globalStyles.primaryColor};
       line-height: 24px;
       font-size: 18px;
-    }
-
-    @media ${device.phone} {
-      width: 100%;
     }
   `
 
@@ -93,14 +78,14 @@ export default props => {
           {props.skills.map(skill => {
             const skillIndex = props.skills.indexOf(skill)
 
-            return (
-              <li key={skillIndex} rel="nofollow">
-                {skill}
-              </li>
-            )
+            return <li key={skillIndex}>{skill}</li>
           })}
         </ProjectSkills>
-        <a href="https://rydoo.com" target="_blank" rel="noopener noreferrer">
+        <a
+          href="https://rydoo.com"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
+        >
           See project
         </a>
       </ProjectWrapperProject>
