@@ -10,7 +10,7 @@ const AboutWrapper = styled.section`
   font-style: normal;
   font-weight: 500;
   color: ${globalStyles.primaryColor};
-  margin: 7rem 0 5rem 0;
+  margin: 7rem 0 7rem 0;
 
   @media ${device.small} {
     flex-direction: column;
@@ -19,7 +19,7 @@ const AboutWrapper = styled.section`
   }
 
   @media ${device.medium} {
-    margin: 2rem 0 2rem 0;
+    margin: 4rem 0 4rem 0;
     padding: 0.5rem;
   }
 `
