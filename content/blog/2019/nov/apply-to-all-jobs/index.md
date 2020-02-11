@@ -3,9 +3,8 @@ path: "{{year}}/{{month}}/{{slug}}/index"
 title: Apply to all jobs, job postings are not realistic anyway.
 date: "2019-11-16"
 description: "Don't let the job description scare you"
+thumbnail: ./cover.jpeg
 ---
-
-![Job Search](https://res.cloudinary.com/practicaldev/image/fetch/s--tX8eurGh--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://thepracticaldev.s3.amazonaws.com/i/a67xjz0gau576qmsjcs6.jpeg)
 
 From time to time, as a matter to keep my eye on the market, I look at job postings to check what is out there. To figure out if my skills are still relevant and check what technology is booming in the job market. I often find myself disappointed that everything still remains the same, the same stupid "REQUIREMENTS":
 

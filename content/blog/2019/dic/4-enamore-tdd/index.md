@@ -3,6 +3,7 @@ path: "{{year}}/{{month}}/{{slug}}/index"
 title: 4 razones por las que me enamoré del Test Driven Development.
 date: "2019-12-20"
 description: "y vos también te vas enamorar"
+thumbnail: ./cover.jpg
 ---
 
 Hasta hace unos 2 años nunca había escrito un test en mi vida, si escuchaste bien, me avergüenza decirlo pero en mis primeros 3 años en la industria nunca nadie me pidió que escribiera un test.

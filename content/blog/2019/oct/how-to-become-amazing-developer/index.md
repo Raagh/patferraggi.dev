@@ -3,9 +3,8 @@ path: "{{year}}/{{month}}/{{slug}}/index"
 title: How to be an amazing developer, things I wish I knew when started.
 date: "2019-10-27"
 description: ""
+thumbnail: ./cover.jpg
 ---
-
-![Developer](https://res.cloudinary.com/practicaldev/image/fetch/s--xG1gcsyJ--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://thepracticaldev.s3.amazonaws.com/i/h68x0up43hmknl5tjcww.jpg)
 
 A few weeks ago something special happened: October 8. For everyone else that means nothing, another regular day. For me on the other hand, it was my software development birthday.
 

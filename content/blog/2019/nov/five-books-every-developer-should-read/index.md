@@ -3,6 +3,7 @@ path: "{{year}}/{{month}}/{{slug}}/index"
 title: 5 books every developer should read, and some extras.
 date: "2019-11-02"
 description: ""
+thumbnail: ./cover.jpeg
 ---
 
 ![Books](https://res.cloudinary.com/practicaldev/image/fetch/s--5l8Za7Jb--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://thepracticaldev.s3.amazonaws.com/i/ifknwf46tdxoah40h7q7.jpeg)

@@ -3,6 +3,7 @@ path: "{{year}}/{{month}}/{{slug}}/index"
 title: How I found a problem in Angular unit testing and decided to fix it myself.
 date: "2019-10-26"
 description: ""
+thumbnail: ./cover.jpeg
 ---
 
 ![VSCODE marketplace](https://res.cloudinary.com/practicaldev/image/fetch/s--IgFz9gfV--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://thepracticaldev.s3.amazonaws.com/i/2z9yyu075xt91sr2g1xl.png)

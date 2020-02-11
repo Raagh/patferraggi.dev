@@ -2,6 +2,13 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/shared/layout"
 import Button from "../components/blog/button"
+import Img from "gatsby-image"
+
+const renderThumbnailIfAvailable = node => {
+  if (node.frontmatter.thumbnail)
+    return <Img fixed={node.frontmatter.thumbnail.childImageSharp.fixed} />
+  else return null
+}
 
 class BlogListTemplate extends React.Component {
   render() {
@@ -23,6 +30,7 @@ class BlogListTemplate extends React.Component {
             const title = node.frontmatter.title || node.fields.slug
             return (
               <div key={node.fields.slug}>
+                {renderThumbnailIfAvailable(node)}
                 <h3>
                   <Link
                     style={{ boxShadow: `none` }}
@@ -95,6 +103,13 @@ export const pageQuery = graphql`
             date(formatString: "MMMM DD, YYYY")
             title
             description
+            thumbnail {
+              childImageSharp {
+                fixed(width: 300, height: 300) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
+            }
           }
         }
       }

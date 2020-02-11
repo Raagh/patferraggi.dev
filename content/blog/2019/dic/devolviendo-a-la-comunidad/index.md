@@ -3,6 +3,7 @@ path: "{{year}}/{{month}}/{{slug}}/index"
 title: Devolviendo a la comunidad.
 date: "2019-12-14"
 description: "Un nuevo comienzo, en español"
+thumbnail: ./cover.jpeg
 ---
 
 Después de años trabajando como desarrollador, sigo sorprendido de la falta de contenido de calidad específico para nuestra comunidad.

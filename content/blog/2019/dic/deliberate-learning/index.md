@@ -3,6 +3,7 @@ path: "{{year}}/{{month}}/{{slug}}/index"
 title: Deliberate Learning!, take control of your career.
 date: "2019-12-01"
 description: "Don't fall behind, is up to you to improve"
+thumbnail: ./cover.jpeg
 ---
 
 I have been working as a developer for the last 5 years. Is not a long time, I know, but in this time I think I have improved a lot, more than if I would have taken a passive approach with my career. I have noticed that people always come to me and mention technologies to get my opinion as if I had tried everything that is out there.

@@ -3,9 +3,10 @@ path: "{{year}}/{{month}}/{{slug}}/index"
 title: Programación Funcional para el desarrollador Orientado a Objetos
 date: "2020-01-14"
 description: "Parte[0]"
+thumbnail: ./cover.jpeg
 ---
 
-Si venís leyendo mis últimos artículos probablemente sepas que estoy estudiando Programación Funcional y tengo que ser honesto, soy un _Newbie_, y me refiero a un _Newbie_ estilo: menos de level 12, no haciendo PVP, matando monstruos chicos por horas. 
+Si venís leyendo mis últimos artículos probablemente sepas que estoy estudiando Programación Funcional y tengo que ser honesto, soy un _Newbie_, y me refiero a un _Newbie_ estilo: menos de level 12, no haciendo PVP, matando monstruos chicos por horas.
 Siendo el _Newbie_ que soy, ni bien arranqué me mandé con todo, no dudé en meterme en un Dungeon mucho más alto que mi nivel con monstruos que pueden matarme con pocos golpes, como podés imaginar sigo asustado, pero por suerte lentamente estoy progresando y de a poco mi personaje incrementa su nivel. Espero que con esta serie de tutoriales puedas guiarte por este dungeon evitando las trampas en las que yo ya caí.
 
 ![Zelda](https://thepracticaldev.s3.amazonaws.com/i/zsoxoc4tgtla335vzzm6.gif)
@@ -49,7 +50,7 @@ Esta función es una regla o relación entre los tipos _INT_ y _BOOL_ (si, ya se
 Debido a esto, cada vez que pasemos a esta función un número mayor a 3, nos va a devolver TRUE. No hay ninguna manera que esto no se cumpla, si esto no se cumpliese entonces no estaríamos haciendo PF, por suerte para nosotros la mayoría de los lenguajes estrictamente funcionales, como Haskell, imponen este comportamiento sobre el programador.
 
 De este concepto sale una palabra mágica que escucho mucho cuando alguien habla sobre la PF, las “Funciones Puras”, me dirás, ¿qué son las funciones puras? Las funciones puras no son más que las funciones regulares en la PF, son funciones que no dependen o modifican el estado afuera de ellas mismas cuando se ejecutan, igual que la función que escribimos hace unos momentos, recibe un parámetro, computa y devuelve un resultado, eso es todo.
- Se lo que estás pensando:
+Se lo que estás pensando:
 
 #### ¿Y esto para qué me sirve?
 
@@ -59,7 +60,7 @@ De este concepto sale una palabra mágica que escucho mucho cuando alguien habla
 4. Ya que definimos funciones en términos matemáticos, otros conceptos matemáticos asociados a funciones también se vuelven aplicables a la programación, como es el concepto de [Composición de funciones](https://en.wikipedia.org/wiki/Function_composition)
 
 La PF hace extensivo uso de la composición, se trata fundamentalmente de tomar funciones pequeñas, genéricas y sencillas y combinarlas de distintas maneras para obtener comportamientos complejos.
- Devuelta, empecemos con la definición para sacarnos eso del encima:
+Devuelta, empecemos con la definición para sacarnos eso del encima:
 
 _Si tenemos dos funciones: f(x) y g(x), de modo que el dominio de la 2ª esté incluido en el recorrido o codominio de la 1ª, se puede definir una nueva función que asocie a cada elemento del dominio de f(x) el valor de g[f(x)]_
 
@@ -84,6 +85,7 @@ const result = mapBoolToHumanOutput(isBiggerThanThree(3))
 En los siguientes blog posts, explicaré otros conceptos adyacentes a este que nos permitirán crear nuevas funciones sin la necesidad de aplicarlas, de modo que podremos pasarlas como parámetros o devolverlas como valores de retorno.
 
 ---
+
 Si decidís seguirme en mi camino me aseguraré de que juntos completemos este calabozo, llegaremos a un punto en el que conoceremos todos sus rincones, tendremos todas las armas y secretos y seremos capaces de salvar el progreso una vez todo esté completo.
 
 Realmente espero que te haya gustado esta pequeña introducción, continuaré subiendo de nivel y guiándote en el proceso. Si encontraste este post útil te pido por favor que me lo hagas saber en los comentarios, mismo si tienes alguna duda, corrección o recomendación no dudes en hacérmelo saber. &#128512;

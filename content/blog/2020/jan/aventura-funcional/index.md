@@ -3,9 +3,8 @@ path: "{{year}}/{{month}}/{{slug}}/index"
 title: Vámonos a una aventura, una aventura funcional.
 date: "2020-01-06"
 description: ""
+thumbnail: ./cover.jpg
 ---
-
-![adventure](./adventure.gif)
 
 Como probablemente sabrás si leíste mis artículos anteriores, no soy un gran conocedor de la Programación Funcional, estoy muy lejos de serlo. Toda mi experiencia en desarrollo se encuentra en las profundidades de la Programación Orientada a Objetos. Bueno, ya no más. Hace unas semanas decidí que quería ver qué eso de lo que hablan los programadores senior y experimentar por mi mismo si los supuestos beneficios de la programación funcional son ciertos o solo rumores.
 
