@@ -54,6 +54,7 @@ const InternalContainer = styled.div`
   max-width: 1660px;
   margin: auto;
   padding: 2rem;
+  width: 100%;
 `
 
 export default ({ children }) => (

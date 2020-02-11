@@ -2,54 +2,109 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import Layout from "../components/shared/layout"
 import Button from "../components/blog/button"
+import styled from "styled-components"
+import globalStyles from "../config/style-variables"
 import Img from "gatsby-image"
 
-const renderThumbnailIfAvailable = node => {
-  if (node.frontmatter.thumbnail)
-    return <Img fixed={node.frontmatter.thumbnail.childImageSharp.fixed} />
-  else return null
-}
+const BlogListTemplateWrapper = styled.section`
+  font-family: ${globalStyles.fontFamilyMedium};
+  font-weight: 500;
+`
+const BlogListTemplateTitle = styled.p`
+  font-size: 54px;
+  line-height: 64px;
+  letter-spacing: -2.2528px;
+`
+const HighLightedText = styled.span`
+  color: ${globalStyles.secondaryColor};
+`
+
+const BlogListMainArticle = styled.article`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background: ${globalStyles.primaryColor};
+  color: ${globalStyles.backgroundColor};
+`
+
+const BlogListMainArticleText = styled.div``
+
+const BlogListArticle = styled.article`
+  width: 25%;
+`
+
+const BlogListArticlesListWrapper = styled.section`
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+`
+
+const StyledGatsbyLinkMainArticle = styled(props => <Link {...props} />)`
+  text-decoration: none;
+  color: ${globalStyles.backgroundColor};
+`
+
+const StyledGatsbyLink = styled(props => <Link {...props} />)`
+  text-decoration: none;
+  color: ${globalStyles.primaryColor};
+`
 
 class BlogListTemplate extends React.Component {
   render() {
     const { data } = this.props
-    const siteTitle =
-      "Estas entrando al Calabozo del Programador, cuida tus pasos"
-    const posts = data.allMdx.edges
-    const { currentPage, numPages } = this.props.pageContext
-    const isFirst = currentPage === 1
-    const isLast = currentPage === numPages
-    const prevPage =
-      currentPage - 1 === 1 ? "/blog/" : "/blog/" + (currentPage - 1).toString()
-    const nextPage = "/blog/" + (currentPage + 1).toString()
+    const mainPost = data.allMdx.edges.shift().node
+    const restOfPosts = data.allMdx.edges
+    // const { currentPage, numPages } = this.props.pageContext
+    // const isFirst = currentPage === 1
+    // const isLast = currentPage === numPages
+    // const prevPage =
+    //   currentPage - 1 === 1 ? "/blog/" : "/blog/" + (currentPage - 1).toString()
+    // const nextPage = "/blog/" + (currentPage + 1).toString()
 
     return (
-      <Layout location={this.props.location} title={siteTitle}>
-        <div style={{ margin: "20px 0 40px" }}>
-          {posts.map(({ node }) => {
-            const title = node.frontmatter.title || node.fields.slug
-            return (
-              <div key={node.fields.slug}>
-                {renderThumbnailIfAvailable(node)}
-                <h3>
-                  <Link
-                    style={{ boxShadow: `none` }}
-                    to={`blog${node.fields.slug}`}
-                  >
-                    {title}
-                  </Link>
-                </h3>
-                <small>{node.frontmatter.date}</small>
-                <p
-                  dangerouslySetInnerHTML={{
-                    __html: node.frontmatter.description || node.excerpt,
-                  }}
-                />
-              </div>
-            )
-          })}
-        </div>
-        <ul
+      <Layout>
+        <BlogListTemplateWrapper>
+          <BlogListTemplateTitle>
+            Bienvenido al{" "}
+            <HighLightedText>Calaboso del programador</HighLightedText>
+          </BlogListTemplateTitle>
+          <BlogListMainArticle>
+            <BlogListMainArticleText>
+              <h3>
+                <StyledGatsbyLinkMainArticle to={`blog${mainPost.fields.slug}`}>
+                  {mainPost.frontmatter.title || mainPost.fields.slug}
+                </StyledGatsbyLinkMainArticle>
+              </h3>
+              <p
+                dangerouslySetInnerHTML={{
+                  __html: mainPost.frontmatter.description || mainPost.excerpt,
+                }}
+              />
+              <small>{mainPost.frontmatter.date}</small>
+            </BlogListMainArticleText>
+            <Img fixed={mainPost.frontmatter.thumbnail.childImageSharp.fixed} />
+          </BlogListMainArticle>
+          <BlogListArticlesListWrapper>
+            {restOfPosts.map(({ node }) => {
+              const title = node.frontmatter.title || node.fields.slug
+              return (
+                <BlogListArticle key={node.fields.slug}>
+                  <Img
+                    fixed={node.frontmatter.thumbnail.childImageSharp.fixed}
+                  />
+                  <h3>
+                    <StyledGatsbyLink to={`blog${node.fields.slug}`}>
+                      {title}
+                    </StyledGatsbyLink>
+                  </h3>
+                  <small>{node.frontmatter.date}</small>
+                </BlogListArticle>
+              )
+            })}
+          </BlogListArticlesListWrapper>
+        </BlogListTemplateWrapper>
+        {/* <ul
           style={{
             display: "flex",
             flexWrap: "wrap",
@@ -70,7 +125,7 @@ class BlogListTemplate extends React.Component {
               Siguiente →
             </Link>
           )}
-        </ul>
+        </ul> */}
         <Link to="/">
           <Button marginTop="85px">Home</Button>
         </Link>
