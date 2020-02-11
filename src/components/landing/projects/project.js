@@ -110,6 +110,11 @@ export default props => {
     }
   `
 
+  const StyledLink = styled.a`
+    color: ${globalStyles.secondaryColor};
+    text-decoration: underline !important;
+  `
+
   return (
     <ProjectWrapper>
       <ProjectWrapperProject>
@@ -121,14 +126,14 @@ export default props => {
             return <li key={skillIndex}>{skill}</li>
           })}
         </ProjectSkills>
-        <a
+        <StyledLink
           href="https://rydoo.com"
           target="_blank"
           rel="noopener noreferrer nofollow"
           style={{ marginTop: "auto", paddingTop: "2rem" }}
         >
           See project
-        </a>
+        </StyledLink>
       </ProjectWrapperProject>
       <ProjectWrapperImage
         fluid={data.file.childImageSharp.fluid}
