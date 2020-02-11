@@ -73,7 +73,11 @@ export default () => {
   return (
     <Headroom>
       <NavbarContainer id="navbar-container">
-        <LogoWrapper id="logo" alt="logo" src={Logo}></LogoWrapper>
+        <a href="/">
+          {" "}
+          <LogoWrapper id="logo" alt="logo" src={Logo}></LogoWrapper>
+        </a>
+
         <NavbarIconsContainer>
           <a
             href="https://www.linkedin.com/in/patricio-ferraggi-ares/"

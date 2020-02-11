@@ -150,11 +150,21 @@ export default () => {
         </HeaderShowOff>
         <HeaderExplanation>
           <p>
-            ¿En Español? <StyledHeaderLink>Por aquí.</StyledHeaderLink>
+            ¿En Español?{" "}
+            <StyledHeaderLink href="/blog" rel="noopener noreferrer">
+              Por aquí.
+            </StyledHeaderLink>
           </p>
           <p>
-            Or find me on <StyledHeaderLink>Dev.to</StyledHeaderLink> for
-            English articles.
+            Or find me on{" "}
+            <StyledHeaderLink
+              href="https://dev.to/patferraggi"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Dev.to
+            </StyledHeaderLink>{" "}
+            for English articles.
           </p>
         </HeaderExplanation>
       </BlogNewsHeader>
