@@ -75,7 +75,7 @@ export default props => {
     }
 
     @media ${device.medium} {
-      padding: 1rem;
+      padding: 2rem;
       width: 100%;
     }
   `
