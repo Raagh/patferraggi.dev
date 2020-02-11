@@ -46,16 +46,14 @@ const ArticleTitle = styled.div`
 
 const StyledPreview = styled.img`
   height: 412px;
-  padding: 0 2.5rem 0 0;
+  margin: 0 2.5rem 0 0;
 
   @media ${device.small} {
     max-width: 100%;
     max-height: 100%;
     object-fit: cover;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 2rem 0 2rem 0;
+    margin: 2rem auto 2rem auto;
   }
 
   @media ${device.medium} {
@@ -63,9 +61,7 @@ const StyledPreview = styled.img`
     max-height: 100%;
     object-fit: cover;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 2rem 0 2rem 0;
+    margin: 2rem auto 2rem auto;
   }
 
   @media ${device.large} {
@@ -73,18 +69,16 @@ const StyledPreview = styled.img`
     max-height: 100%;
     object-fit: cover;
     display: block;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 2rem 0 2rem 0;
+    margin: 2rem auto 2rem auto;
   }
 `
 
 const ArticleTextContainer = styled.div`
-  padding-top: 1.5rem;
-  padding-right: 4rem;
+  margin-top: 1.5rem;
+  margin-right: 4rem;
 
   @media ${device.small} {
-    padding-right: 0;
+    margin-right: 0;
   }
 `
 
