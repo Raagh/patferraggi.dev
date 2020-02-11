@@ -30,48 +30,88 @@ export default props => {
     }
   `)
 
-  const ProjectWrapper = styled.section``
+  const ProjectWrapper = styled.section`
+    display: flex;
+    flex-direction: row;
+    margin-top: 5.5rem;
 
-  const ProjectWrapperImage = styled(Img)`
-    width: 80%;
-    height: auto;
-    max-width: 600px;
-    z-index: 1;
+    @media ${device.small} {
+      flex-direction: column-reverse;
+      margin-top: 2rem;
+    }
+
+    @media ${device.medium} {
+      flex-direction: column-reverse;
+      margin-top: 2rem;
+    }
   `
 
-  const ProjectWrapperProject = styled.div`
-    padding-top: 2rem;
-    font-size: 24px;
-    line-height: 24px;
+  const ProjectWrapperImage = styled(Img)`
+    width: 60%;
+    max-width: 70%;
+
+    @media ${device.small} {
+      max-width: 100%;
+      width: 100%;
+    }
+
+    @media ${device.medium} {
+      max-width: 100%;
+      width: 100%;
+    }
+  `
+
+  const ProjectWrapperProject = styled.article`
     display: flex;
     flex-direction: column;
-    font-family: ${globalStyles.fontFamilyRegular};
-    justify-content: center;
     width: 50%;
+    padding: 3.5rem;
+    background-color: ${globalStyles.primaryColor};
+    color: ${globalStyles.backgroundColor};
 
-    & a {
-      padding-top: 1.5rem;
-      color: ${globalStyles.primaryColor};
-      line-height: 24px;
-      font-size: 18px;
+    @media ${device.small} {
+      padding: 1rem;
+      width: 100%;
+    }
+
+    @media ${device.medium} {
+      padding: 1rem;
+      width: 100%;
     }
   `
 
   const ProjectName = styled.div`
-    color: ${globalStyles.primaryColor};
-    padding-bottom: 1rem;
+    font-size: 54px;
+    line-height: 64px;
+    letter-spacing: -2.2528px;
+
+    @media ${device.small} {
+      font-size: 22px;
+      line-height: 28px;
+      letter-spacing: -0.970036px;
+    }
   `
 
   const ProjectSkills = styled.ul`
-    color: ${globalStyles.inactiveColor};
+    margin-top: 2rem;
+    font-size: 32px;
+    line-height: 40px;
+    opacity: 0.5;
+    letter-spacing: -2.2528px;
+    list-style-type: none;
+
+    @media ${device.small} {
+      font-size: 16px;
+      line-height: 17px;
+
+      letter-spacing: -0.970036px;
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+    }
   `
 
   return (
     <ProjectWrapper>
-      <ProjectWrapperImage
-        fluid={data.file.childImageSharp.fluid}
-        alt="project-example"
-      ></ProjectWrapperImage>
       <ProjectWrapperProject>
         <ProjectName>{props.name}</ProjectName>
         <ProjectSkills>
@@ -85,10 +125,15 @@ export default props => {
           href="https://rydoo.com"
           target="_blank"
           rel="noopener noreferrer nofollow"
+          style={{ marginTop: "auto", paddingTop: "2rem" }}
         >
           See project
         </a>
       </ProjectWrapperProject>
+      <ProjectWrapperImage
+        fluid={data.file.childImageSharp.fluid}
+        alt="project-example"
+      ></ProjectWrapperImage>
     </ProjectWrapper>
   )
 }

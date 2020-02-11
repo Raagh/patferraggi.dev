@@ -5,7 +5,7 @@ import Divider from "../components/shared/divider"
 import BlogNews from "../components/landing/blog-news/blog-news"
 import About from "../components/landing/about"
 import Gallery from "../components/landing/gallery"
-// import Projects from "../components/landing/projects/projects"
+import Projects from "../components/landing/projects/projects"
 
 export default () => (
   <Layout>
@@ -15,6 +15,6 @@ export default () => (
     <About></About>
     <Gallery></Gallery>
     <Divider></Divider>
-    {/* <Projects></Projects> */}
+    <Projects></Projects>
   </Layout>
 )

@@ -4,7 +4,6 @@ import globalStyles from "../shared/global-styles"
 import device from "../shared/device"
 
 const ContactWrapper = styled.section`
-  grid-area: contact;
   padding-top: 5rem;
   font-size: 64px;
   width: 100%;
