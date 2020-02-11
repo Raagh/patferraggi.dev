@@ -5,6 +5,7 @@ import Bio from "../components/blog/bio"
 import Layout from "../components/shared/layout"
 import SEO from "../components/shared/seo"
 import { Disqus, CommentCount } from "gatsby-plugin-disqus"
+import Img from "gatsby-image"
 
 class BlogPostTemplate extends React.Component {
   componentDidMount() {
@@ -30,6 +31,7 @@ class BlogPostTemplate extends React.Component {
           title={post.frontmatter.title}
           description={post.frontmatter.description || post.excerpt}
         />
+        <Img fixed={post.frontmatter.thumbnail.childImageSharp.fixed} />
         <h1>{post.frontmatter.title}</h1>
         <p
           style={{
@@ -93,6 +95,13 @@ export const pageQuery = graphql`
         title
         date(formatString: "MMMM DD, YYYY")
         description
+        thumbnail {
+          childImageSharp {
+            fixed(width: 300, height: 300) {
+              ...GatsbyImageSharpFixed
+            }
+          }
+        }
       }
     }
   }
