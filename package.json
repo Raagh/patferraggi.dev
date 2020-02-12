@@ -12,6 +12,7 @@
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\""
   },
   "dependencies": {
+    "@integreat-app/react-sticky-headroom": "^1.0.5",
     "@mdx-js/mdx": "^1.5.1",
     "@mdx-js/react": "^1.5.1",
     "babel-plugin-styled-components": "^1.10.0",
@@ -39,7 +40,6 @@
     "normalize.css": "^8.0.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-headroom": "^3.0.0",
     "react-helmet": "^5.2.0",
     "react-switch": "^5.0.0",
     "styled-components": "^4.2.0"

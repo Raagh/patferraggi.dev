@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import Headroom from "react-headroom"
+import ReactStickyHeadroom from "@integreat-app/react-sticky-headroom"
 import styled from "styled-components"
 import GithubIcon from "../../../content/assets/icons/github.svg"
 import LinkedinIcon from "../../../content/assets/icons/linkedin.png"
@@ -62,25 +62,14 @@ const NavbarIconsContainer = styled.div`
   }
 `
 
-const fixHeadroomHeight = () => {
-  if (typeof window !== `undefined`) {
-    window.onload = function() {
-      const element = document.getElementsByClassName("headroom-wrapper")[0]
-      element.style.height = "100%"
-    }
-  }
-}
-
 const NavbarIconPadding = { padding: "0 2rem 0 0" }
 const IconSize = { width: "18px", height: "18px" }
 
 export default () => {
   const [isOpen, setIsOpen] = useState(false)
 
-  fixHeadroomHeight()
-
   return (
-    <Headroom>
+    <ReactStickyHeadroom scrollHeight={134}>
       <NavbarContainer id="navbar-container">
         <a href="/">
           {" "}
@@ -114,6 +103,6 @@ export default () => {
 
         <Sidebar isOpen={isOpen} setIsOpen={setIsOpen}></Sidebar>
       </NavbarContainer>
-    </Headroom>
+    </ReactStickyHeadroom>
   )
 }
