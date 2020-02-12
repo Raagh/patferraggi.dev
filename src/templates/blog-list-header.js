@@ -3,6 +3,8 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import globalStyles from "../config/style-variables"
+import IcomoonReact from "icomoon-react"
+import iconSet from "../../content/assets/icons/selection.json"
 
 const BlogListTemplateHeader = styled.section`
   width: 100%;
@@ -76,6 +78,17 @@ const StyledImg = styled(Img)`
   width: 50%;
 `
 
+const NewHeader = styled.p`
+  font-family: ${globalStyles.fontFamilyMedium};
+  font-size: 18px;
+  line-height: 32px;
+  margin-bottom: 2rem;
+
+  path {
+    fill: ${globalStyles.backgroundColor};
+  }
+`
+
 export default props => {
   const data = useStaticQuery(graphql`
     query {
@@ -131,6 +144,9 @@ export default props => {
       {props.shouldDisplayMainArticle && (
         <BlogListMainArticle>
           <BlogListMainArticleText>
+            <NewHeader>
+              {<IcomoonReact iconSet={iconSet} size={"1em"} icon="cup" />} NUEVO
+            </NewHeader>
             <BlogListMainArticleTitle>
               <StyledGatsbyLinkMainArticle to={`blog${mainPost.fields.slug}`}>
                 {mainPost.frontmatter.title || mainPost.fields.slug}
