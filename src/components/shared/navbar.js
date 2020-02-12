@@ -10,8 +10,6 @@ import device from "../../config/device"
 import Sidebar from "./sidebar"
 
 const LogoWrapper = styled.img`
-  grid-area: logo;
-
   @media ${device.small} {
     height: 2.65em;
   }
@@ -64,11 +62,22 @@ const NavbarIconsContainer = styled.div`
   }
 `
 
+const fixHeadroomHeight = () => {
+  if (typeof window !== `undefined`) {
+    window.onload = function() {
+      const element = document.getElementsByClassName("headroom-wrapper")[0]
+      element.style.height = "100%"
+    }
+  }
+}
+
 const NavbarIconPadding = { padding: "0 2rem 0 0" }
 const IconSize = { width: "18px", height: "18px" }
 
 export default () => {
   const [isOpen, setIsOpen] = useState(false)
+
+  fixHeadroomHeight()
 
   return (
     <Headroom>
