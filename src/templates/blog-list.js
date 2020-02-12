@@ -1,36 +1,15 @@
 import React from "react"
 import { Link, graphql } from "gatsby"
-import Layout from "../components/shared/layout"
-import Button from "../components/blog/button"
 import styled from "styled-components"
-import globalStyles from "../config/style-variables"
 import Img from "gatsby-image"
+import Layout from "../components/shared/layout"
+import BlogListTemplateHeader from "./blog-list-header"
+import globalStyles from "../config/style-variables"
+import device from "../config/device"
 
 const BlogListTemplateWrapper = styled.section`
   font-family: ${globalStyles.fontFamilyMedium};
   font-weight: 500;
-`
-const BlogListTemplateTitle = styled.p`
-  font-size: 54px;
-  line-height: 64px;
-  letter-spacing: -2.2528px;
-`
-const HighLightedText = styled.span`
-  color: ${globalStyles.secondaryColor};
-`
-
-const BlogListMainArticle = styled.article`
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  background: ${globalStyles.primaryColor};
-  color: ${globalStyles.backgroundColor};
-`
-
-const BlogListMainArticleText = styled.div``
-
-const BlogListArticle = styled.article`
-  width: 25%;
 `
 
 const BlogListArticlesListWrapper = styled.section`
@@ -38,11 +17,30 @@ const BlogListArticlesListWrapper = styled.section`
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+
+  @media ${device.small} {
+    flex-direction: column;
+  }
 `
 
-const StyledGatsbyLinkMainArticle = styled(props => <Link {...props} />)`
-  text-decoration: none;
-  color: ${globalStyles.backgroundColor};
+const BlogListArticle = styled.article`
+  width: 25%;
+  min-height: 100%;
+  margin-top: 4rem;
+  display: flex;
+  flex-direction: column;
+`
+
+const BlogListArticleTitle = styled.h3`
+  margin-top: 1.5rem;
+  width: 70%;
+  height: 100px;
+`
+
+const BlogListArticleDate = styled.small`
+  margin-top: auto;
+  height: 45px;
+  opacity: 0.5;
 `
 
 const StyledGatsbyLink = styled(props => <Link {...props} />)`
@@ -50,85 +48,99 @@ const StyledGatsbyLink = styled(props => <Link {...props} />)`
   color: ${globalStyles.primaryColor};
 `
 
+const StyledHomeLink = styled(StyledGatsbyLink)`
+  font-size: 14px;
+  line-height: 28px;
+`
+
+const StyledButton = styled.button`
+  width: 216px;
+  height: 54px;
+  font-size: 24px;
+  line-height: 28px;
+  font-family:${device.fontFamilyMedium}
+  letter-spacing: -1px;
+`
+
 class BlogListTemplate extends React.Component {
   render() {
     const { data } = this.props
-    const mainPost = data.allMdx.edges.shift().node
-    const restOfPosts = data.allMdx.edges
-    // const { currentPage, numPages } = this.props.pageContext
-    // const isFirst = currentPage === 1
-    // const isLast = currentPage === numPages
-    // const prevPage =
-    //   currentPage - 1 === 1 ? "/blog/" : "/blog/" + (currentPage - 1).toString()
-    // const nextPage = "/blog/" + (currentPage + 1).toString()
+    const { currentPage, numPages } = this.props.pageContext
+    const isFirst = currentPage === 1
+    const isLast = currentPage === numPages
+    const prevPage =
+      currentPage - 1 === 1 ? "/blog/" : "/blog/" + (currentPage - 1).toString()
+    const nextPage = "/blog/" + (currentPage + 1).toString()
+
+    const posts = data.allMdx.edges
 
     return (
       <Layout>
         <BlogListTemplateWrapper>
-          <BlogListTemplateTitle>
-            Bienvenido al{" "}
-            <HighLightedText>Calaboso del programador</HighLightedText>
-          </BlogListTemplateTitle>
-          <BlogListMainArticle>
-            <BlogListMainArticleText>
-              <h3>
-                <StyledGatsbyLinkMainArticle to={`blog${mainPost.fields.slug}`}>
-                  {mainPost.frontmatter.title || mainPost.fields.slug}
-                </StyledGatsbyLinkMainArticle>
-              </h3>
-              <p
-                dangerouslySetInnerHTML={{
-                  __html: mainPost.frontmatter.description || mainPost.excerpt,
-                }}
-              />
-              <small>{mainPost.frontmatter.date}</small>
-            </BlogListMainArticleText>
-            <Img fixed={mainPost.frontmatter.thumbnail.childImageSharp.fixed} />
-          </BlogListMainArticle>
+          <BlogListTemplateHeader
+            shouldDisplayMainArticle={currentPage !== 2}
+          ></BlogListTemplateHeader>
           <BlogListArticlesListWrapper>
-            {restOfPosts.map(({ node }) => {
+            {posts.map(({ node }) => {
               const title = node.frontmatter.title || node.fields.slug
               return (
                 <BlogListArticle key={node.fields.slug}>
                   <Img
+                    imgStyle={{ objectFit: "fill" }}
                     fixed={node.frontmatter.thumbnail.childImageSharp.fixed}
                   />
-                  <h3>
+                  <BlogListArticleTitle>
                     <StyledGatsbyLink to={`blog${node.fields.slug}`}>
                       {title}
                     </StyledGatsbyLink>
-                  </h3>
-                  <small>{node.frontmatter.date}</small>
+                  </BlogListArticleTitle>
+                  <BlogListArticleDate>
+                    {node.frontmatter.date}
+                  </BlogListArticleDate>
                 </BlogListArticle>
               )
             })}
           </BlogListArticlesListWrapper>
         </BlogListTemplateWrapper>
-        {/* <ul
+        <ul
           style={{
             display: "flex",
-            flexWrap: "wrap",
-            justifyContent: "space-between",
-            alignItems: "center",
-            listStyle: "none",
-            padding: 0,
-            margin: 0,
+            flexDirection: "row",
+            justifyContent: "center",
+            marginBottom: "4rem",
+            marginTop: "4.5rem",
           }}
         >
           {!isFirst && (
-            <Link to={prevPage} rel="prev">
-              ← Anterior
-            </Link>
+            <StyledButton>
+              <Link
+                to={prevPage}
+                rel="prev"
+                style={{
+                  textDecoration: "none",
+                  color: `${globalStyles.backgroundColor}`,
+                }}
+              >
+                ← Anterior
+              </Link>
+            </StyledButton>
           )}
           {!isLast && (
-            <Link to={nextPage} rel="next">
-              Siguiente →
-            </Link>
+            <StyledButton>
+              <Link
+                to={nextPage}
+                rel="next"
+                style={{
+                  textDecoration: "none",
+                  color: `${globalStyles.backgroundColor}`,
+                }}
+              >
+                Siguiente →
+              </Link>
+            </StyledButton>
           )}
-        </ul> */}
-        <Link to="/">
-          <Button marginTop="85px">Home</Button>
-        </Link>
+        </ul>
+        <StyledHomeLink to="/">← Back to my website</StyledHomeLink>
       </Layout>
     )
   }
@@ -160,7 +172,7 @@ export const pageQuery = graphql`
             description
             thumbnail {
               childImageSharp {
-                fixed(width: 300, height: 300) {
+                fixed(width: 350, height: 300) {
                   ...GatsbyImageSharpFixed
                 }
               }

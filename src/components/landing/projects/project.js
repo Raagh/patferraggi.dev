@@ -113,6 +113,16 @@ export default props => {
   const StyledLink = styled.a`
     color: ${globalStyles.secondaryColor};
     text-decoration: underline !important;
+    font-size: 32px;
+    line-height: 40px;
+    letter-spacing: -2.2528px;
+
+    @media ${device.small} {
+      font-size: 16px;
+      line-height: 17px;
+
+      letter-spacing: -0.970036px;
+    }
   `
 
   return (
@@ -132,7 +142,7 @@ export default props => {
           rel="noopener noreferrer nofollow"
           style={{ marginTop: "auto", paddingTop: "2rem" }}
         >
-          See project
+          → See project
         </StyledLink>
       </ProjectWrapperProject>
       <ProjectWrapperImage

@@ -36,6 +36,9 @@ const ArticleTitle = styled.div`
   font-size: 32px;
   line-height: 40px;
   letter-spacing: -1.28px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 
   @media ${device.small} {
     font-size: 1.5em;
@@ -105,7 +108,7 @@ export default props => {
         <p>{props.creationDate}</p>
         <ArticleTitle>
           <ArticleLink href={props.link}>{props.title}</ArticleLink>
-          <p>
+          <p style={{ marginTop: "auto" }}>
             <ArticleLink
               href={props.link}
               style={{ color: globalStyles.secondaryColor }}
