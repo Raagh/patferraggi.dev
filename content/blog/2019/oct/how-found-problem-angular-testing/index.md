@@ -6,8 +6,6 @@ description: ""
 thumbnail: ./cover.jpeg
 ---
 
-![VSCODE marketplace](https://res.cloudinary.com/practicaldev/image/fetch/s--IgFz9gfV--/c_imagga_scale,f_auto,fl_progressive,h_420,q_auto,w_1000/https://thepracticaldev.s3.amazonaws.com/i/2z9yyu075xt91sr2g1xl.png)
-
 Hi my name is Patricio and just like you, I am software developer. Around a year ago I started working with Angular at my current job as I wanted to be a Fullstack developer again. I worked professionally with Angular.js before and I did a few test projects with Angular but nothing serious.
 
 Coming from a C#/JavaScript background doing TypeScript was not a problem at all. I felt right at home and developed the necessary skills quickly. I had my visual studio code environment ready so I went ahead and started developing using a Test Driven Development approach, as I was so used to in C#.
