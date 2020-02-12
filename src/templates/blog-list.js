@@ -58,7 +58,7 @@ const StyledButton = styled.button`
   height: 54px;
   font-size: 24px;
   line-height: 28px;
-  font-family:${device.fontFamilyMedium}
+  font-family: ${device.fontFamilyMedium};
   letter-spacing: -1px;
 `
 
