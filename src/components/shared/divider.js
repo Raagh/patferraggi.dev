@@ -14,6 +14,8 @@ export default props => {
     ? "3.5rem 0 2.5rem 0"
     : "5.5rem 0 4.5rem 0"
 
+  const maxWidth = props.maxWidth ?? null
+
   return (
     <hr
       style={{
@@ -23,6 +25,7 @@ export default props => {
         borderTop: `2px solid ${styleVariables.primaryColor}`,
         margin: margin,
         height: "0px",
+        maxWidth: maxWidth,
       }}
     />
   )

@@ -8,6 +8,7 @@ import globalStyles from "../config/style-variables"
 import Layout from "../components/shared/layout"
 import SEO from "../components/shared/seo"
 import Divider from "../components/shared/divider"
+import BlogPostShowcaseWrapper from "../components/blog/blog-post-showcase-wrapper"
 // import Bio from "../components/blog/bio"
 
 const ArticleWrapper = styled.section`
@@ -39,6 +40,8 @@ const StyledCover = styled(Img)`
 const ArticleContent = styled.article`
   background: linear-gradient(to bottom, #20202c 3%, #eaeae4 3%);
   color: ${globalStyles.backgroundColor};
+  max-width: 1260px;
+  margin-right: auto;
 `
 
 const StyledHomeLink = styled(props => <Link {...props} />)`
@@ -145,7 +148,7 @@ class BlogPostTemplate extends React.Component {
           <StyledHomeLink to="/blog">← Back to my blog</StyledHomeLink>
           <ArticleTitle>{post.frontmatter.title}</ArticleTitle>
           <ArticleDate>{post.frontmatter.date}</ArticleDate>
-          <Divider small={true}></Divider>
+          <Divider small={true} maxWidth={"1260px"}></Divider>
           <ArticleContent>
             <StyledCover
               fluid={post.frontmatter.thumbnail.childImageSharp.fluid}
@@ -184,6 +187,7 @@ class BlogPostTemplate extends React.Component {
             )}
           </li>
         </ul> */}
+        <BlogPostShowcaseWrapper></BlogPostShowcaseWrapper>
         <StyledHomeLink to="/blog">← Back to my blog</StyledHomeLink>
       </Layout>
     )
