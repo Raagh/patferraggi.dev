@@ -8,7 +8,7 @@ import globalStyles from "../config/style-variables"
 import Layout from "../components/shared/layout"
 import SEO from "../components/shared/seo"
 import Divider from "../components/shared/divider"
-import BlogPostShowcaseWrapper from "../components/blog/blog-post-showcase-wrapper"
+import BlogListArticlesDisplay from "../components/blog/blog-list-articles-display"
 // import Bio from "../components/blog/bio"
 
 const ArticleWrapper = styled.section`
@@ -142,6 +142,7 @@ class BlogPostTemplate extends React.Component {
 
   render() {
     const post = this.props.data.mdx
+    const posts = this.props.data.allMdx.edges
 
     let disqusConfig = {
       identifier: post.id,
@@ -184,7 +185,8 @@ class BlogPostTemplate extends React.Component {
         <BlogPostShowcaseWrapperTitle>
           Más artículos
         </BlogPostShowcaseWrapperTitle>
-        <BlogPostShowcaseWrapper></BlogPostShowcaseWrapper>
+
+        <BlogListArticlesDisplay posts={posts}></BlogListArticlesDisplay>
         <StyledHomeLink to="/blog">← Back to my blog</StyledHomeLink>
       </Layout>
     )
@@ -194,7 +196,7 @@ class BlogPostTemplate extends React.Component {
 export default BlogPostTemplate
 
 export const pageQuery = graphql`
-  query BlogPostBySlug($slug: String!) {
+  query BlogPostBySlug($slug: String!, $date: Date!) {
     site {
       siteMetadata {
         title
@@ -216,6 +218,32 @@ export const pageQuery = graphql`
           childImageSharp {
             fluid {
               src
+            }
+          }
+        }
+      }
+    }
+    allMdx(
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 4
+      filter: { frontmatter: { date: { lt: $date } } }
+    ) {
+      edges {
+        node {
+          excerpt
+          fields {
+            slug
+          }
+          frontmatter {
+            date(formatString: "MMMM DD, YYYY")
+            title
+            description
+            thumbnail {
+              childImageSharp {
+                fixed(width: 350, height: 300) {
+                  ...GatsbyImageSharpFixed
+                }
+              }
             }
           }
         }
