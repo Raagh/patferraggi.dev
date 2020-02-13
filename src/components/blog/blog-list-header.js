@@ -2,9 +2,9 @@ import React from "react"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import { Link, graphql, useStaticQuery } from "gatsby"
-import globalStyles from "../config/style-variables"
+import globalStyles from "../../config/style-variables"
 import IcomoonReact from "icomoon-react"
-import iconSet from "../../content/assets/icons/selection.json"
+import iconSet from "../../../content/assets/icons/selection.json"
 
 const BlogListTemplateHeader = styled.section`
   width: 100%;

@@ -1,6 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
-// import { Link } from "gatsby"
+import { graphql, Link } from "gatsby"
 import { MDXRenderer } from "gatsby-plugin-mdx"
 import { Disqus, CommentCount } from "gatsby-plugin-disqus"
 import Img from "gatsby-image"
@@ -22,6 +21,7 @@ const ArticleTitle = styled.h2`
   letter-spacing: -1px;
   width: 60%;
   margin-bottom: 2rem;
+  margin-top: 2rem;
 `
 
 const ArticleDate = styled.span`
@@ -41,6 +41,17 @@ const ArticleContent = styled.article`
   color: ${globalStyles.backgroundColor};
 `
 
+const StyledHomeLink = styled(props => <Link {...props} />)`
+  text-decoration: none;
+  color: ${globalStyles.primaryColor};
+  font-size: 14px;
+  line-height: 28px;
+  font-size: 14px;
+  line-height: 28px;
+  letter-spacing: -1px;
+  font-family: ${globalStyles.fontFamilyRegular};
+`
+
 const ArticleContentText = styled.article`
   padding: 3rem 0 6rem 0;
   font-family: ${globalStyles.fontFamilyRegular};
@@ -49,7 +60,7 @@ const ArticleContentText = styled.article`
   font-size: 18px;
   line-height: 32px;
   letter-spacing: -0.5px;
-  width: 55%;
+  max-width: 44.5rem;
   margin-right: auto;
   margin-left: auto;
 
@@ -86,6 +97,25 @@ const ArticleContentText = styled.article`
   ul {
     margin-bottom: 1.5rem;
   }
+
+  ol {
+    list-style-type: none;
+  }
+
+  ol li {
+    counter-increment: count-me;
+  }
+
+  ol li::before {
+    content: counter(count-me) ". ";
+    display: block;
+    position: relative;
+    max-width: 0px;
+    max-height: 0px;
+    left: -1.3em;
+    color: ${globalStyles.secondaryColor};
+    font-weight: bold;
+  }
 `
 
 class BlogPostTemplate extends React.Component {
@@ -112,6 +142,7 @@ class BlogPostTemplate extends React.Component {
             title={post.frontmatter.title}
             description={post.frontmatter.description || post.excerpt}
           />
+          <StyledHomeLink to="/blog">← Back to my blog</StyledHomeLink>
           <ArticleTitle>{post.frontmatter.title}</ArticleTitle>
           <ArticleDate>{post.frontmatter.date}</ArticleDate>
           <Divider small={true}></Divider>
@@ -153,6 +184,7 @@ class BlogPostTemplate extends React.Component {
             )}
           </li>
         </ul> */}
+        <StyledHomeLink to="/blog">← Back to my blog</StyledHomeLink>
       </Layout>
     )
   }

@@ -3,7 +3,7 @@ import { Link, graphql } from "gatsby"
 import styled from "styled-components"
 import Img from "gatsby-image"
 import Layout from "../components/shared/layout"
-import BlogListTemplateHeader from "./blog-list-header"
+import BlogListTemplateHeader from "../components/blog/blog-list-header"
 import globalStyles from "../config/style-variables"
 import device from "../config/device"
 

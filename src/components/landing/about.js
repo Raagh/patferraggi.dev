@@ -50,6 +50,7 @@ const BackgroundText = styled.article`
   padding-top: 4rem;
   font-size: 24px;
   line-height: 32px;
+  font-family: ${globalStyles.fontFamilyRegular};
   width: 45%;
 
   @media ${device.small} {
