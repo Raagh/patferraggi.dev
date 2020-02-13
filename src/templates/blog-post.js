@@ -55,6 +55,17 @@ const StyledHomeLink = styled(props => <Link {...props} />)`
   font-family: ${globalStyles.fontFamilyRegular};
 `
 
+const BlogPostShowcaseWrapperTitle = styled.p`
+  font-family: ${globalStyles.fontFamilyMedium};
+  color: ${globalStyles.primaryColor};
+  margin-top: 4rem;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 54px;
+  line-height: 64px;
+  letter-spacing: -2.2528px;
+`
+
 const ArticleContentText = styled.article`
   padding: 3rem 0 6rem 0;
   font-family: ${globalStyles.fontFamilyRegular};
@@ -131,7 +142,6 @@ class BlogPostTemplate extends React.Component {
 
   render() {
     const post = this.props.data.mdx
-    // const { previous, next } = this.props.pageContext
 
     let disqusConfig = {
       identifier: post.id,
@@ -155,38 +165,25 @@ class BlogPostTemplate extends React.Component {
             />
             <ArticleContentText>
               <MDXRenderer>{post.body}</MDXRenderer>
-              <Divider small={true}></Divider>
+              {/* <Divider
+                small={true}
+                maxWidth={"44.5rem"}
+                color={globalStyles.backgroundColor}
+              ></Divider>
+              <Bio></Bio> */}
+              <Divider
+                small={true}
+                maxWidth={"44.5rem"}
+                color={globalStyles.backgroundColor}
+              ></Divider>
               <CommentCount config={disqusConfig} />
               <Disqus config={disqusConfig} />
-              {/* <Bio></Bio> */}
             </ArticleContentText>
           </ArticleContent>
         </ArticleWrapper>
-        {/* <hr />
-        <ul
-          style={{
-            display: `flex`,
-            flexWrap: `wrap`,
-            justifyContent: `space-between`,
-            listStyle: `none`,
-            padding: 0,
-          }}
-        >
-          <li>
-            {previous && (
-              <Link to={`blog${previous.fields.slug}`} rel="prev">
-                ← {previous.frontmatter.title}
-              </Link>
-            )}
-          </li>
-          <li>
-            {next && (
-              <Link to={`blog${next.fields.slug}`} rel="next">
-                {next.frontmatter.title} →
-              </Link>
-            )}
-          </li>
-        </ul> */}
+        <BlogPostShowcaseWrapperTitle>
+          Más artículos
+        </BlogPostShowcaseWrapperTitle>
         <BlogPostShowcaseWrapper></BlogPostShowcaseWrapper>
         <StyledHomeLink to="/blog">← Back to my blog</StyledHomeLink>
       </Layout>
