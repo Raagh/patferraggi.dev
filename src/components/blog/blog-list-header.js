@@ -3,8 +3,6 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import globalStyles from "../../config/style-variables"
-import IcomoonReact from "icomoon-react"
-import iconSet from "../../../content/assets/icons/selection.json"
 
 const BlogListTemplateHeader = styled.section`
   width: 100%;
@@ -144,9 +142,7 @@ export default props => {
       {props.shouldDisplayMainArticle && (
         <BlogListMainArticle>
           <BlogListMainArticleText>
-            <NewHeader>
-              {<IcomoonReact iconSet={iconSet} size={"1em"} icon="cup" />} NUEVO
-            </NewHeader>
+            <NewHeader>&#x2605; NUEVO</NewHeader>
             <BlogListMainArticleTitle>
               <StyledGatsbyLinkMainArticle to={`blog${mainPost.fields.slug}`}>
                 {mainPost.frontmatter.title || mainPost.fields.slug}
