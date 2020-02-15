@@ -1,15 +1,57 @@
 import React from "react"
 import { useStaticQuery, graphql } from "gatsby"
-// import Image from "gatsby-image"
-// import styled from "styled-components"
+import Img from "gatsby-image"
+import styled from "styled-components"
+import globalStyles from "../../config/style-variables"
+import device from "../../config/device"
+
+const Container = styled.div`
+  display: flex;
+
+  @media ${device.small} {
+    flex-direction: column;
+  }
+`
+
+const TextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  font-family: ${globalStyles.fontFamilyRegular};
+  font-size: 18px;
+  line-height: 26px;
+  letter-spacing: -0.5px;
+`
+
+const BioTitle = styled.span`
+  font-family: ${globalStyles.fontFamilyMedium};
+`
+
+const BioPresentation = styled.p`
+  opacity: 0.75;
+`
+
+const StyledAvatar = styled(Img)`
+  width: 77px;
+  height: 77px;
+  margin-right: 2rem;
+  margin-top: 1rem;
+
+  img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 0 !important;
+  }
+`
 
 export default () => {
   const data = useStaticQuery(graphql`
     query BioQuery {
-      avatar: file(absolutePath: { regex: "/profile-pic.jpg/" }) {
+      avatar: file(absolutePath: { regex: "/avatar.jpg/" }) {
         childImageSharp {
-          fixed(width: 50, height: 50) {
-            ...GatsbyImageSharpFixed
+          fluid {
+            ...GatsbyImageSharpFluid
           }
         }
       }
@@ -25,24 +67,25 @@ export default () => {
   `)
   const { author, social } = data.site.siteMetadata
   return (
-    <div>
-      <div>
-        <strong>{author}</strong>
-      </div>
-      <p>
-        Soy un desarrollador autodidacta Argentino que actualmente vive y
-        trabaja en Bélgica. Intento mejorar diariamente para convertirme en un
-        mejor desarrollador, mientras ayudo a otros a hacer lo mismo.
-        {` `}
-      </p>
-      <a
-        className="twitter-follow-button"
-        href="https://twitter.com/patferraggi"
-        data-show-count="false"
-        data-size="large"
-      >
-        Seguir a @${social.twitter}
-      </a>
-    </div>
+    <Container>
+      <StyledAvatar fluid={data.avatar.childImageSharp.fluid} alt={author} />
+      <TextContainer>
+        <BioTitle>Hola, soy {author}</BioTitle>
+        <BioPresentation>
+          Soy un developer autodidacta Argentino que actualmente vive y trabaja
+          en Bélgica. Intento mejorar diariamente para convertirme en un mejor
+          programador, mientras ayudo a otros a hacer lo mismo.
+          {` `}
+        </BioPresentation>
+        <a
+          className="twitter-follow-button"
+          href="https://twitter.com/patferraggi"
+          data-show-count="false"
+          data-size="large"
+        >
+          Seguir a @${social.twitter}
+        </a>
+      </TextContainer>
+    </Container>
   )
 }

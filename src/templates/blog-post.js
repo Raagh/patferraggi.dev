@@ -9,7 +9,7 @@ import Layout from "../components/shared/layout"
 import SEO from "../components/shared/seo"
 import Divider from "../components/shared/divider"
 import BlogListArticlesDisplay from "../components/blog/blog-list-articles-display"
-// import Bio from "../components/blog/bio"
+import Bio from "../components/blog/bio"
 
 const ArticleWrapper = styled.section`
   font-family: ${globalStyles.fontFamilyMedium};
@@ -175,12 +175,6 @@ class BlogPostTemplate extends React.Component {
           <ArticleContent>
             <ArticleContentText>
               <MDXRenderer>{post.body}</MDXRenderer>
-              {/* <Divider
-                small={true}
-                maxWidth={"44.5rem"}
-                color={globalStyles.backgroundColor}
-              ></Divider>
-              <Bio></Bio> */}
               <Divider
                 small={true}
                 maxWidth={"44.5rem"}
@@ -188,6 +182,12 @@ class BlogPostTemplate extends React.Component {
               ></Divider>
               <CommentCount config={disqusConfig} />
               <Disqus config={disqusConfig} />
+              <Divider
+                small={true}
+                maxWidth={"44.5rem"}
+                color={globalStyles.backgroundColor}
+              ></Divider>
+              <Bio></Bio>
             </ArticleContentText>
           </ArticleContent>
         </ArticleWrapper>
