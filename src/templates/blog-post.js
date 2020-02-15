@@ -31,19 +31,6 @@ const ArticleDate = styled.span`
   opacity: 0.5;
 `
 
-const StyledCover = styled(Img)`
-  width: 90%;
-  margin: auto;
-  height: 475px;
-`
-
-const ArticleContent = styled.article`
-  background: linear-gradient(to bottom, #20202c 3%, #eaeae4 3%);
-  color: ${globalStyles.backgroundColor};
-  max-width: 1260px;
-  margin-right: auto;
-`
-
 const StyledHomeLink = styled(props => <Link {...props} />)`
   text-decoration: none;
   color: ${globalStyles.primaryColor};
@@ -64,6 +51,26 @@ const BlogPostShowcaseWrapperTitle = styled.p`
   font-size: 54px;
   line-height: 64px;
   letter-spacing: -2.2528px;
+`
+
+const StyledCover = styled(Img)`
+  width: 90%;
+  margin: auto;
+  height: 475px;
+`
+
+const CoverContent = styled.article`
+  background: linear-gradient(to bottom, #20202c 40%, #eaeae4 40%);
+  color: ${globalStyles.backgroundColor};
+  max-width: 1260px;
+  margin-right: auto;
+`
+
+const ArticleContent = styled.article`
+  background: ${globalStyles.primaryColor};
+  color: ${globalStyles.backgroundColor};
+  max-width: 1260px;
+  margin-right: auto;
 `
 
 const ArticleContentText = styled.article`
@@ -160,10 +167,12 @@ class BlogPostTemplate extends React.Component {
           <ArticleTitle>{post.frontmatter.title}</ArticleTitle>
           <ArticleDate>{post.frontmatter.date}</ArticleDate>
           <Divider small={true} maxWidth={"1260px"}></Divider>
-          <ArticleContent>
+          <CoverContent>
             <StyledCover
               fluid={post.frontmatter.thumbnail.childImageSharp.fluid}
             />
+          </CoverContent>
+          <ArticleContent>
             <ArticleContentText>
               <MDXRenderer>{post.body}</MDXRenderer>
               {/* <Divider
