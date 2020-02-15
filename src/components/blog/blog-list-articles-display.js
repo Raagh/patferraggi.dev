@@ -22,12 +22,22 @@ const BlogListArticle = styled.article`
   margin-top: 4rem;
   display: flex;
   flex-direction: column;
+
+  @media ${device.small} {
+    width: 100%;
+    margin-top: 2rem;
+  }
 `
 
 const BlogListArticleTitle = styled.h3`
   margin-top: 1.5rem;
   width: 70%;
   height: 100px;
+
+  @media ${device.small} {
+    width: 100%;
+    height: 80px;
+  }
 `
 
 const BlogListArticleDate = styled.small`

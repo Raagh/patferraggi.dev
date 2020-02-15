@@ -3,6 +3,7 @@ import styled from "styled-components"
 import Img from "gatsby-image"
 import { Link, graphql, useStaticQuery } from "gatsby"
 import globalStyles from "../../config/style-variables"
+import device from "../../config/device"
 
 const BlogListTemplateHeader = styled.section`
   width: 100%;
@@ -13,6 +14,13 @@ const BlogListTemplateTitle = styled.p`
   line-height: 64px;
   letter-spacing: -2.2528px;
   margin-top: 1rem;
+
+  @media ${device.small} {
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -1px;
+    margin-top: 0;
+  }
 `
 
 const BlogListTemplateSubtitle = styled.p`
@@ -21,6 +29,12 @@ const BlogListTemplateSubtitle = styled.p`
   letter-spacing: -1px;
   opacity: 0.5;
   margin-bottom: 3rem;
+
+  @media ${device.small} {
+    line-height: 30px;
+    letter-spacing: -1px;
+    margin-top: 1rem;
+  }
 `
 
 const HighLightedText = styled.span`
@@ -34,6 +48,16 @@ const BlogListMainArticle = styled.article`
   color: ${globalStyles.backgroundColor};
   height: 458px;
   padding: 3rem;
+
+  @media ${device.small} {
+    flex-direction: column;
+    padding: 1rem;
+    max-width: 100%;
+    max-height: 100%;
+    margin-bottom: 2rem;
+    width: 100%;
+    height: 100%;
+  }
 `
 
 const BlogListMainArticleTitle = styled.h3`
@@ -41,6 +65,11 @@ const BlogListMainArticleTitle = styled.h3`
   line-height: 48px;
   letter-spacing: -1px;
   margin-bottom: 1.5rem;
+
+  @media ${device.small} {
+    font-size: 1.5em;
+    line-height: 30px;
+  }
 `
 
 const BlogListMainArticleText = styled.div`
@@ -48,6 +77,11 @@ const BlogListMainArticleText = styled.div`
   margin-right: 4.5rem;
   display: flex;
   flex-direction: column;
+
+  @media ${device.small} {
+    width: 100%;
+    margin-right: 0;
+  }
 `
 
 const BlogListMainArticleExcerpt = styled.div`
@@ -55,6 +89,10 @@ const BlogListMainArticleExcerpt = styled.div`
   line-height: 32px;
   opacity: 0.8;
   margin-bottom: 4rem;
+
+  @media ${device.small} {
+    margin-bottom: 2rem;
+  }
 `
 
 const BlogListMainArticleDate = styled.small`
@@ -74,6 +112,11 @@ const StyledLink = styled.a`
 
 const StyledImg = styled(Img)`
   width: 50%;
+
+  @media ${device.small} {
+    height: 100%;
+    width: 100%;
+  }
 `
 
 const NewHeader = styled.p`
