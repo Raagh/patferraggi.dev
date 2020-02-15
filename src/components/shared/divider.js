@@ -2,15 +2,15 @@ import React from "react"
 import device from "../../config/device"
 import styleVariables from "../../config/style-variables"
 
-const mediaQuery =
+const isMediaQuerySmall =
   typeof window !== `undefined`
-    ? window.matchMedia(device.small)
-    : { matches: false }
+    ? window.matchMedia(device.small).matches
+    : false
 
 export default props => {
   const margin = props.small
     ? "3.5rem 0 3.5rem 0"
-    : mediaQuery.matches
+    : isMediaQuerySmall
     ? "3.5rem 0 2.5rem 0"
     : "5.5rem 0 4.5rem 0"
 

@@ -7,15 +7,11 @@ import device from "../../config/device"
 import iconSet from "../../../content/assets/icons/selection.json"
 import CloseButton from "../../../content/assets/icons/close.svg"
 
-const mediaQuerySmall =
+const isMediaQuerySmallOrMedium =
   typeof window !== `undefined`
-    ? window.matchMedia(device.small)
-    : { matches: false }
-
-const mediaQueryMedium =
-  typeof window !== `undefined`
-    ? window.matchMedia(device.medium)
-    : { matches: false }
+    ? window.matchMedia(device.small).matches ||
+      window.matchMedia(device.medium).matches
+    : false
 
 const disableScrollingIfSidebarOpen = props => {
   const body =
@@ -27,8 +23,7 @@ const disableScrollingIfSidebarOpen = props => {
 }
 
 export default props => {
-  const sidebarWidth =
-    mediaQuerySmall.matches || mediaQueryMedium.matches ? "100%" : "70%"
+  const sidebarWidth = isMediaQuerySmallOrMedium ? "100%" : "70%"
 
   disableScrollingIfSidebarOpen(props)
 

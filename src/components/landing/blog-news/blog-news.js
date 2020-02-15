@@ -6,7 +6,6 @@ import device from "../../../config/device"
 import styleVariables from "../../../config/style-variables"
 import Article from "./blog-news-article"
 import iconSet from "../../../../content/assets/icons/selection.json"
-import DefaultTemporaryBlogNewsImage from "../../../../content/assets/images/2020.jpg"
 
 const BlogNewsWrapper = styled.section`
   border: 2px solid ${styleVariables.primaryColor};
@@ -115,6 +114,12 @@ const BlogNewsArticles = styled.section`
   }
 `
 
+const isMediaQueryLargeOrExtraLarge =
+  typeof window !== `undefined`
+    ? window.matchMedia(device.large).matches ||
+      window.matchMedia(device.xlarge).matches
+    : false
+
 export default () => {
   const articles = useStaticQuery(graphql`
     query {
@@ -175,10 +180,10 @@ export default () => {
           return (
             <Article
               id={articleIndex}
-              preview={DefaultTemporaryBlogNewsImage}
               title={node.frontmatter.title}
               link={`/blog` + node.fields.slug}
               showPreview={articleIndex === 0}
+              small={articleIndex === 1 && isMediaQueryLargeOrExtraLarge}
               creationDate={node.frontmatter.date}
             />
           )

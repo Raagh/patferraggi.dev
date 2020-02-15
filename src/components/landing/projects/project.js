@@ -19,14 +19,6 @@ export default props => {
           }
         }
       }
-      site {
-        siteMetadata {
-          author
-          social {
-            twitter
-          }
-        }
-      }
     }
   `)
 

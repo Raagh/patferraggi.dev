@@ -4,23 +4,8 @@ import globalStyles from "../../../config/style-variables"
 import device from "../../../config/device"
 import IcomoonReact from "icomoon-react"
 import iconSet from "../../../../content/assets/icons/selection.json"
-
-const ArticleWrapper = styled.article`
-  display: flex;
-  flex-direction: row;
-
-  @media ${device.small} {
-    flex-direction: column;
-  }
-
-  @media ${device.medium} {
-    flex-direction: column;
-  }
-
-  @media ${device.large} {
-    flex-direction: column;
-  }
-`
+import Img from "gatsby-image"
+import { graphql, useStaticQuery } from "gatsby"
 
 const ArticleLink = styled.a`
   color: ${globalStyles.primaryColor};
@@ -47,9 +32,10 @@ const ArticleTitle = styled.div`
   }
 `
 
-const StyledPreview = styled.img`
+const StyledPreview = styled(Img)`
   height: 412px;
   margin: 0 2.5rem 0 0;
+  width: 100%;
 
   @media ${device.small} {
     max-width: 100%;
@@ -85,24 +71,50 @@ const ArticleTextContainer = styled.div`
   }
 `
 
-const RenderPreviewIfItMatters = props => {
-  if (props.shouldRenderPreview)
-    return (
-      <StyledPreview
-        alt="close-button"
-        id="close-button"
-        src={props.preview}
-      ></StyledPreview>
-    )
-  else return null
+const RenderPreviewIfItMatters = ({ preview, shouldRenderPreview }) => {
+  return shouldRenderPreview ? (
+    <StyledPreview alt="article-preview" fixed={preview}></StyledPreview>
+  ) : null
 }
 
 export default props => {
+  const ArticleWrapper = styled.article`
+    display: flex;
+    flex-direction: row;
+    width: ${props.small ? "50%" : "100%"};
+
+    @media ${device.small} {
+      flex-direction: column;
+    }
+
+    @media ${device.medium} {
+      flex-direction: column;
+    }
+
+    @media ${device.large} {
+      flex-direction: column;
+    }
+  `
+
+  const data = useStaticQuery(graphql`
+    query {
+      file: file(absolutePath: { regex: "/2020.jpg/" }) {
+        childImageSharp {
+          fluid {
+            base64
+            aspectRatio
+            src
+          }
+        }
+      }
+    }
+  `)
+
   return (
     <ArticleWrapper>
       <RenderPreviewIfItMatters
         shouldRenderPreview={props.showPreview}
-        preview={props.preview}
+        preview={data.file.childImageSharp.fluid}
       ></RenderPreviewIfItMatters>
       <ArticleTextContainer>
         <p>{props.creationDate}</p>
