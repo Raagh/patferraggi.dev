@@ -10,6 +10,7 @@ import SEO from "../components/shared/seo"
 import Divider from "../components/shared/divider"
 import BlogListArticlesDisplay from "../components/blog/blog-list-articles-display"
 import Bio from "../components/blog/bio"
+import device from "../config/device"
 
 const ArticleWrapper = styled.section`
   font-family: ${globalStyles.fontFamilyMedium};
@@ -23,6 +24,21 @@ const ArticleTitle = styled.h2`
   width: 60%;
   margin-bottom: 2rem;
   margin-top: 2rem;
+
+  @media ${device.small} {
+    width: 100%;
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -1px;
+  }
+
+  @media ${device.medium} {
+    width: 100%;
+  }
+
+  @media ${device.large} {
+    width: 100%;
+  }
 `
 
 const ArticleDate = styled.span`
@@ -55,6 +71,14 @@ const StyledCover = styled(Img)`
   width: 90%;
   margin: auto;
   height: 475px;
+
+  img {
+    object-fit: fill !important;
+  }
+
+  @media ${device.small} {
+    height: 300px;
+  }
 `
 
 const CoverContent = styled.article`
@@ -111,29 +135,28 @@ const ArticleContentText = styled.article`
   h6 {
     margin-bottom: 1.5rem;
     margin-top: 3rem;
+    line-height: 32px;
   }
 
   ul {
     margin-bottom: 1.5rem;
   }
 
-  ol {
-    list-style-type: none;
+  li {
+    margin-bottom: 1rem;
+    margin-left: 1.2rem;
   }
 
-  ol li {
-    counter-increment: count-me;
+  @media ${device.small} {
+    font-size: 16px;
+    line-height: 20px;
+    padding-right: 1rem;
+    padding-left: 1rem;
   }
 
-  ol li::before {
-    content: counter(count-me) ". ";
-    display: block;
-    position: relative;
-    max-width: 0px;
-    max-height: 0px;
-    left: -1.3em;
-    color: ${globalStyles.secondaryColor};
-    font-weight: bold;
+  @media ${device.medium} {
+    padding-right: 2rem;
+    padding-left: 2rem;
   }
 `
 

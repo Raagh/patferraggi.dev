@@ -21,6 +21,10 @@ const TextContainer = styled.div`
   font-size: 16px;
   line-height: 26px;
   letter-spacing: -0.5px;
+
+  @media ${device.small} {
+    width: 100%;
+  }
 `
 
 const BioTitle = styled.span`
@@ -42,6 +46,12 @@ const StyledAvatar = styled(Img)`
     height: 50px;
     border-radius: 50%;
     margin: 0 !important;
+  }
+
+  @media ${device.small} {
+    margin: auto auto 2rem auto;
+    width: 100px;
+    height: 100px;
   }
 `
 
