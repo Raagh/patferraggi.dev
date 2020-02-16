@@ -22,16 +22,30 @@ const disableScrollingIfSidebarOpen = props => {
   body.style.overflow = props.isOpen ? "hidden" : "visible"
 }
 
+const fixViewportOnMobile = () => {
+  const fixViewport = () => {
+    const vh = window.innerHeight * 0.01
+    if (document) document.documentElement.style.setProperty("--vh", `${vh}px`)
+  }
+
+  window.addEventListener("resize", () => {
+    fixViewport()
+  })
+}
+
 export default props => {
   const sidebarWidth = isMediaQuerySmallOrMedium ? "100%" : "70%"
 
   disableScrollingIfSidebarOpen(props)
 
+  fixViewportOnMobile()
+
   const SidebarWrapper = styled.section`
     position: fixed;
     top: 0;
     right: 0;
-    height: 100vh;
+    height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
     background-color: ${globalStyles.primaryColor};
     width: ${sidebarWidth};
     opacity: ${props.isOpen ? "1" : "0"};
