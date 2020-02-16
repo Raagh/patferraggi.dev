@@ -65,6 +65,12 @@ const BlogPostShowcaseWrapperTitle = styled.p`
   font-size: 54px;
   line-height: 64px;
   letter-spacing: -2.2528px;
+
+  @media ${device.small} {
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -1px;
+  }
 `
 
 const StyledCover = styled(Img)`
@@ -77,7 +83,7 @@ const StyledCover = styled(Img)`
   }
 
   @media ${device.small} {
-    height: 300px;
+    height: 230px;
   }
 `
 
@@ -149,9 +155,9 @@ const ArticleContentText = styled.article`
 
   @media ${device.small} {
     font-size: 16px;
-    line-height: 20px;
-    padding-right: 1rem;
-    padding-left: 1rem;
+    line-height: 24px;
+    padding-right: 1.5rem;
+    padding-left: 1.5rem;
   }
 
   @media ${device.medium} {
@@ -242,7 +248,7 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "DD MMMM YYYY", locale: "es")
         description
         thumbnail {
           childImageSharp {
@@ -265,7 +271,7 @@ export const pageQuery = graphql`
             slug
           }
           frontmatter {
-            date(formatString: "MMMM DD, YYYY")
+            date(formatString: "DD MMMM YYYY", locale: "es")
             title
             description
             thumbnail {

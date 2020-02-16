@@ -136,7 +136,7 @@ export default () => {
               slug
             }
             frontmatter {
-              date(formatString: "MMMM DD, YYYY")
+              date(formatString: "DD MMMM YYYY", locale: "es")
               title
               description
             }

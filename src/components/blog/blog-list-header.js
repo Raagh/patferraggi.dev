@@ -123,6 +123,10 @@ const BlogListMainArticleDate = styled.small`
 const StyledGatsbyLinkMainArticle = styled(props => <Link {...props} />)`
   text-decoration: none;
   color: ${globalStyles.backgroundColor};
+
+  :hover {
+    color: ${globalStyles.secondaryColor};
+  }
 `
 
 const StyledLink = styled.a`
@@ -173,7 +177,7 @@ export default props => {
               slug
             }
             frontmatter {
-              date(formatString: "MMMM DD, YYYY")
+              date(formatString: "DD MMMM YYYY", locale: "es")
               title
               description
               thumbnail {
@@ -227,6 +231,9 @@ export default props => {
               {mainPost.frontmatter.date}
             </BlogListMainArticleDate>
           </BlogListMainArticleText>
+          <StyledGatsbyLinkMainArticle
+            to={`blog${mainPost.fields.slug}`}
+          ></StyledGatsbyLinkMainArticle>
           <StyledImg
             imgStyle={{ objectFit: "fill" }}
             fluid={mainPost.frontmatter.thumbnail.childImageSharp.fluid}

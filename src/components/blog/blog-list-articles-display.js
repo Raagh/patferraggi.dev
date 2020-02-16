@@ -59,6 +59,10 @@ const BlogListArticleDate = styled.small`
 const StyledGatsbyLink = styled(props => <Link {...props} />)`
   text-decoration: none;
   color: ${globalStyles.primaryColor};
+
+  :hover {
+    color: ${globalStyles.secondaryColor};
+  }
 `
 
 const StyledImg = styled(Img)`
@@ -89,10 +93,13 @@ export default props => {
         const title = node.frontmatter.title || node.fields.slug
         return (
           <BlogListArticle key={node.fields.slug}>
-            <StyledImg
-              imgStyle={{ objectFit: "fill" }}
-              fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
-            />
+            <StyledGatsbyLink to={`blog${node.fields.slug}`}>
+              <StyledImg
+                imgStyle={{ objectFit: "fill" }}
+                fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
+              />
+            </StyledGatsbyLink>
+
             <BlogListArticleTitle>
               <StyledGatsbyLink to={`blog${node.fields.slug}`}>
                 {title}
