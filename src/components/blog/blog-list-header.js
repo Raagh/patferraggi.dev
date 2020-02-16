@@ -50,7 +50,7 @@ const BlogListMainArticle = styled.article`
   padding: 3rem;
 
   @media ${device.small} {
-    flex-direction: column;
+    flex-direction: column-reverse;
     padding: 1rem;
     max-width: 100%;
     max-height: 100%;
@@ -92,6 +92,7 @@ const BlogListMainArticleExcerpt = styled.div`
 
   @media ${device.small} {
     margin-bottom: 2rem;
+    line-height: 20px;
   }
 `
 
@@ -114,8 +115,9 @@ const StyledImg = styled(Img)`
   width: 50%;
 
   @media ${device.small} {
-    height: 100%;
+    height: 250px;
     width: 100%;
+    margin-bottom: 2rem;
   }
 `
 
@@ -127,6 +129,11 @@ const NewHeader = styled.p`
 
   path {
     fill: ${globalStyles.backgroundColor};
+  }
+
+  @media ${device.small} {
+    line-height: 20px;
+    margin-bottom: 1rem;
   }
 `
 

@@ -13,6 +13,10 @@ const ArticleLink = styled.a`
   :hover {
     color: ${globalStyles.secondaryColor};
   }
+
+  @media ${device.small} {
+    margin-bottom: 1rem;
+  }
 `
 
 const ArticleTitle = styled.div`
