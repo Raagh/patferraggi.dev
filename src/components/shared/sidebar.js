@@ -28,9 +28,11 @@ const fixViewportOnMobile = () => {
     if (document) document.documentElement.style.setProperty("--vh", `${vh}px`)
   }
 
-  window.addEventListener("resize", () => {
-    fixViewport()
-  })
+  if (window) {
+    window.addEventListener("resize", () => {
+      fixViewport()
+    })
+  }
 }
 
 export default props => {
