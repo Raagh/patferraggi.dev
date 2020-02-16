@@ -25,10 +25,11 @@ const disableScrollingIfSidebarOpen = props => {
 const fixViewportOnMobile = () => {
   const fixViewport = () => {
     const vh = window.innerHeight * 0.01
-    if (document) document.documentElement.style.setProperty("--vh", `${vh}px`)
+    if (typeof document !== `undefined`)
+      document.documentElement.style.setProperty("--vh", `${vh}px`)
   }
 
-  if (window) {
+  if (typeof window !== `undefined`) {
     window.addEventListener("resize", () => {
       fixViewport()
     })
