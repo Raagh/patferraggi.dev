@@ -51,6 +51,17 @@ const StyledGatsbyLink = styled(props => <Link {...props} />)`
   color: ${globalStyles.primaryColor};
 `
 
+const StyledImg = styled(Img)`
+  height: 350px;
+  width: 350px;
+
+  @media ${device.small} {
+    height: 100%;
+    width: 100%;
+    max-height: 147px;
+  }
+`
+
 export default props => {
   const posts = props.posts
   return (
@@ -59,9 +70,9 @@ export default props => {
         const title = node.frontmatter.title || node.fields.slug
         return (
           <BlogListArticle key={node.fields.slug}>
-            <Img
+            <StyledImg
               imgStyle={{ objectFit: "fill" }}
-              fixed={node.frontmatter.thumbnail.childImageSharp.fixed}
+              fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
             />
             <BlogListArticleTitle>
               <StyledGatsbyLink to={`blog${node.fields.slug}`}>

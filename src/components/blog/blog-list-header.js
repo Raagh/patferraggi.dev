@@ -115,7 +115,7 @@ const StyledImg = styled(Img)`
   width: 50%;
 
   @media ${device.small} {
-    height: 250px;
+    height: 150px;
     width: 100%;
     margin-bottom: 2rem;
   }
