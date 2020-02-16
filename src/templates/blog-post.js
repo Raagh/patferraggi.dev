@@ -24,6 +24,8 @@ const ArticleTitle = styled.h2`
   width: 60%;
   margin-bottom: 2rem;
   margin-top: 2rem;
+  padding-right: 2rem;
+  padding-left: 2rem;
 
   @media ${device.small} {
     width: 100%;
@@ -45,6 +47,8 @@ const ArticleDate = styled.span`
   font-size: 14px;
   line-height: 32px;
   opacity: 0.5;
+  padding-right: 2rem;
+  padding-left: 2rem;
 `
 
 const StyledHomeLink = styled(props => <Link {...props} />)`
@@ -54,6 +58,8 @@ const StyledHomeLink = styled(props => <Link {...props} />)`
   line-height: 28px;
   letter-spacing: -1px;
   font-family: ${globalStyles.fontFamilyRegular};
+  padding-right: 2rem;
+  padding-left: 2rem;
 `
 
 const BlogPostShowcaseWrapperTitle = styled.p`
@@ -65,6 +71,8 @@ const BlogPostShowcaseWrapperTitle = styled.p`
   font-size: 54px;
   line-height: 64px;
   letter-spacing: -2.2528px;
+  padding-right: 2rem;
+  padding-left: 2rem;
 
   @media ${device.small} {
     font-size: 24px;
@@ -184,7 +192,7 @@ class BlogPostTemplate extends React.Component {
     }
 
     return (
-      <Layout>
+      <Layout removeSidePadding={true}>
         <ArticleWrapper>
           <SEO
             title={post.frontmatter.title}
@@ -222,7 +230,10 @@ class BlogPostTemplate extends React.Component {
           Más artículos
         </BlogPostShowcaseWrapperTitle>
 
-        <BlogListArticlesDisplay posts={posts}></BlogListArticlesDisplay>
+        <BlogListArticlesDisplay
+          sidePadding={true}
+          posts={posts}
+        ></BlogListArticlesDisplay>
         <StyledHomeLink to="/blog">← Back to my blog</StyledHomeLink>
       </Layout>
     )

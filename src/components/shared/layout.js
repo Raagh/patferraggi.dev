@@ -49,19 +49,20 @@ const MainContainer = styled.main`
   display: flex;
   flex-direction: column;
 `
+export default ({ children, removeSidePadding }) => {
+  const InternalContainer = styled.div`
+    max-width: 1660px;
+    margin: auto;
+    padding: ${removeSidePadding ? "2rem 0 2rem 0" : "2rem"};
+    width: 100%;
+  `
 
-const InternalContainer = styled.div`
-  max-width: 1660px;
-  margin: auto;
-  padding: 2rem;
-  width: 100%;
-`
-
-export default ({ children }) => (
-  <MainContainer>
-    <SEO title="Patricio Ferraggi Ares"></SEO>
-    <GlobalStyle></GlobalStyle>
-    <Navbar></Navbar>
-    <InternalContainer>{children}</InternalContainer>
-  </MainContainer>
-)
+  return (
+    <MainContainer>
+      <SEO title="Patricio Ferraggi Ares"></SEO>
+      <GlobalStyle></GlobalStyle>
+      <Navbar></Navbar>
+      <InternalContainer>{children}</InternalContainer>
+    </MainContainer>
+  )
+}

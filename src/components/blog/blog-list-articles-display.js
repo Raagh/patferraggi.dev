@@ -5,17 +5,6 @@ import Img from "gatsby-image"
 import globalStyles from "../../config/style-variables"
 import device from "../../config/device"
 
-const BlogListArticlesListWrapper = styled.section`
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-
-  @media ${device.small} {
-    flex-direction: column;
-  }
-`
-
 const BlogListArticle = styled.article`
   width: 25%;
   min-height: 100%;
@@ -86,6 +75,18 @@ const StyledImg = styled(Img)`
 `
 
 export default props => {
+  const BlogListArticlesListWrapper = styled.section`
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    @media ${device.small} {
+      flex-direction: column;
+      padding: ${props.sidePadding ? "0 2rem 0 2rem" : 0};
+    }
+  `
+
   const posts = props.posts
   return (
     <BlogListArticlesListWrapper>
