@@ -70,6 +70,16 @@ const BlogListMainArticleTitle = styled.h3`
     font-size: 1.5em;
     line-height: 30px;
   }
+
+  @media ${device.medium} {
+    font-size: 1.5em;
+    line-height: 30px;
+  }
+
+  @media ${device.large} {
+    font-size: 1.5em;
+    line-height: 30px;
+  }
 `
 
 const BlogListMainArticleText = styled.div`
@@ -91,6 +101,16 @@ const BlogListMainArticleExcerpt = styled.div`
   margin-bottom: 4rem;
 
   @media ${device.small} {
+    margin-bottom: 2rem;
+    line-height: 20px;
+  }
+
+  @media ${device.medium} {
+    margin-bottom: 2rem;
+    line-height: 20px;
+  }
+
+  @media ${device.large} {
     margin-bottom: 2rem;
     line-height: 20px;
   }

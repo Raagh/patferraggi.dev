@@ -27,22 +27,32 @@ const BlogListArticle = styled.article`
     width: 100%;
     margin-top: 2rem;
   }
+
+  @media ${device.medium} {
+    width: 50%;
+    margin-top: 2rem;
+  }
+
+  @media ${device.large} {
+    width: 33%;
+    margin-top: 2rem;
+  }
 `
 
 const BlogListArticleTitle = styled.h3`
   margin-top: 1.5rem;
   width: 70%;
-  height: 100px;
+  min-height: 100px;
 
   @media ${device.small} {
     width: 100%;
-    height: 80px;
+    min-height: 80px;
   }
 `
 
 const BlogListArticleDate = styled.small`
   margin-top: auto;
-  height: 45px;
+  min-height: 45px;
   opacity: 0.5;
 `
 
@@ -52,13 +62,22 @@ const StyledGatsbyLink = styled(props => <Link {...props} />)`
 `
 
 const StyledImg = styled(Img)`
-  height: 350px;
-  width: 350px;
+  height: 210px;
+  width: 90%;
 
   @media ${device.small} {
     height: 100%;
     width: 100%;
-    max-height: 147px;
+  }
+
+  @media ${device.medium} {
+    height: 100%;
+    width: 90%;
+  }
+
+  @media ${device.large} {
+    height: 100%;
+    width: 90%;
   }
 `
 
