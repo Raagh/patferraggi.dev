@@ -5,7 +5,6 @@ import Layout from "../components/shared/layout"
 import BlogListTemplateHeader from "../components/blog/blog-list-header"
 import BlogListArticlesDisplay from "../components/blog/blog-list-articles-display"
 import globalStyles from "../config/style-variables"
-import device from "../config/device"
 
 const BlogListTemplateWrapper = styled.section`
   font-family: ${globalStyles.fontFamilyMedium};
@@ -20,6 +19,8 @@ const StyledGatsbyLink = styled(props => <Link {...props} />)`
 const StyledHomeLink = styled(StyledGatsbyLink)`
   font-size: 14px;
   line-height: 28px;
+  letter-spacing: -1px;
+  font-family: ${globalStyles.fontFamilyRegular};
 `
 
 const StyledButton = styled.button`
@@ -27,7 +28,7 @@ const StyledButton = styled.button`
   height: 54px;
   font-size: 24px;
   line-height: 28px;
-  font-family: ${device.fontFamilyMedium};
+  font-family: ${globalStyles.fontFamilyMedium};
   letter-spacing: -1px;
 `
 

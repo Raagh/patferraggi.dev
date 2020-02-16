@@ -18,7 +18,7 @@ const TextContainer = styled.div`
   flex-direction: column;
   width: 80%;
   font-family: ${globalStyles.fontFamilyRegular};
-  font-size: 18px;
+  font-size: 16px;
   line-height: 26px;
   letter-spacing: -0.5px;
 `

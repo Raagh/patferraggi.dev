@@ -36,8 +36,6 @@ const StyledHomeLink = styled(props => <Link {...props} />)`
   color: ${globalStyles.primaryColor};
   font-size: 14px;
   line-height: 28px;
-  font-size: 14px;
-  line-height: 28px;
   letter-spacing: -1px;
   font-family: ${globalStyles.fontFamilyRegular};
 `
@@ -180,14 +178,14 @@ class BlogPostTemplate extends React.Component {
                 maxWidth={"44.5rem"}
                 color={globalStyles.backgroundColor}
               ></Divider>
-              <CommentCount config={disqusConfig} />
-              <Disqus config={disqusConfig} />
+              <Bio></Bio>
               <Divider
                 small={true}
                 maxWidth={"44.5rem"}
                 color={globalStyles.backgroundColor}
               ></Divider>
-              <Bio></Bio>
+              <CommentCount config={disqusConfig} />
+              <Disqus config={disqusConfig} />
             </ArticleContentText>
           </ArticleContent>
         </ArticleWrapper>
