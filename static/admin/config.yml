@@ -2,17 +2,20 @@ backend:
   name: github
   repo: Raagh/patferraggi.dev
 
-media_folder: static/assets
-public_folder: assets
-
+media_folder: static/media
+public_folder: /media
 collections:
   - name: blog
     label: Blog
     folder: content/blog
+    path: "{{year}}/{{month}}/{{slug}}/index"
+    media_folder: ""
+    public_folder: ""
     create: true
     fields:
       - { name: path, label: Path }
       - { name: date, label: Date, widget: date }
       - { name: title, label: Title }
       - { name: description, label: Description }
+      - { name: "thumbnail", label: "Cover Image", widget: "image" }
       - { name: body, label: Body, widget: markdown }
