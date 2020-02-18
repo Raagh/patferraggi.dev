@@ -14,8 +14,14 @@ const GlobalStyle = createGlobalStyle`
     box-shadow: none !important;
   }
 
-  button:focus {
-    outline:0;
+  button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    
+      :focus {
+        outline:0;
+      }
   }
 
   html,
