@@ -14,6 +14,7 @@ export default props => {
     ? "3.5rem 0 2.5rem 0"
     : "5.5rem 0 4.5rem 0"
 
+  const finalMargin = props.margin ?? margin
   const maxWidth = props.maxWidth ?? null
   const color = props.color ?? styleVariables.primaryColor
 
@@ -24,7 +25,7 @@ export default props => {
         borderRight: "none",
         borderLeft: "none",
         borderTop: `2px solid ${color}`,
-        margin: margin,
+        margin: finalMargin,
         height: "0px",
         maxWidth: maxWidth,
       }}

@@ -109,6 +109,21 @@ const ArticleContent = styled.article`
   margin-right: auto;
 `
 
+const ArticleEntireContent = styled.section`
+  padding-right: 2rem;
+  padding-left: 2rem;
+
+  @media ${device.small} {
+    padding-right: 0;
+    padding-left: 0;
+  }
+
+  @media ${device.medium} {
+    padding-right: 0;
+    padding-left: 0;
+  }
+`
+
 const ArticleContentText = styled.article`
   padding: 3rem 0 6rem 0;
   font-family: ${globalStyles.fontFamilyRegular};
@@ -201,30 +216,36 @@ class BlogPostTemplate extends React.Component {
           <StyledHomeLink to="/blog">← Back to my blog</StyledHomeLink>
           <ArticleTitle>{post.frontmatter.title}</ArticleTitle>
           <ArticleDate>{post.frontmatter.date}</ArticleDate>
-          <Divider small={true} maxWidth={"1260px"}></Divider>
-          <CoverContent>
-            <StyledCover
-              fluid={post.frontmatter.thumbnail.childImageSharp.fluid}
-            />
-          </CoverContent>
-          <ArticleContent>
-            <ArticleContentText>
-              <MDXRenderer>{post.body}</MDXRenderer>
-              <Divider
-                small={true}
-                maxWidth={"44.5rem"}
-                color={globalStyles.backgroundColor}
-              ></Divider>
-              <Bio></Bio>
-              <Divider
-                small={true}
-                maxWidth={"44.5rem"}
-                color={globalStyles.backgroundColor}
-              ></Divider>
-              <CommentCount config={disqusConfig} />
-              <Disqus config={disqusConfig} />
-            </ArticleContentText>
-          </ArticleContent>
+          <Divider
+            margin={"3.5rem 2rem 3.5rem 2rem"}
+            small={true}
+            maxWidth={"1260px"}
+          ></Divider>
+          <ArticleEntireContent>
+            <CoverContent>
+              <StyledCover
+                fluid={post.frontmatter.thumbnail.childImageSharp.fluid}
+              />
+            </CoverContent>
+            <ArticleContent>
+              <ArticleContentText>
+                <MDXRenderer>{post.body}</MDXRenderer>
+                <Divider
+                  small={true}
+                  maxWidth={"44.5rem"}
+                  color={globalStyles.backgroundColor}
+                ></Divider>
+                <Bio></Bio>
+                <Divider
+                  small={true}
+                  maxWidth={"44.5rem"}
+                  color={globalStyles.backgroundColor}
+                ></Divider>
+                <CommentCount config={disqusConfig} />
+                <Disqus config={disqusConfig} />
+              </ArticleContentText>
+            </ArticleContent>
+          </ArticleEntireContent>
         </ArticleWrapper>
         <BlogPostShowcaseWrapperTitle>
           Más artículos

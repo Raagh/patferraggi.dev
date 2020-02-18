@@ -80,10 +80,10 @@ export default props => {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    padding: ${props.sidePadding ? "0 2rem 0 2rem" : 0};
 
     @media ${device.small} {
       flex-direction: column;
-      padding: ${props.sidePadding ? "0 2rem 0 2rem" : 0};
     }
   `
 
