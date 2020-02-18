@@ -32,6 +32,10 @@ const BlogListArticleTitle = styled.h3`
   margin-top: 1.5rem;
   width: 70%;
   min-height: 100px;
+  font-family: ${globalStyles.fontFamilyMedium};
+  font-size: 24px;
+  line-height: 28px;
+  letter-spacing: -1px;
 
   @media ${device.small} {
     width: 100%;
@@ -43,6 +47,9 @@ const BlogListArticleDate = styled.small`
   margin-top: auto;
   min-height: 45px;
   opacity: 0.5;
+  font-family: ${globalStyles.fontFamilyMedium};
+  font-size: 14px;
+  line-height: 32px;
 `
 
 const StyledGatsbyLink = styled(props => <Link {...props} />)`
@@ -61,16 +68,19 @@ const StyledImg = styled(Img)`
   @media ${device.small} {
     height: 100%;
     width: 100%;
+    max-height: 130px;
   }
 
   @media ${device.medium} {
     height: 100%;
     width: 90%;
+    max-height: 130px;
   }
 
   @media ${device.large} {
     height: 100%;
     width: 90%;
+    max-height: 119px;
   }
 `
 
@@ -96,7 +106,7 @@ export default props => {
           <BlogListArticle key={node.fields.slug}>
             <StyledGatsbyLink to={`blog${node.fields.slug}`}>
               <StyledImg
-                imgStyle={{ objectFit: "fill" }}
+                imgStyle={{ objectFit: "cover" }}
                 fluid={node.frontmatter.thumbnail.childImageSharp.fluid}
               />
             </StyledGatsbyLink>

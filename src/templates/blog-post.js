@@ -87,7 +87,7 @@ const StyledCover = styled(Img)`
   height: 475px;
 
   img {
-    object-fit: fill !important;
+    object-fit: contain !important;
   }
 
   @media ${device.small} {
@@ -125,7 +125,7 @@ const ArticleEntireContent = styled.section`
 `
 
 const ArticleContentText = styled.article`
-  padding: 3rem 0 6rem 0;
+  padding: 2rem 0 6rem 0;
   font-family: ${globalStyles.fontFamilyRegular};
   font-style: normal;
   font-weight: normal;
@@ -181,6 +181,7 @@ const ArticleContentText = styled.article`
     line-height: 24px;
     padding-right: 1.5rem;
     padding-left: 1.5rem;
+    padding-bottom: 2rem;
   }
 
   @media ${device.medium} {
