@@ -1,6 +1,6 @@
 ---
 path: "{{year}}/{{month}}/{{slug}}/index"
-title: How to be an amazing developer, things I wish I knew when started.
+title: How to be an amazing developer, things I wish I knew when started
 date: "2019-10-27"
 description: ""
 thumbnail: ./cover.jpg

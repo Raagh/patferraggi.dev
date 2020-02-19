@@ -1,6 +1,6 @@
 ---
 path: "{{year}}/{{month}}/{{slug}}/index"
-title: Devolviendo a la comunidad.
+title: Devolviendo a la comunidad
 date: "2019-12-14"
 description: "Un nuevo comienzo, en español"
 thumbnail: ./cover.jpeg

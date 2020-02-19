@@ -1,6 +1,6 @@
 ---
 path: "{{year}}/{{month}}/{{slug}}/index"
-title: How I found a problem in Angular unit testing and decided to fix it myself.
+title: How I found a problem in Angular unit testing and decided to fix it myself
 date: "2019-10-26"
 description: ""
 thumbnail: ./cover.jpeg

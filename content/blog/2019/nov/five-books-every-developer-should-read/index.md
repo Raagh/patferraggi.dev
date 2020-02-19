@@ -1,6 +1,6 @@
 ---
 path: "{{year}}/{{month}}/{{slug}}/index"
-title: 5 books every developer should read, and some extras.
+title: 5 books every developer should read, and some extras
 date: "2019-11-02"
 description: ""
 thumbnail: ./cover.jpeg
