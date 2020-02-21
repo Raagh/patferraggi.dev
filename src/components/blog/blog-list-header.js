@@ -200,7 +200,7 @@ export default props => {
     <BlogListTemplateHeader>
       <BlogListTemplateTitle>
         Bienvenido al{" "}
-        <HighLightedText>Calabozo del programador</HighLightedText>
+        <HighLightedText>Calabozo del Programador</HighLightedText>
       </BlogListTemplateTitle>
       <BlogListTemplateSubtitle>
         visit{" "}
