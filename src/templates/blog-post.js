@@ -248,9 +248,11 @@ class BlogPostTemplate extends React.Component {
             </ArticleContent>
           </ArticleEntireContent>
         </ArticleWrapper>
-        <BlogPostShowcaseWrapperTitle>
-          Más artículos
-        </BlogPostShowcaseWrapperTitle>
+        {posts.length > 0 && (
+          <BlogPostShowcaseWrapperTitle>
+            Más artículos
+          </BlogPostShowcaseWrapperTitle>
+        )}
 
         <BlogListArticlesDisplay
           sidePadding={true}

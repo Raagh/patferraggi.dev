@@ -68,7 +68,7 @@ class BlogListTemplate extends React.Component {
         <BackNextButtons>
           {!isFirst && (
             <StyledButton>
-              <StyledDirectionButton to={prevPage} rel="prev" style={{}}>
+              <StyledDirectionButton to={prevPage} rel="prev">
                 ← Anterior
               </StyledDirectionButton>
             </StyledButton>
