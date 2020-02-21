@@ -1,9 +1,9 @@
 ---
 path: "{{year}}/{{month}}/{{slug}}/index"
-title: Programación Funcional para el desarrollador Orientado a Objetos
+title: Programación funcional para el desarrollador orientado a objetos
 date: "2020-01-14"
-description: "Parte[0]"
-thumbnail: ./cover.jpeg
+description: ""
+thumbnail: ./cover.png
 ---
 
 Si venís leyendo mis últimos artículos probablemente sepas que estoy estudiando Programación Funcional y tengo que ser honesto, soy un _Newbie_, y me refiero a un _Newbie_ estilo: menos de level 12, no haciendo PVP, matando monstruos chicos por horas.

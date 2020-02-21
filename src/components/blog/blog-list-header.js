@@ -235,7 +235,7 @@ export default props => {
             to={`blog${mainPost.fields.slug}`}
           ></StyledGatsbyLinkMainArticle>
           <StyledImg
-            imgStyle={{ objectFit: "fill" }}
+            imgStyle={{ objectFit: "cover" }}
             fluid={mainPost.frontmatter.thumbnail.childImageSharp.fluid}
           ></StyledImg>
         </BlogListMainArticle>
