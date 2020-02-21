@@ -55,7 +55,7 @@ Se lo que estás pensando:
 ### ¿Y esto para qué me sirve?
 
 1. Si una función siempre devuelve el mismo resultado para un mismo parámetro, entonces hacer _unit testing_ se vuelve una tarea extremadamente sencilla
-2. Si una función siempre devuelve el mismo resultado para un mismo parámetro, entonces lo resultados pueden ser “cacheados” para mejorar la _performance_, esto se conoce como [Memoization](https://en.wikipedia.org/wiki/Memoization), es un concepto muy común en la PF y muchas librerías incluyen funciones para hacer esto, como por ejemplo [memoizeWith en Ramda.js](https://ramdajs.com/docs/#memoizeWith) en Ramda.js
+2. Si una función siempre devuelve el mismo resultado para un mismo parámetro, entonces lo resultados pueden ser “cacheados” para mejorar la _performance_, esto se conoce como [Memoization](https://en.wikipedia.org/wiki/Memoization), es un concepto muy común en la PF y muchas librerías incluyen funciones para hacer esto, como por ejemplo [memoizeWith en Ramda.js](https://ramdajs.com/docs/#memoizeWith)
 3. Si una función no depende del estado del programa fuera de sí misma entonces nuestro código se vuelve extremadamente efectivo en escenarios donde la concurrencia es moneda corriente.
 4. Ya que definimos funciones en términos matemáticos, otros conceptos matemáticos asociados a funciones también se vuelven aplicables a la programación, como es el concepto de [Composición de funciones](https://en.wikipedia.org/wiki/Function_composition)
 
