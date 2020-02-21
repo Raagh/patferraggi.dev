@@ -32,6 +32,19 @@ const StyledButton = styled.button`
   letter-spacing: -1px;
 `
 
+const BackNextButtons = styled.ul`
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin-bottom: 4rem;
+  margin-top: 4.5rem;
+`
+
+const StyledDirectionButton = styled(props => <Link {...props} />)`
+  text-decoration: none;
+  color: ${globalStyles.backgroundColor};
+`
+
 class BlogListTemplate extends React.Component {
   render() {
     const { data } = this.props
@@ -52,44 +65,22 @@ class BlogListTemplate extends React.Component {
           ></BlogListTemplateHeader>
           <BlogListArticlesDisplay posts={posts}></BlogListArticlesDisplay>
         </BlogListTemplateWrapper>
-        <ul
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "center",
-            marginBottom: "4rem",
-            marginTop: "4.5rem",
-          }}
-        >
+        <BackNextButtons>
           {!isFirst && (
             <StyledButton>
-              <Link
-                to={prevPage}
-                rel="prev"
-                style={{
-                  textDecoration: "none",
-                  color: `${globalStyles.backgroundColor}`,
-                }}
-              >
+              <StyledDirectionButton to={prevPage} rel="prev" style={{}}>
                 ← Anterior
-              </Link>
+              </StyledDirectionButton>
             </StyledButton>
           )}
           {!isLast && (
             <StyledButton>
-              <Link
-                to={nextPage}
-                rel="next"
-                style={{
-                  textDecoration: "none",
-                  color: `${globalStyles.backgroundColor}`,
-                }}
-              >
+              <StyledDirectionButton to={nextPage} rel="next">
                 Siguiente →
-              </Link>
+              </StyledDirectionButton>
             </StyledButton>
           )}
-        </ul>
+        </BackNextButtons>
         <StyledHomeLink to="/">← Back to my website</StyledHomeLink>
       </Layout>
     )
