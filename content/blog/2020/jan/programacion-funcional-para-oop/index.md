@@ -1,8 +1,8 @@
 ---
-path: "{{year}}/{{month}}/{{slug}}/index"
-title: Programación funcional para el desarrollador orientado a objetos
-date: "2020-01-14"
-description: ""
+path: '{{year}}/{{month}}/{{slug}}/index'
+date: '2020-01-14'
+title: Programación funcional para el desarrollador orientado a objetos - Capitulo 0
+description: ' '
 thumbnail: ./cover.png
 ---
 
