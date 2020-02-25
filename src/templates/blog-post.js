@@ -124,6 +124,26 @@ const ArticleEntireContent = styled.section`
   }
 `
 
+const ArticleDescription = styled.div`
+  font-size: 18px;
+  line-height: 32px;
+  opacity: 0.8;
+  padding-right: 2rem;
+  padding-left: 2rem;
+
+  @media ${device.small} {
+    line-height: 20px;
+  }
+
+  @media ${device.medium} {
+    line-height: 20px;
+  }
+
+  @media ${device.large} {
+    line-height: 20px;
+  }
+`
+
 const ArticleContentText = styled.article`
   padding: 2rem 0 6rem 0;
   font-family: ${globalStyles.fontFamilyRegular};
@@ -216,6 +236,9 @@ class BlogPostTemplate extends React.Component {
           />
           <StyledHomeLink to="/blog">← Back to my blog</StyledHomeLink>
           <ArticleTitle>{post.frontmatter.title}</ArticleTitle>
+          <ArticleDescription>
+            {post.frontmatter.description}
+          </ArticleDescription>
           <ArticleDate>{post.frontmatter.date}</ArticleDate>
           <Divider
             margin={"3.5rem 2rem 3.5rem 2rem"}

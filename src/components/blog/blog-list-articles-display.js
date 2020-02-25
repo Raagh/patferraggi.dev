@@ -66,6 +66,7 @@ const StyledDescription = styled.div`
   line-height: 32px;
   opacity: 0.8;
   margin-top: 0.5rem;
+  font-family: ${globalStyles.fontFamilyMedium};
 
   @media ${device.small} {
     line-height: 20px;
