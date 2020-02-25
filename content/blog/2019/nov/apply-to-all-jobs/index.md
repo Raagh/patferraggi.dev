@@ -2,7 +2,6 @@
 path: "{{year}}/{{month}}/{{slug}}/index"
 title: Apply to all jobs, job postings are not realistic anyway
 date: "2019-11-16"
-description: "Don't let the job description scare you"
 thumbnail: ./cover.jpeg
 ---
 

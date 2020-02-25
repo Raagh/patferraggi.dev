@@ -61,6 +61,25 @@ const StyledGatsbyLink = styled(props => <Link {...props} />)`
   }
 `
 
+const StyledDescription = styled.div`
+  font-size: 18px;
+  line-height: 32px;
+  opacity: 0.8;
+  margin-top: 0.5rem;
+
+  @media ${device.small} {
+    line-height: 20px;
+  }
+
+  @media ${device.medium} {
+    line-height: 20px;
+  }
+
+  @media ${device.large} {
+    line-height: 20px;
+  }
+`
+
 const StyledImg = styled(Img)`
   height: 210px;
   width: 90%;
@@ -116,6 +135,9 @@ export default props => {
                 {title}
               </StyledGatsbyLink>
             </BlogListArticleTitle>
+            <StyledDescription>
+              {node.frontmatter.description}
+            </StyledDescription>
             <BlogListArticleDate>{node.frontmatter.date}</BlogListArticleDate>
           </BlogListArticle>
         )

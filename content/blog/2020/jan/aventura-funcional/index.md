@@ -2,7 +2,6 @@
 path: "{{year}}/{{month}}/{{slug}}/index"
 title: Vámonos a una aventura, una aventura funcional
 date: "2020-01-06"
-description: ""
 thumbnail: ./cover.jpg
 ---
 

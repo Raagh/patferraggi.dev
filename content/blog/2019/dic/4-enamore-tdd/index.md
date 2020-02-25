@@ -2,7 +2,6 @@
 path: "{{year}}/{{month}}/{{slug}}/index"
 title: 4 razones por las que me enamoré del Test Driven Development
 date: "2019-12-20"
-description: "y vos también te vas enamorar"
 thumbnail: ./cover.jpg
 ---
 

@@ -2,7 +2,6 @@
 path: "{{year}}/{{month}}/{{slug}}/index"
 title: Como planeo mi desarrollo personal para 2020, aprendiendo del 2019
 date: "2019-12-31"
-description: "Metas y planes"
 thumbnail: ./2020.jpg
 ---
 

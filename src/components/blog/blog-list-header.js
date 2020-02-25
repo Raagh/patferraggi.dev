@@ -116,6 +116,25 @@ const BlogListMainArticleExcerpt = styled.div`
   }
 `
 
+const StyledDescription = styled.div`
+  font-size: 18px;
+  line-height: 32px;
+  opacity: 0.8;
+  margin-top: 0.5rem;
+
+  @media ${device.small} {
+    line-height: 20px;
+  }
+
+  @media ${device.medium} {
+    line-height: 20px;
+  }
+
+  @media ${device.large} {
+    line-height: 20px;
+  }
+`
+
 const BlogListMainArticleDate = styled.small`
   margin-top: auto;
 `
@@ -221,6 +240,9 @@ export default props => {
               <StyledGatsbyLinkMainArticle to={`blog${mainPost.fields.slug}`}>
                 {mainPost.frontmatter.title || mainPost.fields.slug}
               </StyledGatsbyLinkMainArticle>
+              <StyledDescription>
+                {mainPost.frontmatter.description}
+              </StyledDescription>
             </BlogListMainArticleTitle>
             <BlogListMainArticleExcerpt
               dangerouslySetInnerHTML={{
