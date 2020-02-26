@@ -114,13 +114,23 @@ const BlogNewsArticles = styled.section`
   }
 `
 
-const isMediaQueryLargeOrExtraLarge =
-  typeof window !== `undefined`
-    ? window.matchMedia(device.large).matches ||
-      window.matchMedia(device.xlarge).matches
-    : false
-
 export default () => {
+  let isMediaQueryLargeOrExtraLarge = false
+
+  if (window !== `undefined`) {
+    const mqlLarge = window.matchMedia(device.large)
+    const mqlXLarge = window.matchMedia(device.xlarge)
+    isMediaQueryLargeOrExtraLarge = mqlLarge.matches || mqlXLarge.matches
+
+    mqlLarge.addListener(() => {
+      isMediaQueryLargeOrExtraLarge = mqlLarge.matches
+    })
+
+    mqlXLarge.addListener(() => {
+      isMediaQueryLargeOrExtraLarge = mqlXLarge.matches
+    })
+  }
+
   const articles = useStaticQuery(graphql`
     query {
       site {
