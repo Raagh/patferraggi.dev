@@ -6,7 +6,10 @@ description: Capitulo 1
 thumbnail: ./cover.png
 ---
 
-Hola amigos!, ¿cuanto tiempo no?. Les pido mil disculpas si estuve ausente un tiempo y se quedaron con ganas de seguir aprendiendo programación funcional.
+Hola amigos!, ¿cuanto tiempo no?. Les pido mil disculpas si estuve ausente un tiempo y se quedaron con ganas de seguir aprendiendo programación funcional. O puede que estes pensando, ¿Otra vez escribiendo sobre programacional funcional?
+
+![NotGoingToHappen](./not_going_to_happen.jpg)
+
 Me encontraba trabajando muy duro en el re-diseño del sitio, espero que les guste.
 
 Pero bueno ahora ya podemos volver a esta travesía, aprender programación funcional. En mí artículo introductorio hablamos un poco sobre conceptos básicos de la FP como que es una función en términos matemáticos,
@@ -182,6 +185,8 @@ Hoy abarcamos una serie de conceptos fundamentales y muy interesantes, claves pa
 Nos van a permitir abrir puertas que antes no era posible o que requeriamos de inmensa fuerza fuerza para lograrlo.
 En los próximos tutoriales seguiremos agregando nuevas herramientas a nuestro cinturón y utilizando estos elementos claves de nuevas maneras.
 
-![NotGoingToHappen](./not_going_to_happen.jpg)
+Por el momento, puedes estar orgulloso de ti mismo, si utilizas estos conocimientos básicos en tu dia a dia, ya estarás haciendo Programación Funcional.
+
+![whatifFunctional](./what_if_functional.jpg)
 
 Si te gusto este artículo, o si no te gusto, te pido que me lo hagas saber en los comentarios abajo. Si te quedaron dudas por favor tambien asi podemos dejar todo bien claro antes de pasar al siguiente tema.

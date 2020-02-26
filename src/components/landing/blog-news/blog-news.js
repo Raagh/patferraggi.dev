@@ -185,6 +185,7 @@ export default () => {
               showPreview={articleIndex === 0}
               small={articleIndex === 1 && isMediaQueryLargeOrExtraLarge}
               creationDate={node.frontmatter.date}
+              description={node.frontmatter.description}
             />
           )
         })}

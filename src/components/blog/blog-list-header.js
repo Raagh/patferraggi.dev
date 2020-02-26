@@ -46,7 +46,7 @@ const BlogListMainArticle = styled.article`
   flex-direction: row;
   background: ${globalStyles.primaryColor};
   color: ${globalStyles.backgroundColor};
-  height: 458px;
+  min-height: 458px;
   padding: 3rem;
 
   @media ${device.small} {
@@ -56,7 +56,7 @@ const BlogListMainArticle = styled.article`
     max-height: 100%;
     margin-bottom: 2rem;
     width: 100%;
-    height: 100%;
+    min-height: 100%;
   }
 `
 
@@ -120,7 +120,7 @@ const StyledDescription = styled.div`
   font-size: 18px;
   line-height: 32px;
   opacity: 0.8;
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 
   @media ${device.small} {
     line-height: 20px;

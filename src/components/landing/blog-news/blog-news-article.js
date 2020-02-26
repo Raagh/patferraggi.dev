@@ -66,6 +66,25 @@ const StyledPreview = styled(Img)`
   }
 `
 
+const StyledDescription = styled.div`
+  font-size: 18px;
+  line-height: 32px;
+  opacity: 0.8;
+  margin-bottom: 1rem;
+
+  @media ${device.small} {
+    line-height: 20px;
+  }
+
+  @media ${device.medium} {
+    line-height: 20px;
+  }
+
+  @media ${device.large} {
+    line-height: 20px;
+  }
+`
+
 const ArticleTextContainer = styled.div`
   margin-top: 1.5rem;
   margin-right: 4rem;
@@ -124,6 +143,7 @@ export default props => {
         <p>{props.creationDate}</p>
         <ArticleTitle>
           <ArticleLink href={props.link}>{props.title}</ArticleLink>
+          <StyledDescription>{props.description}</StyledDescription>
           <p style={{ marginTop: "auto" }}>
             <ArticleLink
               href={props.link}
