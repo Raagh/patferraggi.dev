@@ -118,7 +118,7 @@ const isMediaQueryLargeOrExtraLarge =
   typeof window !== `undefined`
     ? window.matchMedia(device.large).matches ||
       window.matchMedia(device.xlarge).matches
-    : false
+    : true
 
 export default () => {
   const articles = useStaticQuery(graphql`
@@ -181,16 +181,15 @@ export default () => {
         </HeaderExplanation>
       </BlogNewsHeader>
       <BlogNewsArticles>
-        {articles.map(item => {
+        {articles.map((item, index) => {
           const node = item.node
-          const articleIndex = articles.indexOf(item)
           return (
             <Article
-              id={articleIndex}
+              id={index}
               title={node.frontmatter.title}
               link={`/blog` + node.fields.slug}
-              showPreview={articleIndex === 0}
-              small={articleIndex === 1 && isMediaQueryLargeOrExtraLarge}
+              showPreview={index === 0}
+              small={index !== 0 && isMediaQueryLargeOrExtraLarge}
               creationDate={node.frontmatter.date}
               description={node.frontmatter.description}
               thumbnail={node.frontmatter.thumbnail}
