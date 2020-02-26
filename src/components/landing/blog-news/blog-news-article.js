@@ -107,14 +107,21 @@ export default props => {
 
     @media ${device.small} {
       flex-direction: column;
+      width: 100%;
     }
 
     @media ${device.medium} {
       flex-direction: column;
+      width: 100%;
     }
 
     @media ${device.large} {
       flex-direction: column;
+      width: 100%;
+    }
+
+    @media ${device.xlarge} {
+      width: ${props.small ? "50%" : "100%"};
     }
   `
 

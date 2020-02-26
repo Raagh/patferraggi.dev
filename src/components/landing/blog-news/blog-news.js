@@ -115,22 +115,6 @@ const BlogNewsArticles = styled.section`
 `
 
 export default () => {
-  let isMediaQueryLargeOrExtraLarge = false
-
-  if (window !== `undefined`) {
-    const mqlLarge = window.matchMedia(device.large)
-    const mqlXLarge = window.matchMedia(device.xlarge)
-    isMediaQueryLargeOrExtraLarge = mqlLarge.matches || mqlXLarge.matches
-
-    mqlLarge.addListener(() => {
-      isMediaQueryLargeOrExtraLarge = mqlLarge.matches
-    })
-
-    mqlXLarge.addListener(() => {
-      isMediaQueryLargeOrExtraLarge = mqlXLarge.matches
-    })
-  }
-
   const articles = useStaticQuery(graphql`
     query {
       site {
@@ -199,7 +183,7 @@ export default () => {
               title={node.frontmatter.title}
               link={`/blog` + node.fields.slug}
               showPreview={index === 0}
-              small={index !== 0 && isMediaQueryLargeOrExtraLarge}
+              small={index !== 0}
               creationDate={node.frontmatter.date}
               description={node.frontmatter.description}
               thumbnail={node.frontmatter.thumbnail}
