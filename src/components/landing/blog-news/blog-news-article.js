@@ -5,7 +5,6 @@ import device from "../../../config/device"
 import IcomoonReact from "icomoon-react"
 import iconSet from "../../../../content/assets/icons/selection.json"
 import Img from "gatsby-image"
-import { graphql, useStaticQuery } from "gatsby"
 
 const ArticleLink = styled.a`
   color: ${globalStyles.primaryColor};
@@ -119,25 +118,11 @@ export default props => {
     }
   `
 
-  const data = useStaticQuery(graphql`
-    query {
-      file: file(absolutePath: { regex: "/2020.jpg/" }) {
-        childImageSharp {
-          fluid {
-            base64
-            aspectRatio
-            src
-          }
-        }
-      }
-    }
-  `)
-
   return (
     <ArticleWrapper>
       <RenderPreviewIfItMatters
         shouldRenderPreview={props.showPreview}
-        preview={data.file.childImageSharp.fluid}
+        preview={props.thumbnail.childImageSharp.fluid}
       ></RenderPreviewIfItMatters>
       <ArticleTextContainer>
         <p>{props.creationDate}</p>

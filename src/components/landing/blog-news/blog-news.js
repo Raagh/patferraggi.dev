@@ -139,6 +139,13 @@ export default () => {
               date(formatString: "DD MMMM YYYY", locale: "es")
               title
               description
+              thumbnail {
+                childImageSharp {
+                  fluid {
+                    ...GatsbyImageSharpFluid
+                  }
+                }
+              }
             }
           }
         }
@@ -186,6 +193,7 @@ export default () => {
               small={articleIndex === 1 && isMediaQueryLargeOrExtraLarge}
               creationDate={node.frontmatter.date}
               description={node.frontmatter.description}
+              thumbnail={node.frontmatter.thumbnail}
             />
           )
         })}
