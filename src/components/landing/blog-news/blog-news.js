@@ -118,7 +118,7 @@ const isMediaQueryLargeOrExtraLarge =
   typeof window !== `undefined`
     ? window.matchMedia(device.large).matches ||
       window.matchMedia(device.xlarge).matches
-    : true
+    : false
 
 export default () => {
   const articles = useStaticQuery(graphql`
