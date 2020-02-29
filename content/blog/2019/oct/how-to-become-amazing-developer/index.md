@@ -1,52 +1,52 @@
 ---
 path: "{{year}}/{{month}}/{{slug}}/index"
-title: How to be an amazing developer, things I wish I knew when started
+title: Cómo volverse un excelente programador, cosas me hubiera gustado saber cuando empecé
 date: "2019-10-27"
 description: ""
 thumbnail: ./cover.jpg
 ---
 
-A few weeks ago something special happened: October 8. For everyone else that means nothing, another regular day. For me on the other hand, it was my software development birthday.
+Hace unas semanas sucedió algo especial: el 8 de octubre. Para todos los demás eso no significa nada, otro día normal. Para mí, por otro lado, fue mi cumpleaños de desarrollo de software.
 
-In the beginning of 2014 my best friend recommended me to start learning programming as he saw I was sad and tired pursuing a career I did not really like. I started learning C on my own, dubbed a little with C++ and finally started reading “C# in Depth” based on my friend’s recommendation.
-
----
-
-On October 8th, 2014 I joined a training program on C# given by Accenture(they called it their bootcamp), 1 month later I was working as C# Junior developer and my career in software started.
-A lot has changed in the last 5 years, Microsoft went full open source, JavaScript became a serious language and not just a toy for websites, functional programming started it’s comeback, tons of technologies have been given birth and died before our eyes.
-
-A lot of things changed in my career too: I went from self taught to bootcamp, to switching universities to pursue software engineering, dropping out and finally continuing the self taught route. From working in accounting to becoming a software developer, working for 3 years in my home country, Argentina, to looking for a better life in a place I knew nothing about, much less speak the same language, lovely rainy Belgium.
-
-After reflecting on the path that brought me here, I can’t help to think about the good and bad decisions I’ve made. Here is some stuff I wish I knew when I started:
-
-### 1. Go to meetups, meet new people, make friends!
-
-People underestimate how important personal relationships and communication are in software development. Some believe in this idea of a Genius 10X developer who will code 24 hours without sleeping and create magic. This is a pipe dream. We are great at what we do when we collaborate with each other, when we develop human relationships that allow us to create great pieces of software. These relationships help us grow, learn new things (not always software related which is just as valuable) and even progress in our careers. If it wasn’t for a friend of mine I would probably be a very sad accountant.
-
-### 2. Read technical books.
-
-I always preferred tutorials and online courses, but unfortunately they won’t cover fundamental knowledge that will take your development skills to a whole new level. For the last 2 years I have been eating technical books, “The pragmatic programmer”, “Code complete”, “Clean Code”, “Refactoring”, you name it, I just wished I started earlier. There is so much knowledge out there written by pros in the industry and it’s just a pity not to pick their brains a little.
-
-### 3. Focus your learning in language/framework agnostic knowledge.
-
-This one is related to the previous one. Sure, there’s a new JavaScript framework every day and people are struggling to catch up. Well, don’t try. It’s not possible nor worth it. Instead of focusing on frameworks, focus on architecture, system design, even software paradigms. Languages and frameworks are just tools we use to create products, they change all the time, the techniques we use to build software evolves on a much slower pace and can help you switch from one stack to another with ease.
-
-### 4. Always have a personal project on the side.
-
-I can’t stress enough how important this is. Sure, you code for 8 hours a day on your daily job and might be thinking, “why do I need to code on my spare time?”, well there are a number of reasons.
-
-- It will not always be clear what you want to do with your career. When I first started I thought I wanted to be a mobile developer. It took me one personal project creating an expense reimbursement app in Xamarin as a POC for a previous employer to realize that this was not what interested me the most.
-- Technical skills get outdated pretty quickly in this industry so you need to try other stuff and get a good feeling of what’s out there.
-  It can be a very good way to build a personal portfolio, to show a potential employer that you are passionate, a problem solver and have a nice set of skills.
-- If the projects get noticed by the community it can be a great way to meet other developers, make connections and friends.
-
-### 5. Learn some Computer Science.
-
-If you are a self-taught developer like me, you probably don’t want anything to do with this. Well I will have to burst the bubble for you. Learning some key concepts will make your life a lot easier for future learning. I’m not saying you need them to be a developer but after learning about them, they will become the building blocks you will use to learn new technologies and patterns.
-I spent 2 years studying computer science while working as a developer, not a lot but still was enough to get in contact with concepts like boolean algebra, groups, graphs, trees, sorting algorithms, dynamic and static memory, pointers, automata theory; even different programming paradigms — like structured, logical, functional and objects — and I can remember tons of moments where I could associate those concepts to how some new piece of tech I was learning was implemented behind the scenes.
-
-If you re a self-taught developer I would recommend you read [The Imposter ‘s Handbook 1 & 2](https://bigmachine.io/products/imposter2-combo/) , they cover everything you will ever need :)
+A principios de 2014, mi mejor amigo me recomendó que comenzara a aprender programación porque vio que estaba triste y cansado de seguir una carrera que realmente no me gustaba. Comencé a aprender C por mi cuenta, experimente un poco con C++ y finalmente comencé a leer "C# In Depth" según la recomendación de mi amigo.
 
 ---
 
-After writing this article I feel much better about my progress, I made some mistakes here and there, maybe I didn’t use my time correctly. But I learnt and I will continue learning no matter what, because that is the most important thing I want you to remember from this, keep learning and I promise everything will be fine.
+El 8 de octubre de 2014 me uní a un programa de capacitación en C# impartido por _Accenture_ (lo llamaron su campo de entrenamiento), 1 mes después estaba trabajando como desarrollador de C# Junior y comenzó mi carrera en software.
+Mucho ha cambiado en los últimos 5 años, _Microsoft_ se volvió de código abierto, _JavaScript_ se convirtió en un lenguaje serio y no solo un juguete para sitios web, la programación funcional comenzó su regreso, toneladas de tecnologías han nacido y murieron ante nuestros ojos.
+
+Muchas cosas también cambiaron en mi carrera: pasé de ser autodidacta a bootcamp, a cambiar de universidad para dedicarme a la ingeniería de software, abandonar y finalmente continuar la ruta autodidacta. Desde trabajar en contabilidad hasta convertirme en desarrollador de software, trabajar durante 3 años en mi país natal, Argentina, para buscar una vida mejor en un lugar del que no sabía nada, y mucho menos hablar el mismo idioma, la encantadora y lluviosa Bélgica.
+
+Después de reflexionar sobre el camino que me trajo hasta aquí, no puedo evitar pensar en las buenas y malas decisiones que he tomado. Aquí hay algunas cosas que desearía haber sabido cuando comencé:
+
+### 1. ¡Ve a meetups, conoce gente nueva, haz amigos!
+
+Las personas subestiman la importancia de las relaciones personales y la comunicación en el desarrollo de software. Algunos creen en esta idea de un desarrollador genio 10X que codeara 24 horas sin dormir y creará magia. Este es un sueño imposible. Somos excelentes en lo que hacemos cuando colaboramos entre nosotros, cuando desarrollamos relaciones humanas que nos permiten crear grandes piezas de software. Estas relaciones nos ayudan a crecer, aprender cosas nuevas (no siempre relacionadas con el software, pero igual de valiosas) e incluso progresar en nuestras carreras. Si no fuera por un amigo mío, probablemente sería un contador muy triste.
+
+### 2. Leer libros técnicos.
+
+Siempre preferí los tutoriales y los cursos en línea, pero desafortunadamente no cubrirán el conocimiento fundamental que llevará sus habilidades de desarrollo a un nivel completamente nuevo. Durante los últimos 2 años he estado comiendo libros técnicos, "El programador pragmático", "Código completo", "Código limpio", "Refactorización", lo que sea, sólo desearía haber comenzado antes. Hay tanto conocimiento escrito por profesionales en la industria y es una pena no mirar un poco sus cerebros.
+
+### 3. Centra tu aprendizaje en el conocimiento agnóstico del lenguaje o framework.
+
+Este está relacionado con el anterior. Claro, hay un nuevo framework de _JavaScript_ todos los días y la gente está luchando por ponerse al día. Bueno, no lo intentes. No es posible ni vale la pena. En lugar de enfocarse en los framework, enfócate en la arquitectura, el diseño de sistemas, incluso los paradigmas de software. Los lenguajes y los framework son solo herramientas que utilizamos para crear productos, cambian todo el tiempo, las técnicas que utilizamos para crear software evolucionan a un ritmo mucho más lento y pueden ayudarte a cambiar de un stack a otro con facilidad.
+
+### 4. Siempre tenga un proyecto personal al lado.
+
+No puedo enfatizar lo suficiente lo importante que es esto. Claro, codeas 8 horas al día en su trabajo diario y podrías estar pensando, "¿por qué necesito codear en mi tiempo libre?", Bueno, hay una serie de razones.
+
+- No siempre estará claro qué quieres hacer con tu carrera. Cuando comencé, pensé que quería ser un desarrollador móvile. Me llevó un proyecto personal creando una aplicación de reembolso de gastos en Xamarin se darme cuenta de que esto no era lo que más me interesaba.
+- Las habilidades técnicas se vuelven obsoletas rápidamente en esta industria, por lo que debes probar otras cosas y tener una buena idea de lo que hay fuera de tu zona de confort.
+- Puede ser una muy buena manera de crear un portfolio personal, mostrarle a un empleador potencial que eres un apasionado, un solucionador de problemas y tienes un buen conjunto de habilidades.
+- Si la comunidad nota los proyectos, puede ser una excelente manera de conocer a otros desarrolladores, hacer conexiones y amigos.
+
+### 5. Aprende algo de Ciencias de la Computación.
+
+Si eres un desarrollador autodidacta como yo, probablemente no quieras tener nada que ver con esto. Bueno, tendré que reventarte la burbuja. Aprender algunos conceptos clave hará que tu vida sea mucho más fácil para el aprendizaje futuro. No digo que los necesites para ser un desarrollador, pero después de conocerlos, se convertirán en los componentes básicos que utilizarás para aprender nuevas tecnologías y patrones.
+Pasé 2 años estudiando ciencias de la computación mientras trabajaba como desarrollador, no mucho, pero fue suficiente para ponerme en contacto con conceptos como álgebra booleana, grupos, grafos, árboles, algoritmos de clasificación, memoria dinámica y estática, punteros, teoría de autómatas; incluso diferentes paradigmas de programación, como orientado a objetos, lógico, funcional, y puedo recordar toneladas de momentos en los que pude asociar esos conceptos a cómo una nueva pieza de tecnología que estaba aprendiendo se encontraba implementada detrás de escena.
+
+Si eres un desarrollador autodidacta, te recomendaría que leyeras [The Imposter ‘s Handbook 1 & 2](https://bigmachine.io/products/imposter2-combo/), cubren todo lo que puedas necesitar &#128512;
+
+---
+
+Después de escribir este artículo, me siento mucho mejor acerca de mi progreso, cometí algunos errores aquí y allá, tal vez no utilicé mi tiempo correctamente. Pero aprendí y continuaré aprendiendo sin importar qué, porque eso es lo más importante que quiero que recuerdes de esto, sigue aprendiendo y te prometo que todo estará bien.

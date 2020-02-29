@@ -1,40 +1,40 @@
 ---
 path: "{{year}}/{{month}}/{{slug}}/index"
-title: How I found a problem in Angular unit testing and decided to fix it myself
+title: Como encontré un problema con el Testing en Angular y decidí solucionarlo yo mismo
 date: "2019-10-26"
 description: ""
 thumbnail: ./cover.jpeg
 ---
 
-Hi my name is Patricio and just like you, I am software developer. Around a year ago I started working with Angular at my current job as I wanted to be a Fullstack developer again. I worked professionally with Angular.js before and I did a few test projects with Angular but nothing serious.
+Hola, me llamo Patricio y, como tú, soy desarrollador de software. Hace aproximadamente un año comencé a trabajar con _Angular_ en mi trabajo actual, ya que quería volver a ser desarrollador full stack. Trabajé profesionalmente con Angular.js antes e hice algunos proyectos de prueba con Angular pero nada serio.
 
-Coming from a C#/JavaScript background doing TypeScript was not a problem at all. I felt right at home and developed the necessary skills quickly. I had my visual studio code environment ready so I went ahead and started developing using a Test Driven Development approach, as I was so used to in C#.
+Con conocimientos en _C#/JavaScript_ hacer _TypeScript_ no fue un problema en absoluto. Me sentí como en casa y desarrollé las habilidades necesarias rápidamente. Tenía mi entorno de desarrollo en Visual Studio Code listo, así que seguí adelante y comencé a desarrollar utilizando TDD, como estaba acostumbrado a hacer en C#.
 
 ---
 
-I created my first tests using Jasmine and Karma as it comes by default with Angular when I first noticed a problem. I had to run “ng test” to run tests in the project, see the output in the console or open a browser and see the results in Karma. If I wanted to run a single test by default, I had to modify the code so it would only run that test.
+Creé mis primeras pruebas usando Jasmine y Karma, ya que viene por defecto con _Angular_ cuando noté un problema por primera vez. Tuve que ejecutar "ng test" para ejecutar pruebas en el proyecto, ver el resultado en la consola o abrir un navegador y ver los resultados en Karma. Si quería ejecutar una sola prueba por defecto, tenía que modificar el código para que solo ejecutara esa prueba.
 
-I was completely astonished, I could not believe that this was how Angular developers were working. The hole testing workflow felt weird, counterproductive and it really slowed me down. Coming from Visual Studio I was so used to having a nice interactive UI where you see all the tests: you run the hole suite or run them individually and get immediate feedback. I needed something similar for Angular to work as efficiently as I do in C#, but I couldn’t find it(Jetbrains ‘s WebStorm had something similar but I was a fan of VS Code and also did not want to buy a product license).
+Estaba completamente asombrado, no podía creer que así es como trabajaban los desarrolladores en _Angular_. El flujo de testing entero se sintió extraño, contraproducente y realmente me retrasó. Viniendo de Visual Studio, estaba tan acostumbrado a tener una interfaz de usuario interactiva agradable donde ves todas las pruebas: ejecutas la "Suite" entera o ejecutas tests individualmente y obtienes resultados inmediatos. Necesitaba algo similar para que _Angular_ funcionara tan eficientemente como lo hago en _C#_, pero no pude encontrarlo (WebStorm de Jetbrains tenía algo similar, pero yo soy fanático de VS Code y tampoco quería comprar una licencia de producto) .
 
-So what did I decide to do? Build my own solution.
+Entonces, ¿qué decidí hacer? Construir mi propia solución.
 
 ![Alt Text](https://thepracticaldev.s3.amazonaws.com/i/tmfv22164xb8ngg8i2gh.png)
 
-This is how my “Angular/Karma Test Explorer” extension came to life.
+Así es como mi extensión "Angular/Karma Test Explorer" se hizo realidad.
 
-With the extension you re able to open an Angular project in Visual Studio Code and immediately see all your tests inside the explorer.
-You are also able to run the whole suite, or single tests and see the results right away, even see gutter decorations in the file or run the tests directly from the file.
+Con la extensión, puedes abrir un proyecto _Angular_ en Visual Studio Code e inmediatamente ver todas sus pruebas dentro del explorador.
+También puedes ejecutar todo el conjunto de pruebas o pruebas individuales y ver los resultados de inmediato, incluso ver decoraciones en el archivo o ejecutar las pruebas directamente desde el archivo.
 
 ![Alt Text](https://thepracticaldev.s3.amazonaws.com/i/7nsmr183g6szwk2ervrp.png)
 
-It all started as a personal issue I had and could not find a solution for, but eventually people started responding to the extension. It started being used at my workplace and other companies, and people showed their appreciation to the project. Users started to request features and even submitted new features which I did not consider important when I started building it.
+Todo comenzó como un problema personal que tuve y no pude encontrar una solución, pero finalmente la gente comenzó a responder a la extensión. Comenzó a usarse en mi lugar de trabajo y en otras compañías, y la gente mostró su aprecio por el proyecto. Los usuarios comenzaron a solicitar funciones e incluso enviaron "pull requests" para cosas que jamas hubiese considerado yo.
 
 ![Alt Text](https://thepracticaldev.s3.amazonaws.com/i/fwg87ttoqs0zgiipo81f.png)
 
-I was not proficient in Angular or TypeScript (the extension is built on TypeScript so I feel a lot more confident about it now), I would not even consider myself a senior developer, but I saw a problem and took the personal challenge to build something that myself and other people could enjoy.
+No era competente en _Angular_ o _TypeScript_ (la extensión esta hecha en _TypeScript_, así que ahora me siento mucho más confiado con el lenguaje), ni siquiera me consideraba un desarrollador senior, pero vi un problema y tomé el desafío personal de construir algo que yo y otras personas podrían disfrutar.
 
 ---
 
-And this is the takeaway from this article. We as developers create solutions, and no matter the skills you have, you have probably already seen a missing feature, or problem that is not being solved. Don’t wait for someone to fix it for you, go ahead and do it yourself. Help someone else and increase your own skills in the process, I promise you it is going to be a lot of fun.
+Y esta es la conclusión de este artículo. Como desarrolladores, creamos soluciones, y no importa las habilidades que tengas, probablemente ya hayas visto una característica faltante o un problema que no se está resolviendo. No esperes a que alguien lo arregle por vos, hacelo vos mismo. Ayuda a alguien más y aumenta tus propias habilidades en el proceso, te prometo que será muy divertido.
 
-If you want to checkout the project you can find it directly on VSCode or in the Marketplace, if you want to contribute please take a look at the Github repo or if you just want to have a chat with me please feel free to contact me on Twitter. Thank you for taking the time to read this and hopefully it encourages you to keep on start building new products :).
+Si deseas contribuir al proyecto, puedes encontrarlo directamente en VSCode o en el Marketplace, antes de contribuir, echa un vistazo al repositorio de Github o si solo quieres conversar conmigo, no dudes en ponerte en contacto conmigo en Twitter. Gracias por tomarte el tiempo de leer esto y, con suerte, te aliente a comenzar a construir nuevos productos &#128512;.

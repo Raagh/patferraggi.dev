@@ -1,58 +1,58 @@
 ---
 path: "{{year}}/{{month}}/{{slug}}/index"
-title: Deliberate Learning!, take control of your career
+title: Estudio deliberado, tomando el control de nuestra carrera
 date: "2019-12-01"
-thumbnail: ./cover.jpeg
+thumbnail: ./cover.jpg
 ---
 
-I have been working as a developer for the last 5 years. Is not a long time, I know, but in this time I think I have improved a lot, more than if I would have taken a passive approach with my career. I have noticed that people always come to me and mention technologies to get my opinion as if I had tried everything that is out there.
-Although is an overstatement I did had quite a few different experiences, between professional work and hobby I have done regular business applications, games, game cheats and hacks, online bots, high load public API's, visual studio code extensions and even custom Android ROMS. Why you ask? because not learning is being dead, simple as that.
+He estado trabajando como desarrollador durante los últimos 5 años. No es mucho tiempo, lo sé, pero en este tiempo creo que he mejorado mucho, más que si hubiera tomado un enfoque pasivo con mi carrera. Me he dado cuenta de que las personas siempre acuden a mí y mencionan las tecnologías para obtener mi opinión como si hubiera probado todo lo que está ahí fuera.
+Aunque es una exageración, tuve experiencias variadas, entre el trabajo profesional y el hobby, he realizado aplicaciones comerciales, juegos, hacks de juegos, bots, API públicas de alta concurrencia, extensiones de Visual Studio Code e incluso ROMS personalizados de Android. ¿y porque te preguntas? porque no aprender es estar muerto, así de simple.
 
-> Let me say that again! not learning is being dead.
+> Déjame decir eso otra vez! No aprender es estar muerto.
 
-There is always a new book out there, something interesting that you haven't tried before and something that you can learn from and is your job to take action and do it, nobody else can do it for you, if you just wait to "learn on the job" you might wake up one day in that crappy old job doing the exact same thing that you been doing for the last 10 years and be forced to improve, it's not gonna end up well.
+Siempre hay un nuevo libro, algo interesante que no has probado antes y algo de lo que puedes aprender y es tu trabajo tomar medidas y hacerlo, nadie más puede hacerlo por ti, si solo esperas "aprender en el trabajo" puede que te despiertes un día en ese trabajo viejo y horrible haciendo exactamente lo mismo que has estado haciendo durante los últimos 10 años y te veas obligado a mejorar, dejame decirte, ese cuento no va a terminar bien.
 
 ---
 
-To be fair not all my learning has been 100% deliberate, I did plan to investigate technologies or read certain book or get better at a certain skill but I have not always been as organized as I am becoming now, so I will try to share my workflow with you.
+Para ser justos, no todo mi aprendizaje ha sido 100% planeado, planeé investigar tecnologías o leer cierto libro o mejorar en cierta habilidad, pero no siempre he sido tan organizado como me estoy volviendo ahora, así que intentaré compartir mi sistema de trabajo contigo.
 
-I needed a way to keep all the mental complexity of advancing my career in one place, for that I chose [Notion](https://www.notion.so/), it is a great tool with tons of templates for basically everything you could ever need, I don't just use it for my personal development, but for my budget, job applications, food tracking and freelancing jobs documentation.
+Necesitaba una manera de mantener toda la complejidad mental de avanzar en mi carrera en un solo lugar, para eso elegí [Notion](https://www.notion.so/), es una gran herramienta con toneladas de plantillas para básicamente todo que puedas necesitar, no solo lo uso para mi desarrollo personal, sino también para mi presupuesto, solicitudes de empleo, trackear mis comidas y documentación de trabajos independientes.
 
-So how do we start? first we setup our goals, for me I just made a list.
+Entonces, ¿cómo empezamos? Primero establecemos nuestros objetivos, para llevar esto acabo podemos hacer una lista.
 
-1. Get good at Functional Programming.
-2. Get clear practice on the Clean Architecture pattern.
-3. Become a real fullstack developer (improve frontend).
-4. Create my own website/blog.
-5. Get a remote backend/fullstack developer job.
+1. Aprender programación funcional
+2. Aprender a utilizar patrones de arquitectura como _Clean Architecture_
+3. Conviértete en un verdadero desarrollador full stack, mejorar mis capacidades en el frontend
+4. Crear mi propio sitio web / blog
+5. Obtener un trabajo de desarrollador remoto de backend / full stack
 
-I have other goals like losing weight, saving extra money, investing, improve personal relationships, etc. I just named the ones related to software &#128512;
+Tengo otros objetivos como perder peso, ahorrar dinero extra, invertir, mejorar mis relaciones personales, etc. Solo nombre los relacionados con el software &#128512;
 
-After that we translate those goals into smaller and concrete tasks so when completed it will take us one step further to our goals, I track them using a Kanban board in notion as you can see in the picture below.
+Después de eso, traducimos esos objetivos en tareas más pequeñas y concretas, por lo que, de modo que cuando se complete una, nos llevará un paso más allá hacia nuestros objetivos, esto lo logró usando una tabla Kanban en _Notion_ como se puede ver en la imagen a continuación.
 
 ![Notion Kanban Board](https://thepracticaldev.s3.amazonaws.com/i/6njh1bf4p42dx4l223mz.png)
 
-Here you will see things like:
+Aquí verás cosas como:
 
-- "Read Design Patterns"
-- "Read Mostly Adequate Guide to Functional Programming"
-- "Read Structure and interpretation of computer programs"
-- "Create Basic website layout for landing page"
-- "Create basic website layout for blog"
-- "Finish Pending features on Angular Test Explorer (that is the vscode extension I mentioned before)"
+- "Leer _Design Patterns_"
+- "Leer _Mostly Adequate Guide to Functional Programming_"
+- "Leer _Structure and Interpretation of computer programs_"
+- "Implementar diseño de la landing page de mi sitio"
+- "Implementar diseño de blog y los artículos"
+- "Finalizar características pendientes en Angular Test Explorer (esa es la extensión VSCODE que mencioné antes)"
 
-So that is all fine and dandy but then you have to make sure you do them right? well I noticed by trial and error that if I don't plan them, they never get done. So how do I do that? good old [Google Calendar](https://calendar.google.com/) to the rescue.
+Esto esta perfecto, pero luego debes asegurarte de realmente hacer lo que decis que vas a hacer. Bueno, noté por prueba y error que si no los planificó, nunca se hacen. Entonces, ¿cómo hago eso? el confiable [Google Calendar](https://calendar.google.com/) al rescate.
 
-![Google Calendar](https://thepracticaldev.s3.amazonaws.com/i/4gaxvshbcu8f4w7fyphr.png)
+![Calendario de Google](https://thepracticaldev.s3.amazonaws.com/i/4gaxvshbcu8f4w7fyphr.png)
 
-On sunday evening before the weekend ends, I plan what I am gonna do next week(and yes the planning is also on the calendar), I don't get too specific here, I just put "Code", or "Read", or in some special cases "Do Code Katas".
-I am trying, still not perfect at it, to follow the "2 hats mindset" here, basically what this means is that when I plan my week I have the "boss hat" on, during the week on the other hand I have the "employee hat" on, if my calendar says exercise then the boss said exercise so it is exercise time, no questions asked I just shut up and do it, this of course is easier said than done but I am trying.
+El domingo por la noche antes de que termine el fin de semana, planeo lo que voy a hacer la próxima semana (y sí, la planificación también está en el calendario), no soy muy específico aquí, solo pongo "Código" o "Leer", o en algunos casos especiales "Hacer Code Katas".
+Estoy intentando, aunque no soy perfecto en ello, seguir la técnica "2 sombreros" aquí, básicamente lo que esto significa es que cuando planifico mi semana tengo el "sombrero de jefe", durante la semana, por otro lado tengo "sombrero de empleado", si mi calendario dice ejercicio, entonces el jefe dijo ejercicio, así que es tiempo de ejercicio, sin preguntas, simplemente lo hago, por supuesto, es más fácil decirlo que hacerlo, pero lo intento.
 
-Finally, I write my progress down in a notebook, yeah no apps here, a real notebook, also I read what I have accomplished the previous week so I always have it fresh in my head.
+Finalmente, escribo mi progreso en un cuaderno, si, no hay aplicaciones aquí, un cuaderno real, también leo lo que he logrado la semana anterior, así que siempre lo tengo en mi cabeza.
 
-![Notebook](https://thepracticaldev.s3.amazonaws.com/i/8ygelofb7d5h22ts5tyj.jpg)
+![Cuaderno](https://thepracticaldev.s3.amazonaws.com/i/8ygelofb7d5h22ts5tyj.jpg)
 
 ---
 
-So far my progress has skyrocketed since I started becoming more disciplined and organized about my career, now it is much clear what I want to accomplish and if I am taking the right steps.
-My workflow is not perfect, I am still trying to get better at it but I truly hope seeing my process inspires you to take your path into your own hands, put some deep thought into it and plan your hard work. It will make a world of difference.
+Hasta ahora, mi progreso se ha disparado desde que comencé a ser más disciplinado y organizado sobre mi carrera, ahora está muy claro lo que quiero lograr y si estoy tomando los pasos correctos.
+Mi flujo de trabajo no es perfecto, todavía estoy tratando de mejorar, pero realmente espero que mi proceso te inspire a tomar tu camino en tus propias manos, reflexionar profundamente y planificar tu arduo trabajo. Hará un mundo de diferencia.
