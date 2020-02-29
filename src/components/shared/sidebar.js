@@ -72,6 +72,21 @@ export default props => {
     flex-direction: column;
   `
 
+  const SpecialLinksList = styled.ol`
+    display: flex;
+    flex-direction: column;
+
+    @media ${device.xsmall} {
+      margin-bottom: 2rem;
+    }
+    @media ${device.small} {
+      margin-bottom: 2rem;
+    }
+    @media ${device.medium} {
+      margin-bottom: 2rem;
+    }
+  `
+
   const StyledGatsbyLink = styled(props => <Link {...props} />)`
     color: ${globalStyles.backgroundColor} !important;
     font-family: ${globalStyles.fontFamilyMedium};
@@ -160,7 +175,7 @@ export default props => {
             </p>
           </StyledLink>
         </LinksList>
-        <LinksList>
+        <SpecialLinksList>
           <StyledLink
             href="https://www.linkedin.com/in/patricio-ferraggi-ares/"
             key="linkedin"
@@ -178,7 +193,7 @@ export default props => {
           >
             github
           </StyledLink>
-        </LinksList>
+        </SpecialLinksList>
       </LinksWrapper>
       <button
         onClick={() => props.setIsOpen(false)}
