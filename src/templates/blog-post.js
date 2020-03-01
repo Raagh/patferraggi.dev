@@ -196,6 +196,23 @@ const ArticleContentText = styled.article`
     margin-left: 1.2rem;
   }
 
+  blockquote {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 40px;
+    margin-inline-end: 40px;
+    border-left: calc(0.2vw + 2px) solid #333;
+    padding: 0.1% 6% 0.1% 4%;
+    margin: 1.6em 1vw;
+    font-size: 0.92em;
+    line-height: 1.4em;
+
+    p {
+      margin: 0;
+    }
+  }
+
   @media ${device.small} {
     font-size: 16px;
     line-height: 24px;
