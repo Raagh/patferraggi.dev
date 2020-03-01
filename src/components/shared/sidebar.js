@@ -77,13 +77,13 @@ export default props => {
     flex-direction: column;
 
     @media ${device.xsmall} {
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
     @media ${device.small} {
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
     @media ${device.medium} {
-      margin-bottom: 2rem;
+      margin-bottom: 3rem;
     }
   `
 
