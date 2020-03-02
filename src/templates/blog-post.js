@@ -257,7 +257,9 @@ class BlogPostTemplate extends React.Component {
           <ArticleDescription>
             {post.frontmatter.description}
           </ArticleDescription>
-          <ArticleDate>{post.frontmatter.date}</ArticleDate>
+          <ArticleDate>
+            {post.frontmatter.date} - {post.timeToRead + 1} minutos de lectura
+          </ArticleDate>
           <Divider
             margin={"3.5rem 2rem 3.5rem 2rem"}
             small={true}
@@ -319,6 +321,7 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       body
+      timeToRead
       fields {
         slug
       }

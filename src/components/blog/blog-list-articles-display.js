@@ -139,7 +139,9 @@ export default props => {
             <StyledDescription>
               {node.frontmatter.description}
             </StyledDescription>
-            <BlogListArticleDate>{node.frontmatter.date}</BlogListArticleDate>
+            <BlogListArticleDate>
+              {node.frontmatter.date} - {node.timeToRead + 1} minutos de lectura
+            </BlogListArticleDate>
           </BlogListArticle>
         )
       })}

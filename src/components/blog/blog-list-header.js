@@ -192,6 +192,7 @@ export default props => {
         edges {
           node {
             excerpt
+            timeToRead
             fields {
               slug
             }
@@ -250,7 +251,8 @@ export default props => {
               }}
             ></BlogListMainArticleExcerpt>
             <BlogListMainArticleDate>
-              {mainPost.frontmatter.date}
+              {mainPost.frontmatter.date} - {mainPost.timeToRead + 1} minutos de
+              lectura
             </BlogListMainArticleDate>
           </BlogListMainArticleText>
           <StyledGatsbyLinkMainArticle
