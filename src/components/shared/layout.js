@@ -5,7 +5,6 @@ import globalStyles from "../../config/style-variables"
 import { createGlobalStyle } from "styled-components"
 import InterRegular from "../../../content/assets/fonts/Inter-Regular.otf"
 import InterMedium from "../../../content/assets/fonts/Inter-Medium.otf"
-import SEO from "./seo"
 import "normalize.css"
 
 const GlobalStyle = createGlobalStyle`
@@ -65,7 +64,6 @@ export default ({ children, removeSidePadding }) => {
 
   return (
     <MainContainer>
-      <SEO title="Patricio Ferraggi Ares"></SEO>
       <GlobalStyle></GlobalStyle>
       <Navbar></Navbar>
       <InternalContainer>{children}</InternalContainer>

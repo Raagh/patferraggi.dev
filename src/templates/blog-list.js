@@ -5,6 +5,7 @@ import Layout from "../components/shared/layout"
 import BlogListTemplateHeader from "../components/blog/blog-list-header"
 import BlogListArticlesDisplay from "../components/blog/blog-list-articles-display"
 import globalStyles from "../config/style-variables"
+import SEO from "../components/shared/seo"
 
 const BlogListTemplateWrapper = styled.section`
   font-family: ${globalStyles.fontFamilyMedium};
@@ -59,6 +60,7 @@ class BlogListTemplate extends React.Component {
 
     return (
       <Layout>
+        <SEO title="El Calabozo del Programador"></SEO>
         <BlogListTemplateWrapper>
           <BlogListTemplateHeader
             shouldDisplayMainArticle={currentPage !== 2}

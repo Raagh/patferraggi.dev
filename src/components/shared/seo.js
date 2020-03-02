@@ -2,8 +2,9 @@ import React from "react"
 import PropTypes from "prop-types"
 import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
+import defaultOpenGraphImage from "../../../content/assets/images/2020.jpg"
 
-function SEO({ description, lang, meta, keywords, title }) {
+function SEO({ description, lang, meta, keywords, title, image }) {
   const { site } = useStaticQuery(
     graphql`
       query {
@@ -12,6 +13,7 @@ function SEO({ description, lang, meta, keywords, title }) {
             title
             description
             author
+            siteUrl
           }
         }
       }
@@ -19,6 +21,8 @@ function SEO({ description, lang, meta, keywords, title }) {
   )
 
   const metaDescription = description || site.siteMetadata.description
+  const ogImageUrl =
+    site.siteMetadata.siteUrl + (image || defaultOpenGraphImage)
 
   return (
     <Helmet
@@ -60,6 +64,18 @@ function SEO({ description, lang, meta, keywords, title }) {
           name: `twitter:description`,
           content: metaDescription,
         },
+        {
+          property: `og:image`,
+          content: ogImageUrl,
+        },
+        {
+          property: `twitter:image`,
+          content: ogImageUrl,
+        },
+        {
+          property: `image`,
+          content: ogImageUrl,
+        },
       ]
         .concat(
           keywords.length > 0
@@ -79,6 +95,7 @@ SEO.defaultProps = {
   meta: [],
   keywords: [],
   description: ``,
+  title: "Patricio Ferraggi Ares",
 }
 
 SEO.propTypes = {

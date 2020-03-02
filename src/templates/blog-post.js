@@ -250,6 +250,7 @@ class BlogPostTemplate extends React.Component {
           <SEO
             title={post.frontmatter.title}
             description={post.frontmatter.description || post.excerpt}
+            image={post.frontmatter.thumbnail.childImageSharp.fluid.src}
           />
           <StyledHomeLink to="/blog">← Back to my blog</StyledHomeLink>
           <ArticleTitle>{post.frontmatter.title}</ArticleTitle>
