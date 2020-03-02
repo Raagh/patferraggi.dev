@@ -328,7 +328,7 @@ export const pageQuery = graphql`
         thumbnail {
           childImageSharp {
             fluid {
-              src
+              ...GatsbyImageSharpFluid
             }
           }
         }

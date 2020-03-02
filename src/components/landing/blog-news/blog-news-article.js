@@ -95,7 +95,7 @@ const ArticleTextContainer = styled.div`
 
 const RenderPreviewIfItMatters = ({ preview, shouldRenderPreview }) => {
   return shouldRenderPreview ? (
-    <StyledPreview alt="article-preview" fixed={preview}></StyledPreview>
+    <StyledPreview alt="article-preview" fluid={preview}></StyledPreview>
   ) : null
 }
 

@@ -202,7 +202,7 @@ export default props => {
               thumbnail {
                 childImageSharp {
                   fluid {
-                    src
+                    ...GatsbyImageSharpFluid
                   }
                 }
               }

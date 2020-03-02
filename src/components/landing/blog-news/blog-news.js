@@ -179,6 +179,7 @@ export default () => {
           const node = item.node
           return (
             <Article
+              key={index}
               id={index}
               title={node.frontmatter.title}
               link={`/blog` + node.fields.slug}
