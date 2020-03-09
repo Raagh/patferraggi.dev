@@ -133,6 +133,9 @@ export default () => {
               date(formatString: "DD MMMM YYYY", locale: "es")
               title
               description
+              enTitle
+              enDescription
+              enPostUrl
               thumbnail {
                 childImageSharp {
                   fluid {
@@ -187,6 +190,9 @@ export default () => {
               small={index !== 0}
               creationDate={node.frontmatter.date}
               description={node.frontmatter.description}
+              enTitle={node.frontmatter.enTitle}
+              enDescription={node.frontmatter.enDescription}
+              enPostUrl={node.frontmatter.enPostUrl}
               thumbnail={node.frontmatter.thumbnail}
             />
           )

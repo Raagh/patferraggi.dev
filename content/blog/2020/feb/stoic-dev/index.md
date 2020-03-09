@@ -2,7 +2,10 @@
 path: "{{year}}/{{month}}/{{slug}}/index"
 date: "2020-03-01"
 title: Filosofía antigua para el programador moderno
-description: ""
+description:
+enTitle: Ancient Philosophy for the Modern Developer
+enDescription:
+enPostUrl: https://dev.to/patferraggi/ancient-philosophy-for-the-modern-developer-42p
 thumbnail: ./cover.jpg
 ---
 

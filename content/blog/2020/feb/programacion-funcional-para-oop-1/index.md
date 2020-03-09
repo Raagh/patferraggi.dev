@@ -3,6 +3,9 @@ path: "{{year}}/{{month}}/{{slug}}/index"
 date: "2020-02-25"
 title: Programación funcional para el desarrollador orientado a objetos
 description: Capitulo 1
+enTitle: Functional Programming for the Object-Oriented Developer
+enDescription: Chapter 1
+enPostUrl: https://dev.to/patferraggi/functional-programming-for-the-object-oriented-developer-g45
 thumbnail: ./cover.png
 ---
 

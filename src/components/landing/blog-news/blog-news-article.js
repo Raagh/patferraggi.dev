@@ -2,8 +2,6 @@ import React from "react"
 import styled from "styled-components"
 import globalStyles from "../../../config/style-variables"
 import device from "../../../config/device"
-import IcomoonReact from "icomoon-react"
-import iconSet from "../../../../content/assets/icons/selection.json"
 import Img from "gatsby-image"
 
 const ArticleLink = styled.a`
@@ -16,6 +14,11 @@ const ArticleLink = styled.a`
   @media ${device.small} {
     margin-bottom: 1rem;
   }
+`
+
+const EnArticleLink = styled(ArticleLink)`
+  opacity: 0.5;
+  margin-top: 1rem;
 `
 
 const ArticleTitle = styled.div`
@@ -84,6 +87,10 @@ const StyledDescription = styled.div`
   }
 `
 
+const EnStyledDescription = styled(StyledDescription)`
+  opacity: 0.5;
+`
+
 const ArticleTextContainer = styled.div`
   margin-top: 1.5rem;
   margin-right: 4rem;
@@ -136,22 +143,14 @@ export default props => {
         <ArticleTitle>
           <ArticleLink href={props.link}>{props.title}</ArticleLink>
           <StyledDescription>{props.description}</StyledDescription>
-          <p style={{ marginTop: "auto" }}>
-            <ArticleLink
-              href={props.link}
-              style={{ color: globalStyles.secondaryColor }}
-            >
-              Leer mas{" "}
-              {
-                <IcomoonReact
-                  iconSet={iconSet}
-                  size={"1em"}
-                  icon="hand"
-                  color={globalStyles.secondaryColor}
-                />
-              }
-            </ArticleLink>
-          </p>
+          <EnArticleLink
+            target="_blank"
+            rel="noopener noreferrer"
+            href={props.enPostUrl}
+          >
+            {props.enTitle}
+          </EnArticleLink>
+          <EnStyledDescription>{props.enDescription}</EnStyledDescription>
         </ArticleTitle>
       </ArticleTextContainer>
     </ArticleWrapper>
