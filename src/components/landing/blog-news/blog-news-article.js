@@ -3,6 +3,7 @@ import styled from "styled-components"
 import globalStyles from "../../../config/style-variables"
 import device from "../../../config/device"
 import Img from "gatsby-image"
+import { Link } from "gatsby"
 
 const ArticleLink = styled.a`
   color: ${globalStyles.primaryColor};
@@ -100,9 +101,21 @@ const ArticleTextContainer = styled.div`
   }
 `
 
-const RenderPreviewIfItMatters = ({ preview, shouldRenderPreview }) => {
+const StyledGatsbyLink = styled(props => <Link {...props} />)`
+  width: 100%;
+  height: 100%;
+  margin: 0 2.5rem 0 0;
+
+  :hover {
+    color: ${globalStyles.secondaryColor};
+  }
+`
+
+const RenderPreviewIfItMatters = ({ preview, shouldRenderPreview, link }) => {
   return shouldRenderPreview ? (
-    <StyledPreview alt="article-preview" fluid={preview}></StyledPreview>
+    <StyledGatsbyLink to={link}>
+      <StyledPreview alt="article-preview" fluid={preview}></StyledPreview>
+    </StyledGatsbyLink>
   ) : null
 }
 
@@ -137,6 +150,7 @@ export default props => {
       <RenderPreviewIfItMatters
         shouldRenderPreview={props.showPreview}
         preview={props.thumbnail.childImageSharp.fluid}
+        link={props.link}
       ></RenderPreviewIfItMatters>
       <ArticleTextContainer>
         <p>{props.creationDate}</p>
