@@ -164,7 +164,7 @@ Déjenme ser claro sobre esto, si no tiene pruebas, no sabes si su código funci
 Ese comportamiento y abandono han llevado a la muerte de personas y millones de dólares en pérdidas. Algunos ejemplos son:
 
 - [Knight Capital](https://en.wikipedia.org/wiki/Knight_Capital_Group)
-- [Boeing 737 MAX se bloquea](https://en.wikipedia.org/wiki/Boeing_737_MAX_groundings)
+- [Boeing 737 MAX](https://en.wikipedia.org/wiki/Boeing_737_MAX_groundings)
 
 ---
 
