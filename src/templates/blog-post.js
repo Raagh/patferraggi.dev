@@ -11,6 +11,7 @@ import Divider from "../components/shared/divider"
 import BlogListArticlesDisplay from "../components/blog/blog-list-articles-display"
 import Bio from "../components/blog/bio"
 import device from "../config/device"
+import NewsLetter from "../components/blog/newsletter"
 
 const ArticleWrapper = styled.section`
   font-family: ${globalStyles.fontFamilyMedium};
@@ -290,6 +291,7 @@ class BlogPostTemplate extends React.Component {
               </ArticleContentText>
             </ArticleContent>
           </ArticleEntireContent>
+          <NewsLetter></NewsLetter>
         </ArticleWrapper>
         {posts.length > 0 && (
           <BlogPostShowcaseWrapperTitle>
