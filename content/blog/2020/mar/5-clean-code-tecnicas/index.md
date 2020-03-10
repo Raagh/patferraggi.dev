@@ -9,7 +9,7 @@ enPostUrl: https://dev.to/patferraggi/5-clean-code-techniques-you-can-start-doin
 thumbnail: ./cover.jpg
 ---
 
-Hace dos años comencé a buscar formas de mejorar mis habilidades de programación, hasta ese momento estaba totalmente de conforme con aprender el siguiente framework, experimentar constantemente con las nuevas tecnologías y no me malinterpreten, todavía lo hago, soy un gran creyente de que debe mantener sus habilidades actualizadas, pero hace dos años leí [Clean Code: A Handbook of Agile Software Craftsmanship](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/ref=sr_1_1?keywords=clean+code&qid=1583780721&sr=8-1) y mi carrera cambió para siempre, incluso me atrevería a decir que mi opinión sobre el software cambió para siempre.
+Hace dos años comencé a buscar formas de mejorar mis habilidades de programación, hasta ese momento estaba totalmente conforme con aprender el siguiente framework, experimentar constantemente con las nuevas tecnologías y no me malinterpreten, todavía lo hago, soy un gran creyente de que debe mantener sus habilidades actualizadas, pero hace dos años leí [Clean Code: A Handbook of Agile Software Craftsmanship](https://www.amazon.com/Clean-Code-Handbook-Software-Craftsmanship/dp/0132350882/ref=sr_1_1?keywords=clean+code&qid=1583780721&sr=8-1) y mi carrera cambió para siempre, incluso me atrevería a decir que mi opinión sobre el software cambió para siempre.
 
 Después de ese libro, comencé a pensar realmente en el código que estaba produciendo, cómo era una expresión de mí mismo y lo importante que era para mí tener en cuenta la calidad del software que estaba creando.
 
