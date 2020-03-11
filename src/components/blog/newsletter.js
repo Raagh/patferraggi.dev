@@ -1,9 +1,10 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import globalStyles from "../../config/style-variables"
 import device from "../../config/device"
 import iconSet from "../../../content/assets/icons/selection.json"
 import IcomoonReact from "icomoon-react"
+import addToMailchimp from "gatsby-plugin-mailchimp"
 
 const Container = styled.section`
   padding: 3rem 4rem 3rem 4rem;
@@ -12,13 +13,20 @@ const Container = styled.section`
   font-weight: 500;
   max-width: 1260px;
   margin-left: 2rem;
+  margin-right: 2rem;
 
   border: 2px solid #eaeae4;
   box-sizing: border-box;
 
   @media ${device.small} {
     margin-left: 0;
+    margin-right: 0;
     padding: 2.5rem 2rem 2.5rem 2rem;
+  }
+
+  @media ${device.medium} {
+    margin-left: 0;
+    margin-right: 0;
   }
 `
 
@@ -37,6 +45,13 @@ const Title = styled.article`
     letter-spacing: -2.2528px;
     margin-bottom: 0.5rem;
   }
+
+  @media ${device.medium} {
+    font-size: 54px;
+    line-height: 36px;
+    letter-spacing: -2.2528px;
+    margin-bottom: 0.5rem;
+  }
 `
 
 const Text = styled.article`
@@ -48,12 +63,15 @@ const Text = styled.article`
   @media ${device.small} {
     font-size: 18px;
     line-height: 24px;
-
     letter-spacing: -1px;
+  }
+
+  @media ${device.medium} {
+    line-height: 32px;
   }
 `
 
-const InputContainer = styled.div`
+const InputContainer = styled.form`
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -75,14 +93,23 @@ const Input = styled.input`
   height: 60px;
   padding: 1rem;
   opacity: 0.4;
+  outline: none;
 
   :focus {
     outline-width: 0;
   }
 
+  :required {
+    box-shadow: none;
+  }
+
   @media ${device.small} {
     width: 100%;
     margin-bottom: 0.5rem;
+  }
+
+  @media ${device.medium} {
+    width: 80%;
   }
 `
 
@@ -102,16 +129,39 @@ const Button = styled.button`
 `
 
 export default () => {
+  const [email, setEmail] = useState("")
+  const [buttonText, setButtonText] = useState("Enviar")
+
+  const handleSubmit = e => {
+    e.preventDefault()
+
+    addToMailchimp(email).then(data => {
+      setEmail("")
+      setButtonText("Enviado!")
+    })
+  }
+
+  const handleEmailChange = event => {
+    setEmail(event.currentTarget.value)
+    setButtonText("Enviar")
+  }
+
   return (
-    <Container>
+    <Container onSubmit={handleSubmit}>
       <Title>
-        Subsríbite al newsletter{" "}
+        Suscribite al newsletter{"  "}
         {<IcomoonReact iconSet={iconSet} size={"1em"} icon="email" />}
       </Title>
       <Text>Nada de spam, solo los últimos artículos cada dos semanas.</Text>
       <InputContainer>
-        <Input type="email" placeholder="Tu e-mail acá"></Input>
-        <Button>Enviar</Button>
+        <Input
+          type="email"
+          placeholder="Tu e-mail acá"
+          name="email"
+          value={email}
+          onChange={handleEmailChange}
+        ></Input>
+        <Button>{buttonText}</Button>
       </InputContainer>
     </Container>
   )
