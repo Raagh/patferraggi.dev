@@ -9,7 +9,7 @@ enPostUrl: https://dev.to/patferraggi/the-noble-art-of-refactoring-part-0-2k58
 thumbnail: ./cover.jpg
 ---
 
-Por lo general, cuando estudiamos programación o desarrollamos nuestros propios proyectos, nunca nos damos cuenta de que este no es el flujo regular que vamos a seguir cuando trabajamos como parte de un equipo en un proyecto que se ha desarrollado a lo largo de los años, el 90% del tiempo vamos a estar trabajando en el código que ya está allí, el desarrollador original podría no estar más en el equipo, tal vez no hay documentación, tal vez no hay pruebas, hay muchas posibilidades diferentes aquí, pero dado que estaremos involucrados en esto entorno es crucial saber cómo mejorar el código existente, este proceso se llama _Refactoring_ o _Refactorización_.
+Por lo general, cuando estudiamos programación o desarrollamos nuestros propios proyectos, nunca nos damos cuenta de que este no es el flujo regular que vamos a seguir cuando trabajamos como parte de un equipo en un proyecto que se ha desarrollado a lo largo de los años, el 90% del tiempo vamos a estar trabajando en el código que ya está allí, el desarrollador original podría no estar más en el equipo, tal vez no hay documentación, tal vez no hay pruebas, hay muchas posibilidades diferentes aquí, pero dado que estaremos involucrados en este entorno es crucial saber cómo mejorar código existente, este proceso se llama _Refactoring_ o _Refactorización_.
 
 ## Introducción
 
@@ -17,7 +17,7 @@ Primero, comencemos con una definición:
 
 > Un cambio realizado en la estructura interna del software para que sea más fácil de entender y más barato de modificar sin cambiar su comportamiento observable. - Martin Fowler
 
-En resumen, refactorizar significa reestructurar el código existente sin cambiar la salida. Es posible que hayas escuchado el término "refactorización" ser utilizado vagamente para referirse a cualquier modificación de código existente. Sin embargo, la refactorización es en realidad una técnica basada en transformaciones que mejoran su código sin afectar el comportamiento.
+En resumen, refactorizar significa reestructurar el código existente sin cambiar la salida. Es posible que hayas escuchado el término "refactorización" ser utilizado vagamente para referirse a cualquier modificación de código existente. Sin embargo, la refactorización es en realidad una técnica basada en transformaciones que mejoran el código sin afectar el comportamiento.
 
 Una consideración importante es que la refactorización no corrige errores intencionalmente, altera ninguna funcionalidad ni mejora directamente el rendimiento. Se supone que el código está funcionando antes de comenzar.
 
@@ -27,7 +27,7 @@ Esta será una serie de artículos puramente prácticos, profundizaremos en un e
 
 ## El ejemplo
 
-Para nuestra práctica, utilizaremos la [Gilded Rose Refactoring Kata](https://github.com/NotMyself/GildedRose), este es un ejemplo de codigo bastante malo hecho con el solo proposito de practicar nuestra habilidad de refactorizar. En nuestro caso, no vamos a usar la implementación original escrita en C#, ya que soy un desarrollador de C# que se está moviendo al mundo del frontend, decidí probar algo diferente y usar la versión _JavaScript_ de [este repositorio](https://github.com/emilybache/GildedRose-Refactoring-Kata/tree/master/js-jest) y como framework de testing vamos a utilizar [Jest](https://jestjs.io/), arranquemos.
+Para nuestra práctica, utilizaremos la [Gilded Rose Refactoring Kata](https://github.com/NotMyself/GildedRose), este es un ejemplo de código bastante malo hecho con el solo proposito de practicar nuestra habilidad de refactorizar. En nuestro caso, no vamos a usar la implementación original escrita en C#, ya que soy un desarrollador de C# que se está moviendo al mundo del frontend, decidí probar algo diferente y usar la versión _JavaScript_ de [este repositorio](https://github.com/emilybache/GildedRose-Refactoring-Kata/tree/master/js-jest) y como framework de testing vamos a utilizar [Jest](https://jestjs.io/), arranquemos.
 
 ## Requisitos
 
@@ -293,4 +293,5 @@ Sé que deseas comenzar a refactorizar de inmediato, pero sería demasiado en un
 
 Después de terminar con la refactorización, agregaremos la característica que solicitaron en la especificación, será pan comido, lo prometo.
 
-Si te gustó esto, hágamelo saber en los comentarios y no te olvides de compartir, si tiene algunos comentarios o sugerencias sobre cómo tomar este ejemplo, no te olvide de comentar abajo.
+Si te gustó esto, hacemelo saber en los comentarios y no te olvides de compartir, si tiene algunos comentarios o sugerencias sobre cómo tomar este ejemplo, no te olvide de comentar abajo.
+Hasta la proxima.
