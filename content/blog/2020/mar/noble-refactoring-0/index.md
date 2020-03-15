@@ -244,19 +244,6 @@ describe("Backstage passes", () => {
     expect(items).toStrictEqual(expectedResult)
   })
 
-  it("increases in Quality as it's SellIn value approaches but is is not there yet", () => {
-    const storeItems = [
-      new Item("Backstage passes to a TAFKAL80ETC concert", 11, 0),
-    ]
-    const expectedResult = [
-      new Item("Backstage passes to a TAFKAL80ETC concert", 10, 1),
-    ]
-    const gildedRose = new Shop(storeItems)
-    const items = gildedRose.updateQuality()
-
-    expect(items).toStrictEqual(expectedResult)
-  })
-
   it("Quality increases by 2 when there are 10 days or less", () => {
     const storeItems = [
       new Item("Backstage passes to a TAFKAL80ETC concert", 10, 0),
