@@ -102,12 +102,24 @@ const ArticleTextContainer = styled.div`
 `
 
 const StyledGatsbyLink = styled(props => <Link {...props} />)`
-  width: 100%;
+  width: 50%;
   height: 100%;
   margin: 0 2.5rem 0 0;
 
   :hover {
     color: ${globalStyles.secondaryColor};
+  }
+
+  @media ${device.small} {
+    width: 100%;
+  }
+
+  @media ${device.medium} {
+    width: 100%;
+  }
+
+  @media ${device.large} {
+    width: 100%;
   }
 `
 
