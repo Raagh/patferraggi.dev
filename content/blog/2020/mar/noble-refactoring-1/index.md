@@ -5,18 +5,18 @@ title: El noble arte del refactoring
 description: Parte 1
 enTitle: The noble art of refactoring
 enDescription: Part 1
-enPostUrl: https://dev.to/patferraggi/the-noble-art-of-refactoring-part-0-2k58
+enPostUrl: https://dev.to/patferraggi/the-noble-art-of-refactoring-part-1-1d1b
 thumbnail: ./cover.jpeg
 ---
 
-¿Oye cómo has estado? Espero que estuvieras esperando para ver cómo hacemos esta refactorización. Si no ha revisado el artículo anterior, definitivamente deberías hacerlo chequeando [este link](https://www.patferraggi.dev/blog/2020/mar/noble-refactoring-0/), ya que hoy haremos la refactorización y agregaremos esa `feature` pendiente en nuestro backlog.
+¿Hey, como estas? Espero que estuvieras esperando para ver cómo hacemos esta refactorización. Si no has leido el artículo anterior, definitivamente deberías hacerlo en [este link](https://www.patferraggi.dev/blog/2020/mar/noble-refactoring-0/), ya que hoy haremos la refactorización y agregaremos esa `feature` pendiente en nuestro backlog.
 
 ---
 
 ## La refactorización
 
 Entonces, sin más preámbulos, comencemos.
-Primero, no se vos, pero a mi no me gusta ese `for loop` y acceder a los elementos mediante _i_, así que eliminemos eso usando un `forEach` para hacer el código mas claro.
+Primero, no se vos, pero a mi no me gusta ese `for loop` y acceder a los elementos mediante _i_, así que eliminemos eso usando un `forEach` para hacer que el código sea mas claro.
 
 ```javascript
 this.items.forEach(item => {
@@ -69,8 +69,8 @@ this.items.forEach(item => {
 })
 ```
 
-Ahora, me gustaría extraer cada expresión booleana en su propia variable para que quede de manera explícita, esto se llama [Extraer Variable](https://refactoring.guru/extract-variable) de esta manera podemos evitar tener que llevar toda esa complejidad dentro de la cabeza.
-Al dar nombres significativos a las expresiones booleanas, el código se vuelve mas limpio automáticamente, si te interesa el código limpio, te recomiendo que leas mi artículo anterior, puedes encontrarlo [aquí](https://dev.to/patferraggi/5-clean-code-technologies-you-can-start-doing-today-2ifh).
+Ahora, me gustaría extraer cada expresión booleana en su propia variable para que quede de manera explícita, esto se llama [Extraer Variable](https://refactoring.guru/extract-variable) y de esta manera podemos evitar tener que llevar toda esa complejidad dentro de la cabeza.
+Al dar nombres significativos a las expresiones, el código se vuelve mas limpio automáticamente, si te interesa el código limpio o `clean code`, te recomiendo que leas mi artículo anterior, puedes encontrarlo [aquí](https://dev.to/patferraggi/5-clean-code-technologies-you-can-start-doing-today-2ifh).
 También me gustaría cambiar los aumentos y disminuciones por algo como ++ y -.
 
 ```javascript
@@ -262,7 +262,7 @@ Una vez que llegamos a este punto, nos damos cuenta de que hay algunos problemas
       }
 ```
 
-Como puede ver ahora, está bastante claro lo que está sucediendo, un artículo puede ser `Sulfuras` que no se preocupa por la `Quality` o `SellIn`, puede ser un `Normal Item`, puede ser `Backstage Passes` pasa o puede ser `Aged Brie`, cada uno de esos casos tiene su lógica contenida en su propio `if`. Aún queda trabajo por hacer.
+Como puedes ver ahora, está bastante claro lo que está sucediendo, un artículo puede ser `Sulfuras` que no se preocupa por la `Quality` o `SellIn`, puede ser un `Normal Item`, puede ser `Backstage Passes` pasa o puede ser `Aged Brie`, cada uno de esos casos tiene su lógica contenida en su propio `if`. Aún queda trabajo por hacer.
 
 ¿Por qué no continuamos extrayendo los diferentes comportamientos en funciones separadas?, para ser claros, también podría hacer una orientación clásica de objetos y separar los comportamientos en una jerarquía de clases con un `factory design pattern` para hacer una refactorización como [Reemplazar Condicional con Polimorfismo](https://refactoring.guru/replace-conditional-with-polymorphism) pero pensé que ya que estamos usando _JavaScript_ sigamos usando funciones.
 
@@ -295,7 +295,7 @@ const calculateSellinDifference = ({ sellIn, name }) => {
 }
 ```
 
-Observa cómo también intenté eliminar un poco la mutación de estado haciendo que estas funciones fueran puras simplemente procesando el `Quality` o `SellIn` y devolviendo un resultado sin modificar el artículo en sí. Ahora nuestro método `updateQuality` se ve así:
+Observa cómo también intenté eliminar un poco la mutación de estado haciendo que estas funciones fueran puras simplemente procesando el `Quality` o `SellIn` y devolviendo un resultado sin modificar el item en sí. Ahora nuestro método `updateQuality` se ve así:
 
 ```javascript
   updateQuality() {
@@ -322,7 +322,7 @@ Observa cómo también intenté eliminar un poco la mutación de estado haciendo
   }
 ```
 
-Ahora, hagamos lo mismo y extraigamos la lógica con respecto al `Quality`, cambiemos ese `foreach` por un`map`, y veamos la version final del método `updateQuality`:
+Ahora, hagamos lo mismo y extraigamos la lógica con respecto al `Quality`, cambiemos ese `foreach` por un `map`, y veamos la version final del método `updateQuality`:
 
 ```javascript
 class Item {
@@ -399,7 +399,6 @@ Eso es todo, ahora que estamos aqui ya podemos comenzar a trabajar en la parte d
 ¿De qué se trataba esta funcionalidad?
 
 > Recientemente hemos firmado un proveedor de artículos conjurados. Esto requiere una actualización de nuestro sistema:
-
 > Los elementos `Conjured` se degradan en calidad dos veces más rápido que los elementos normales
 
 ¿Qué cambiamos primero?
@@ -470,9 +469,9 @@ const calculateQualityDifference = item => {
 
 Felicitaciones, después de largas horas refactorizando este código, agregamos la función especificada, no solo eso, sino que aumentamos mucho la calidad general del software.
 
-Si estás interesado en refactorizar, te recomiendo [Refactorización: Mejora del diseño del código existente](https://www.amazon.com/-/es/Martin-Fowler/dp/0134757599/ref=pd_sbs_14_t_0/133-9591133-9013653?_encoding=UTF8&pd_rd_i=0134757599&pd_rd_r=6d5cfc6d-3bc8-44ef-a4df-4926f04f8adf&pd_rd_w=iZeJC&pd_rd_wg=582cX&pf_rd_p=5cfcfe89-300f-47d2-b1ad-a4e27203a02a&pf_rd_r=3VA8TRMT2V5QYYG5JJ3N&psc=1&refRID=3VA8TRMT2V5QYYG5JJ3N) por Martin Fowler o si prefieres algo más interactivo [Refactoring guru](https://refactoring.guru/). Ambos lugares contienen muchas técnicas excelentes para mejorar el código existente.
+Si estás interesado en refactorizar, te recomiendo [Refactorización: Mejora del diseño del código existente](https://www.amazon.com/-/es/Martin-Fowler/dp/0134757599/ref=pd_sbs_14_t_0/133-9591133-9013653?_encoding=UTF8&pd_rd_i=0134757599&pd_rd_r=6d5cfc6d-3bc8-44ef-a4df-4926f04f8adf&pd_rd_w=iZeJC&pd_rd_wg=582cX&pf_rd_p=5cfcfe89-300f-47d2-b1ad-a4e27203a02a&pf_rd_r=3VA8TRMT2V5QYYG5JJ3N&psc=1&refRID=3VA8TRMT2V5QYYG5JJ3N) por Martin Fowler o si prefieres algo más interactivo puedes ver [Refactoring Guru](https://refactoring.guru/). Ambos lugares contienen muchas técnicas excelentes para mejorar el código existente.
 
-Espero que hayas disfrutado este artículo, fue un trabajo duro refactorizar ese desastre, pero creo que hicimos un gran trabajo, y sé lo que estás pensando, ¿por qué usaste funciones libres en lugar de usar métodos de clase? ¿No deberías evitar modificar las instancias y simplemente devolver un nuevo conjunto de objetos? todo estas son preocupaciones válidas, y no estoy afirmando de ninguna manera que esta sea la solución perfecta, pero hemos recorrido un largo camino desde nuestro código original, y también tenemos algunas pruebas que verifican nuestro comportamiento, desde aquí podemos ir a cualquier parte y seguir mejorando este código hasta que sea perfecto.
+Espero que hayas disfrutado este artículo, fue un trabajo duro refactorizar ese desastre, pero creo que hicimos un gran trabajo, y sé lo que estás pensando, ¿por qué usaste funciones libres en lugar de usar métodos de clase? ¿No deberías evitar modificar las instancias y simplemente devolver un nuevo conjunto de objetos? todas estas son preocupaciones válidas, y no estoy afirmando de ninguna manera que esta sea la solución perfecta, pero hemos recorrido un largo camino desde nuestro código original, y también tenemos algunas pruebas que verifican nuestro comportamiento, desde aquí podemos ir a cualquier parte y seguir mejorando este código hasta que sea perfecto.
 
-Por favor, avíseme en los comentarios si te gustó este ejemplo y también si harías algo de otra manera.
+Por favor, avísame en los comentarios si te gustó este ejemplo y también si harías algo de otra manera.
 Si realmente te gustó esto, no olvides compartir &#128512;.
