@@ -102,7 +102,7 @@ const ArticleTextContainer = styled.div`
 `
 
 const StyledGatsbyLink = styled(props => <Link {...props} />)`
-  width: 50%;
+  width: 65%;
   height: 100%;
   margin: 0 2.5rem 0 0;
 

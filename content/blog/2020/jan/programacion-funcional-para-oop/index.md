@@ -2,7 +2,7 @@
 path: "{{year}}/{{month}}/{{slug}}/index"
 date: "2020-01-14"
 title: Programación funcional para el desarrollador orientado a objetos
-description: Capitulo 0
+description: Parte 0
 thumbnail: ./cover.png
 ---
 
