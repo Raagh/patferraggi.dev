@@ -148,7 +148,7 @@ const createWorld = (rows, columns, state) => {
 
 Con pipe lo que hacemos es configurar una serie de funciones que se ejecutarán una tras otra, pasando el valor de retorno de cada una a la siguiente función. Esto parece más o menos lo que queremos hacer, ¿verdad? primero, dibuja el `mapa`, luego dibuja la `manzana` por encima y finalmente dibuja la `serpiente`.
 
-## La serpiente
+### La serpiente
 
 Entonces, ahora que tenemos una forma de dibujar por encima del `mapa`, extendamos eso para dibujar la `serpiente`
 
