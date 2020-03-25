@@ -5,7 +5,7 @@ title: Crea un juego de la viborita en JavaScript funcional
 description: Parte 0
 enTitle: Build a Snake Game in functional JavaScript
 enDescription: Part 0
-enPostUrl: https://dev.to/patferraggi/5-clean-code-techniques-you-can-start-doing-today-2ifh
+enPostUrl: https://dev.to/patferraggi/build-a-snake-game-in-functional-javascript-part-0-3hbk
 thumbnail: ./cover.jpeg
 ---
 
