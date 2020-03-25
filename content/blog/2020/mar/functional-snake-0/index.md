@@ -9,7 +9,7 @@ enPostUrl: https://dev.to/patferraggi/build-a-snake-game-in-functional-javascrip
 thumbnail: ./cover.jpeg
 ---
 
-Si ha estado siguiendo mis últimos artículos, probablemente sepas que he estado tratando de aprender programación funcional.
+Si has estado siguiendo mis últimos artículos, probablemente sepas que he estado tratando de aprender programación funcional.
 Al principio, estaba tratando de aprender `Haskell` leyendo este [libro](https://haskellbook.com/), aprendiendo Category Theory de este [libro](https://github.com/hmemcpy/milewski-ctfp-pdf/) e incluso tratando de construir un [Juego de la viborita](<https://en.wikipedia.org/wiki/Snake_(video_game_genre)>) en `Haskell`
 
 ![Snake Game in Haskell](./haskell-snake.jpeg)
