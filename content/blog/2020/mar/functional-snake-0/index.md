@@ -31,22 +31,22 @@ Principalmente, lo que estaba sucediendo era que me atascaba constantemente debi
 
 - [Functional-Light JavaScript V3 course on Frontend Masters](https://frontendmasters.com/courses/functional-javascript-v3/)
 
-Después de repasarlos y hacer algunas prácticas sencillas, decidí asumir nuevamente el desafío de construir el juego, ahora en un lenguaje que conocía, por lo que si en algún momento me quedaba atrapado en la `forma funcional`, siempre podría dejar recurrir al clásico `JavaScript`. En este tutorial, te guiaré mientras construyes el juego, toma esto no como un ejemplo perfecto sino como un diario de mis pasos en el `estilo funcional`.
+Después de repasarlos y hacer algunas prácticas sencillas, decidí asumir nuevamente el desafío de construir el juego, ahora en un lenguaje que conocía, por lo que si en algún momento me quedaba atrapado en la `forma funcional`, siempre podría volver al clásico `JavaScript`. En este tutorial, te guiaré mientras construyes el juego, pero toma esto no como un ejemplo perfecto sino como un diario de mis pasos en el `estilo funcional`.
 
 ---
 
-Tomé la idea de construir este juego de [la explicación de Christopher Okhravi](https://www.youtube.com/watch?v=poVMBGe1THE) y decidí que voy a crear este pequeño juego en múltiples lenguajes de programación funcionales para poder comprobar cuál me gusta mas para poder sumergirme profundamente en él. Primero, déjame aclarar que el contenido y la forma de explicar las cosas que tiene Christopher me parecen asombrosas, pero encontré dos problemas con este video:
+Tomé la idea de este post de [la explicación de Christopher Okhravi](https://www.youtube.com/watch?v=poVMBGe1THE) y decidí que voy a crear este pequeño juego en múltiples lenguajes de programación funcionales para poder comprobar cuál me gusta mas y luego sumergirme en él. Primero, déjame aclarar que el contenido y la forma de explicar las cosas que tiene Christopher me parecen asombrosas, pero encontré dos problemas con este video:
 
-1. Como carecía de un `background` funcional, no podía seguir el código que él escribió o entender por qué había construido cosas de cierta manera, así que decidí tomar el asunto en mis propias manos, construirlo por mi cuenta para hacer una comparación más tarde.
-2. Como no conozco los patrones comunes para la programación funcional, no podría lidiar con tener que construir las funciones básicas y al mismo tiempo construir el juego.
+1. Como yo no vengo de un `background` funcional, no podía seguir el código que él escribió o entender por qué había construido cosas de cierta manera, así que decidí tomar el asunto en mis propias manos, construirlo por mi cuenta para hacer una comparación más tarde.
+2. Como no conozco los patrones comunes de la programación funcional, no podría lidiar con tener que construir las funciones básicas y al mismo tiempo construir el juego.
 
-Para resolver ambos problemas, decidí utilizar [Ramda.js](https://ramdajs.com/docs/), esta biblioteca implementa muchas de las funciones que encontraría en un lenguaje totalmente funcional, todas son `puras` y todos vienen `curried` por defecto.
+Para resolver ambos problemas, decidí utilizar [Ramda.js](https://ramdajs.com/docs/), esta libreria implementa muchas de las funciones que encontrarías en un lenguaje totalmente funcional, todas son `puras` y todas vienen `curried` por defecto.
 
 ---
 
 Perdón por la larga presentación, quería explicar qué guió mis decisiones y cómo llegué a este punto. Empecemos.
 
-En esta primera parte de la serie, intentaremos construir los 3 elementos básicos del juego: Map, Snake (representado por `X` 's) y Apple (representado por `O`) y mostrarlos en la consola . Entonces obtendremos algo como esto:
+En esta primera parte de la serie, intentaremos construir los 3 elementos básicos del juego: el mapa, la serpiente (representado por `X` 's), la manzana (representado por `O`) y mostrarlos en la consola . Entonces obtendremos algo como esto:
 
 ![Final result](./final-result.png)
 
@@ -63,7 +63,7 @@ const point = (x, y) => {
 }
 ```
 
-A partir de esto, podemos crear la `serpiente` que no es más que una colección de`puntos`, la `manzana` que es solo un`punto` en el `mapa`. Estas 2 cosas serán parte del `estado` de nuestro juego.
+A partir de esto, podemos crear la `serpiente` que no es más que una colección de `puntos`, la `manzana` que es solo un`punto` en el `mapa`. Estas 2 cosas serán parte del `estado` de nuestro juego.
 
 ```javascript
 /// Elegí una posición arbitraria para nuestra manzana y serpiente
@@ -87,7 +87,7 @@ Importamos `ramda`
 const r = require("ramda")
 ```
 
-Creamos una función que recibe, el número de filas, el número de columnas y el `estado` inicial de nuestro juego (usaremos ese`estado` más adelante para dibujar la `manzana` y la`serpiente` por encima del `mapa`).
+Creamos una función que recibe, el número de filas, el número de columnas y el `estado` inicial de nuestro juego (usaremos ese `estado` más adelante para dibujar la `manzana` y la `serpiente` por encima del `mapa`).
 
 ```javascript
 const createWorld = (rows, columns, state) => {
@@ -114,7 +114,7 @@ const addApple = (state, map) => {
 }
 ```
 
-La función recibiría el `mapa`, el`estado` y agregaría una `O` en la posición en que debería estar la `manzana`. Esto funciona, pero sé que no es "muy funcional" ya que estoy mutando una matriz en su lugar. En cambio, podríamos usar una función llamada `adjust` que recibirá un _índice_, una _string_ y un _array_ y copiará esa _array_ pero reemplazará el elemento en el _índice_ por el _string_ que recibió como parámetro. Así que creemos una función auxiliar para actualizar nuestro `mapa`.
+La función recibiría el `mapa`, el `estado` y agregaría una `O` en la posición en que debería estar la `manzana`. Esto funciona, pero sé que no es "muy funcional" ya que estoy mutando una matriz en su lugar. En cambio, podríamos usar una función llamada `adjust` que recibirá un _índice_, una _string_ y un _array_ y copiará esa _array_ pero reemplazará el elemento en el _índice_ por el _string_. Así que creemos una función auxiliar para actualizar nuestro `mapa`.
 
 ```javascript
 // Esta función tomará una cadena y un punto, primero reemplazará a `X`
@@ -127,14 +127,14 @@ const update = r.curry((str, point) =>
 )
 ```
 
-Probablemente hayas notado algo extraño en esta función, no estamos pasando el `mapa` en ninguna parte, esto se debe a que estamos retrasando la evaluación de dicha función, en lugar de pasar el `mapa`, estamos devolviendo una función que recibirá el `mapa` y producirá un resultado , sé que esto se ve raro, pero se hará evidente en un momento, confía en mí.
+Probablemente hayas notado algo extraño en esta función, no estamos pasando el `mapa` en ninguna parte, esto se debe a que estamos retrasando la evaluación de dicha función, en lugar de pasar el `mapa`, estamos devolviendo una función que recibirá el `mapa` y producirá un resultado , sé que esto se ve raro, pero la razon se hará evidente en un momento, confía en mí.
 Ahora que tenemos la función auxiliar `update` podemos refactorizar nuestra función `addApple` de la siguiente manera:
 
 ```javascript
 const addApple = state => update("O")(state.apple)
 ```
 
-Nuestra función `addApple` tomará el `estado`, llamará a la función `update` y devolverá la función que hará el trabajo cuando pasemos el `mapa`.
+Nuestra función `addApple` tomará el `estado`, llamará a la función `update` y devolverá la función que hará el trabajo cuando le pasemos el `mapa`.
 Entonces, intentemos dibujar la `manzana`, para eso, yo lo imagino como una línea de montaje. Primero, creamos el `mapa`, luego dibujamos la `manzana` por encima, por lo que haremos uso de una función muy común en la Programación Funcional llamada `pipe`.
 
 ```javascript
@@ -156,7 +156,7 @@ Entonces, ahora que tenemos una forma de dibujar por encima del `mapa`, extendam
 const addSnake = state => r.pipe(...r.map(update("X"), state.snake))
 ```
 
-Entonces que hacemos aqui? bueno, estamos creando una función que pondrá una `X` en cada posición de la `serpiente` y luego devolverá todos esos cambios en forma de una sola función aplicando parcialmente `pipe`. Cuando esa función se ejecute y reciba el `mapa` hará todos los cambios en una cadena. Ahora nuestro `createWorld` se verá así:
+Entonces, ¿que hacemos aqui? bueno, estamos creando una función que pondrá una `X` en cada posición de la `serpiente` y luego devolverá todos esos cambios en forma de una sola función aplicando parcialmente `pipe`. Cuando esa función se ejecute y reciba el `mapa` hará todos los cambios en una cadena. Ahora nuestro `createWorld` se verá así:
 
 ```javascript
 const createWorld = (rows, columns, state) => {
@@ -178,7 +178,7 @@ const displayWorld = matrix => {
 }
 ```
 
-Esta función no es nada mágica, solo toma el `mapa`, logea cada línea colocando un espacio entre cada elemento, y cuando llega al final hace un salto de línea, extraje la lógica del intercalado a una función auxiliar para hacerlo más legible.
+Esta función no es nada mágica, solo toma el `mapa`, logea cada línea colocando un espacio entre cada elemento, y cuando llega al final hace un salto de línea. Extraje la lógica del intercalado a una función auxiliar para hacerlo más legible.
 
 Finalmente, podemos juntar nuestro `estado` inicial y mostrarlo en la consola
 
