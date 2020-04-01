@@ -1,7 +1,7 @@
 ---
 path: "{{year}}/{{month}}/{{slug}}/index"
 date: "2020-04-01"
-title: ¿Jugar o programar? Volviendo a la carrera
+title: ¿Jugar o Programar? Volviendo a la carrera
 description:
 enTitle: Gaming or Coding? Getting back on track
 enDescription:
