@@ -6,7 +6,7 @@ description: Parte 1
 enTitle: Build a Snake Game in functional JavaScript
 enDescription: Part 1
 enPostUrl: https://dev.to/patferraggi/build-a-snake-game-in-functional-javascript-part-1-2cnh
-thumbnail: ./cover.jpeg
+thumbnail: ./cover.jpg
 ---
 
 Hola chicos, espero que les vaya bien y que estén aprendiendo nuevas habilidades mientras están en cuarentena. Si ese es el caso, entonces están de suerte porque hoy vamos a terminar nuestro querido _Snake Game_ escrito en _JavaScript_ funcional. Si no has leído el artículo anterior, puedes hacerlo [aquí](https://www.patferraggi.dev/blog/2020/mar/functional-snake-0/).
