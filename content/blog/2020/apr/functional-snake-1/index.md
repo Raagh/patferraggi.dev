@@ -1,7 +1,7 @@
 ---
 path: "{{year}}/{{month}}/{{slug}}/index"
 date: "2020-04-13"
-title: Crea un juego de la viborita en JavaScript funcional
+title: Crea un juego de la serpiente en JavaScript funcional
 description: Parte 1
 enTitle: Build a Snake Game in functional JavaScript
 enDescription: Part 1

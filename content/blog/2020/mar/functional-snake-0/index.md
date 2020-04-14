@@ -1,13 +1,15 @@
 ---
 path: "{{year}}/{{month}}/{{slug}}/index"
 date: "2020-03-25"
-title: Crea un juego de la viborita en JavaScript funcional
+title: Crea un juego de la serpiente en JavaScript funcional
 description: Parte 0
 enTitle: Build a Snake Game in functional JavaScript
 enDescription: Part 0
 enPostUrl: https://dev.to/patferraggi/build-a-snake-game-in-functional-javascript-part-0-3hbk
 thumbnail: ./cover.jpeg
 ---
+
+## Introducción
 
 Si has estado siguiendo mis últimos artículos, probablemente sepas que he estado tratando de aprender programación funcional.
 Al principio, estaba tratando de aprender `Haskell` leyendo este [libro](https://haskellbook.com/), aprendiendo Category Theory de este [libro](https://github.com/hmemcpy/milewski-ctfp-pdf/) e incluso tratando de construir un [Juego de la viborita](<https://en.wikipedia.org/wiki/Snake_(video_game_genre)>) en `Haskell`
@@ -18,10 +20,10 @@ Es justo decir que era miserable, estaba progresando muy poco y enfrentando cant
 
 Estaba:
 
-1. Intentando aprender la sintaxis de Haskell
-2. Intentando aprender programación funcional
-3. Intentando construir un juego de la viborita.
-4. Intentando aprender un nuevo IDE y herramientas de desarrollo.
+1. ...**aprender** la sintaxis de Haskell
+2. ...**aprender** programación funcional
+3. ...**aprender** un nuevo IDE y herramientas de desarrollo.
+4. ...**construir** un juego de la viborita.
 
 Principalmente, lo que estaba sucediendo era que me atascaba constantemente debido a que no entendía cómo hacer cosas básicas (como escribir en la consola) o no sabía los nombres correctos para los patrones comunes en la programación funcional. Entonces, decidí cambiar mi enfoque. Fui a algo que sabía, `JavaScript`. No soy un experto pero lo uso todos los días, también tenía 2 libros y un curso preparados.
 
@@ -192,9 +194,9 @@ display(15, 15, Snake.initialState)
 
 ![Final result](./final-result.png)
 
-Lo sé, realmente necesitamos que alguien trabaje en los gráficos si vamos a intentar vender este juego, ¿verdad?
+## Conclusiones
 
----
+Lo sé, realmente necesitamos que alguien trabaje en los gráficos si vamos a intentar vender este juego, ¿verdad?
 
 Espero que este ejemplo no haya sido demasiado difícil para ustedes, hice todo lo posible para explicar mi proceso de pensamiento al crear la 'UI'.
 
