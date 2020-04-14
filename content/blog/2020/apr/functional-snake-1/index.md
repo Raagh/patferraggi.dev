@@ -17,14 +17,14 @@ En nuestro artículo anterior, terminamos teniendo la `UI` lista y un pequeño m
 
 **Todo software necesita producir efectos secundarios. Si se evitarían los efectos secundarios, no habría pruebas de que el programa realmente se ejecutó**. En nuestro caso, tenemos 2 tipos de efectos secundarios:
 
-- El output del juego (lo que ves en la pantalla)
-- El estado interno del juego que debe actualizarse (la posición de la serpiente, la manzana, etc.)
+- El output del juego (lo que ves en la pantalla).
+- El estado interno del juego que debe actualizarse (la posición de la serpiente, la manzana, etc.).
 
-Los lenguajes de programación funcionales puros vienen con ciertas herramientas que nos ayudan a manejar esto de una manera elegante. _JavaScript_, por otro lado, no tiene estas herramientas, se pueden agregar usando librerias como [Ramda Fantasy](https://github.com/ramda/ramda-fantasy), pero en nuestro caso, vamos a usar un enfoque llamado `Functional Core Imperative Shell`, que básicamente dice que podemos tratar nuestro código como en su mayoría funcional manteniendo todo lo puro en un lugar y todo lo que no es puro cerca de los límites de nuestro software, si deseas leer más al respecto, puedes consultar la publicación original [aquí](https://www.destroyallsoftware.com/screencasts/catalog/functional-core-imperative-shell).
+Los lenguajes de programación funcionales puros vienen con ciertas herramientas que nos ayudan a manejar esto de una manera elegante. _JavaScript_, por otro lado, no tiene estas herramientas, se pueden agregar usando librerias como [Ramda Fantasy](https://github.com/ramda/ramda-fantasy), pero en nuestro caso, vamos a usar un enfoque llamado `Functional Core Imperative Shell`, que básicamente dice que podemos tratar nuestro código en su mayoría funcional manteniendo todo lo puro en un lugar y todo lo que no es puro cerca de los límites de nuestro software, si deseas leer más al respecto, puedes consultar la publicación original [aquí](https://www.destroyallsoftware.com/screencasts/catalog/functional-core-imperative-shell).
 
 Entonces, siguiendo ese enfoque, voy a ser muy explícito sobre qué partes del juego producen efectos secundarios y cuáles no.
 
-### La salida del juego
+### El output del juego
 
 Este es nuestro módulo actual `UI`
 
@@ -67,11 +67,11 @@ const displayWorld = matrix => {
 }
 ```
 
-El resto del código toma entradas y produce salidas, eso es todo.
+El resto del código toma parametros de entrada y produce resultados, eso es todo.
 
 ### El estado interno del juego que necesita ser actualizado
 
-Este es el archivo `index.js` donde comenzamos nuestro juego
+Este es el archivo `index.js` desde donde se inicia nuestro juego:
 
 ```javascript
 const COLUMNS = 15
@@ -94,7 +94,7 @@ Como puedes ver aquí, tomamos el estado inicial del juego y luego tenemos un in
 
 **En un lenguaje de programación funcional, haríamos esto con `Recursión` pero dado que los motores de _JavaScript_ carecen de `Tail Call Optimization`, hacer esto aquí volaría la pila casi de inmediato**, tendríamos que usar algunos hacks como devolver funciones sobre funciones para evitar este problema, pero pensé que en este punto era más fácil ser pragmático y seguir el enfoque mencionado anteriormente.
 
-## Obteniendo entrada
+## Obteniendo input
 
 Obtener información es una de esas cosas que modificará nuestro estado, específicamente el estado que dice dónde debe moverse la serpiente.
 
@@ -161,7 +161,7 @@ const nextSnake = r.curry((cols, rows, state) => {
 })
 ```
 
-Imagina que ya definimos todas las funciones utilizadas aquí, vamos una por una, primero, preguntamos si la serpiente se estrellará contra alguna parte de su cuerpo, si lo hace, devolveremos el estado inicial para que el juego comience nuevamente, si no se estrella, entonces devolvemos un nuevo estado. Dentro del nuevo estado, revisamos nuevamente, ¿la serpiente se va a comer la manzana? en caso afirmativo, movemos la serpiente y agregamos un punto más en su cabeza para que la serpiente crezca. Si, por otro lado, la serpiente no se come la manzana, entonces agregamos un punto en la cabeza de la serpiente y retiramos uno de la parte posterior para dar la impresión de que la serpiente se mueve sin crecer. Ahora echemos un vistazo a esas funciones que faltan:
+Imagina que ya definimos todas las funciones utilizadas aquí, vamos una por una, primero, preguntamos si la serpiente se estrellará contra alguna parte de su cuerpo, si lo hace, devolveremos el estado inicial para que el juego comience nuevamente, si no se estrella, entonces devolvemos un nuevo estado. Dentro del nuevo estado, revisamos nuevamente, ¿la serpiente se va a comer la manzana? en caso afirmativo, movemos la serpiente y agregamos un punto más en su cabeza para que la serpiente crezca. Si, por otro lado, la serpiente no se come la manzana, entonces agregamos un punto en la cabeza de la serpiente y retiramos uno de la parte posterior para dar la impresión de que la serpiente se mueve sin crecer. Ahora echemos un vistazo a esas funciones que faltaba definir:
 
 ```javascript
 const willEat = r.equals
@@ -176,7 +176,7 @@ const nextHead = (cols, rows, { move, snake }) =>
 ```
 
 `willEat` sólo comprueba si los objetos son iguales, por lo que podemos pasar la función [equals](https://ramdajs.com/docs/#equals) de ramda.js utilizando la notación `point-free`.
-`nextHead` tomará la cabeza de la serpiente y la dirección actual y simplemente creará un nuevo punto al lado. Aquí usamos 'módulo' para que cuando la serpiente llegue a un lado del mapa, pase por el otro.
+`nextHead` tomará la cabeza de la serpiente y la dirección actual y simplemente creará un nuevo punto al lado. Aquí usamos 'módulo' para que cuando la serpiente llegue a un lado del mapa, salga por el otro.
 `willCrash` comprueba si la nueva cabeza de la serpiente coincidirá con cualquier punto del cuerpo.
 
 ## La manzana
@@ -191,7 +191,7 @@ const nextApple = r.curry((cols, rows, state) =>
 )
 ```
 
-Este es otro caso en el que técnicamente no estamos haciendo programación funcional, ya que `nextApple` producirá diferentes manzanas con la misma entrada usando la función`randomPos`.
+Vale la pena aclarar que aquí técnicamente no estamos haciendo programación funcional, ya que `nextApple` producirá diferentes manzanas con la misma entrada usando la función `randomPos`.
 
 ## Armando nuestra lógica de juego
 
@@ -203,7 +203,7 @@ const step = r.curry((cols, rows, state) =>
 )
 ```
 
-Como puede ver, primero creamos la serpiente, luego creamos la manzana y devolvimos el estado calculado. Ahora tenemos que llamar a esto desde nuestro index.js impuro
+Como puede ver, primero creamos la serpiente, luego creamos la manzana y devolvimos el estado calculado. Ahora tenemos que llamar a esto desde nuestro `index.js` impuro
 
 ```javascript
 const COLUMNS = 15
@@ -247,17 +247,17 @@ Ahora puedes ver lo que quise decir acerca de que nuestro estado de juego es imp
 
 ![gamerunning](https://media.giphy.com/media/j77lvKqWHyMQPhH1qL/giphy.gif)
 
-Ese es un juego atractivo, ¿verdad? :sonrisa:
+Ese es un juego bastante bonito, ¿verdad? &#128512;.
 
 ## Conclusión
 
 Este ejemplo tiene algunas advertencias. Está claro que podríamos haber sido más funcionales si hubiéramos querido.
 
 - Podríamos haber incorporado tipos de datos algebraicos de ramda-fantasy.
-- Use funciones en todas partes usando r.merge en lugar de destrucción de objetos y r.ifElse en lugar de operadores ternarios
-- Use hacks para permitir una recursión adecuada en lugar de usar 'setInterval'
-- Use mónadas para IO
+- Usar funciones en todas partes usando `r.merge` en lugar de destrucción de objetos y `r.ifElse` en lugar de operadores ternarios.
+- Usar hacks para poder hacer recursión en lugar de usar `setInterval`.
+- Usar `monads` para IO.
 
-Pero creo que ** el punto de hacer _JavaScript_ de una manera funcional es para que no sientas la presión inmediata de hacer todo como un lenguaje como _Haskell_ te obligaría a** así que, en general, creo que es una buena forma de practicar la programación funcional en un lenguaje que no es estrictamente funcional.
+Pero creo que **el punto de hacer _JavaScript_ de una manera funcional es que no sientas la presión inmediata de hacer todo como un lenguaje como _Haskell_ te obligaría a hacer**. Creo que es una buena forma de practicar la programación funcional en un lenguaje que no es estrictamente funcional.
 
-Realmente espero que hayas disfrutado este pequeño tutorial, fue muy difícil al principio, pero lentamente creo que empiezo a entender los conceptos básicos de la programación funcional, espero que tú también lo hagas. Si te gustó este artículo, compártelo y avísame a continuación en los comentarios. Si tiene alguna duda o necesita ayuda, no dude en ponerse en contacto conmigo.
+Realmente espero que hayas disfrutado este pequeño tutorial, fue muy difícil al principio, pero lentamente creo que empiezo a entender los conceptos básicos de la programación funcional, espero que tú también lo hagas. Si te gustó este artículo, compártelo y avísame a continuación en los comentarios. Si tienes alguna duda o necesitas ayuda, no dudes en ponerte en contacto conmigo.
