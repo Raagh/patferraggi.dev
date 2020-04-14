@@ -63,7 +63,7 @@ class BlogListTemplate extends React.Component {
         <SEO title="El Calabozo del Programador"></SEO>
         <BlogListTemplateWrapper>
           <BlogListTemplateHeader
-            shouldDisplayMainArticle={currentPage !== 2}
+            shouldDisplayMainArticle={currentPage === 1}
           ></BlogListTemplateHeader>
           <BlogListArticlesDisplay posts={posts}></BlogListArticlesDisplay>
         </BlogListTemplateWrapper>
