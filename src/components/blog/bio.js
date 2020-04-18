@@ -83,8 +83,8 @@ export default () => {
         <BioTitle>Hola, soy {author}</BioTitle>
         <BioPresentation>
           Soy un developer autodidacta Argentino que actualmente vive y trabaja
-          en Bélgica. Intento mejorar diariamente para convertirme en un mejor
-          programador, mientras ayudo a otros a hacer lo mismo.
+          en Bélgica. Intento mejorar diariamente, mientras ayudo a otros a
+          hacer lo mismo.
           {` `}
         </BioPresentation>
         <a
