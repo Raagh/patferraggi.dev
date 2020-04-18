@@ -53,7 +53,13 @@ module.exports = {
                     site.siteMetadata.siteUrl + `/blog` + edge.node.fields.slug,
                   guid:
                     site.siteMetadata.siteUrl + `/blog` + edge.node.fields.slug,
-                  // custom_elements: [{ "content:encoded": edge.node.html }],
+                  custom_elements: [
+                    {
+                      "content:encoded":
+                        edge.node.frontmatter.monthSpanish[0].toUpperCase() +
+                        edge.node.frontmatter.monthSpanish.slice(1),
+                    },
+                  ],
                 })
               })
             },
@@ -69,7 +75,8 @@ module.exports = {
                       fields { slug }
                       frontmatter {
                         title
-                        date(formatString: "DD MMMM YYYY", locale: "es")
+                        date
+                        monthSpanish: date(formatString: "MMMM", locale: "es")
                         description
                         thumbnail {
                           childImageSharp {
