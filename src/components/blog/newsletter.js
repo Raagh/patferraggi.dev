@@ -152,7 +152,7 @@ export default () => {
         Suscribite al newsletter{"  "}
         {<IcomoonReact iconSet={iconSet} size={"1em"} icon="email" />}
       </Title>
-      <Text>Nada de spam, solo los últimos artículos cada dos semanas.</Text>
+      <Text>Nada de spam, solo los últimos artículos una vez al mes.</Text>
       <InputContainer>
         <Input
           type="email"
