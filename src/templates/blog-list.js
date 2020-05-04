@@ -6,6 +6,7 @@ import BlogListTemplateHeader from "../components/blog/blog-list-header"
 import BlogListArticlesDisplay from "../components/blog/blog-list-articles-display"
 import globalStyles from "../config/style-variables"
 import SEO from "../components/shared/seo"
+import SubscribeModal from "../components/blog/modal"
 
 const BlogListTemplateWrapper = styled.section`
   font-family: ${globalStyles.fontFamilyMedium};
@@ -84,6 +85,7 @@ class BlogListTemplate extends React.Component {
           )}
         </BackNextButtons>
         <StyledHomeLink to="/">← Back to my website</StyledHomeLink>
+        <SubscribeModal></SubscribeModal>
       </Layout>
     )
   }
