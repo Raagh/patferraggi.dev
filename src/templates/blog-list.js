@@ -85,7 +85,7 @@ class BlogListTemplate extends React.Component {
           )}
         </BackNextButtons>
         <StyledHomeLink to="/">← Back to my website</StyledHomeLink>
-        <SubscribeModal></SubscribeModal>
+        {currentPage === 1 && <SubscribeModal></SubscribeModal>}
       </Layout>
     )
   }

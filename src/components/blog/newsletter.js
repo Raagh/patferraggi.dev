@@ -167,11 +167,11 @@ export default props => {
       {props.showCloseButton && (
         <button
           onClick={() => props.closeModal()}
-          height="24"
-          width="24"
           style={{
+            height: "24px",
             float: "right",
             margin: "1rem",
+            border: "none",
           }}
           id="exit"
         >
