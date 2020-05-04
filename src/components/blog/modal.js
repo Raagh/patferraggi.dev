@@ -6,8 +6,8 @@ ReactModal.setAppElement("body")
 const customStyles = {
   overlay: {
     zIndex: 10000,
-    position: "absolute",
     backgroundColor: "rgba(0, 0, 0, 0.58)",
+    borderRadius: 0,
   },
   content: {
     top: "50%",
@@ -29,15 +29,24 @@ const disableScrollingIfModalOpen = isOpen => {
 }
 
 export default () => {
-  const [modalOpen, setModalOpen] = useState(true)
+  const [isModalOpen, setModalOpen] = useState(false)
+  const [wasModalOpenAlready, setModalOpenAlready] = useState(false)
   // const modalCloseTimeout = 300
-  disableScrollingIfModalOpen(modalOpen)
+  disableScrollingIfModalOpen(isModalOpen)
+
+  if (!wasModalOpenAlready) {
+    setTimeout(() => {
+      setModalOpenAlready(true)
+      setModalOpen(true)
+    }, 60000)
+  }
+
   const closeModal = () => {
     setModalOpen(false)
   }
   return (
     <ReactModal
-      isOpen={modalOpen}
+      isOpen={isModalOpen}
       onRequestClose={closeModal}
       style={customStyles}
       contentLabel="Modal"
