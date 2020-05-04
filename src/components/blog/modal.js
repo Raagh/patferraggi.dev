@@ -1,5 +1,7 @@
 import React, { useState } from "react"
 import ReactModal from "react-modal"
+import NewsLetter from "../blog/newsletter"
+import globalStyles from "../../config/style-variables"
 
 ReactModal.setAppElement("body")
 
@@ -16,6 +18,10 @@ const customStyles = {
     bottom: "auto",
     marginRight: "-50%",
     transform: "translate(-50%, -50%)",
+    backgroundColor: globalStyles.backgroundColor,
+    padding: 0,
+    borderRadius: 0,
+    border: "none",
   },
 }
 
@@ -38,7 +44,7 @@ export default () => {
     setTimeout(() => {
       setModalOpenAlready(true)
       setModalOpen(true)
-    }, 60000)
+    }, 2000)
   }
 
   const closeModal = () => {
@@ -52,7 +58,7 @@ export default () => {
       contentLabel="Modal"
       // closeTimeoutMS={modalCloseTimeout}
     >
-      <button onClick={closeModal}>Close Modal</button>
+      <NewsLetter></NewsLetter>
     </ReactModal>
   )
 }

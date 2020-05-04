@@ -292,7 +292,7 @@ class BlogPostTemplate extends React.Component {
               </ArticleContentText>
             </ArticleContent>
           </ArticleEntireContent>
-          <NewsLetter></NewsLetter>
+          <NewsLetter enableMargin={true}></NewsLetter>
         </ArticleWrapper>
         {posts.length > 0 && (
           <BlogPostShowcaseWrapperTitle>
