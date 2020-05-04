@@ -1,4 +1,4 @@
-import React, { Component } from "react"
+import React, { useState } from "react"
 import ReactModal from "react-modal"
 
 ReactModal.setAppElement("body")
@@ -6,9 +6,8 @@ ReactModal.setAppElement("body")
 const customStyles = {
   overlay: {
     zIndex: 10000,
-    height: "100%",
     position: "absolute",
-    backgroundColor: "transparent",
+    backgroundColor: "rgba(0, 0, 0, 0.58)",
   },
   content: {
     top: "50%",
@@ -29,33 +28,22 @@ const disableScrollingIfModalOpen = isOpen => {
   body.style.overflow = isOpen ? "hidden" : "visible"
 }
 
-class Modal extends Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      isModalOpen: true,
-    }
-    disableScrollingIfModalOpen(true)
+export default () => {
+  const [modalOpen, setModalOpen] = useState(true)
+  // const modalCloseTimeout = 300
+  disableScrollingIfModalOpen(modalOpen)
+  const closeModal = () => {
+    setModalOpen(false)
   }
-
-  handleModalClose = event => {
-    // console.log('handleModalOpen: ', event);
-    this.setState({ isModalOpen: false })
-    disableScrollingIfModalOpen(false)
-  }
-
-  render() {
-    return (
-      <ReactModal
-        isOpen={this.state.isModalOpen}
-        onRequestClose={this.handleModalClose}
-        contentLabel="Example Modal In Gatsby"
-        style={customStyles}
-      >
-        <button onClick={this.handleModalClose}>Close Modal</button>
-      </ReactModal>
-    )
-  }
+  return (
+    <ReactModal
+      isOpen={modalOpen}
+      onRequestClose={closeModal}
+      style={customStyles}
+      contentLabel="Modal"
+      // closeTimeoutMS={modalCloseTimeout}
+    >
+      <button onClick={closeModal}>Close Modal</button>
+    </ReactModal>
+  )
 }
-
-export default Modal
