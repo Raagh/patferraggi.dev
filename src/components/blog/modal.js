@@ -58,7 +58,11 @@ export default () => {
       contentLabel="Modal"
       // closeTimeoutMS={modalCloseTimeout}
     >
-      <NewsLetter></NewsLetter>
+      <NewsLetter
+        enableMargin={false}
+        closeModal={closeModal}
+        showCloseButton={true}
+      ></NewsLetter>
     </ReactModal>
   )
 }
