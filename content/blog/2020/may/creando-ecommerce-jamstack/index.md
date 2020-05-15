@@ -109,7 +109,7 @@ El tech stack completo en el momento de escribir es:
 - [Componentes con estilo](https://styled-components.com/)
 - [Jest](https://jestjs.io/) + [Enzyme](https://enzymejs.github.io/enzyme/) para probar
 - [Sanity.io](https://www.sanity.io/)
-- [Vercel / Now.sh](https://vercel.com/)
+- [Vercel/Now.sh](https://vercel.com/)
 
 Y fui por la siguiente arquitectura:
 
