@@ -86,7 +86,7 @@ En el último año, he estado construyendo mi propio sitio web/blog con Gatsby y
 
 **API para la integración**
 
-- Funciones sin servidor de Next.js (generosa cuota gratuita)
+- Funciones serverless de Next.js (generosa cuota gratuita)
 - Funciones de Netlify (generosa cuota gratuita)
 
 **Hosting**
