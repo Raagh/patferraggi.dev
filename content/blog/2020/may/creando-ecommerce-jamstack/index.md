@@ -1,7 +1,7 @@
 ---
 path: "{{year}}/{{month}}/{{slug}}/index"
 date: "2020-05-15"
-title: Creemos un comercio electrónico personalizado con el JAMstack
+title: Creando una Aplicación de E-commerce con el JAMstack
 description: Parte 1
 enTitle: Let's build a custom e-commerce with the JAMstack
 enDescription: Part 1
@@ -106,7 +106,7 @@ El tech stack completo en el momento de escribir es:
 
 - [Next.js](https://nextjs.org/)
 - [TypeScript](https://www.typescriptlang.org/)
-- [Componentes con estilo](https://styled-components.com/)
+- [Styled Components](https://styled-components.com/)
 - [Jest](https://jestjs.io/) + [Enzyme](https://enzymejs.github.io/enzyme/) para probar
 - [Sanity.io](https://www.sanity.io/)
 - [Vercel/Now.sh](https://vercel.com/)
