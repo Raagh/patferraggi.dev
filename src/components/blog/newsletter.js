@@ -128,6 +128,8 @@ const Input = styled.input`
   opacity: 0.4;
   outline: none;
 
+  width: 60%;
+
   :focus {
     outline-width: 0;
   }
@@ -144,6 +146,10 @@ const Input = styled.input`
   @media ${device.medium} {
     width: 80%;
   }
+`
+
+const MaxWidthInput = styled(Input)`
+  width: 100% !important;
 `
 
 export default props => {
@@ -224,13 +230,13 @@ export default props => {
           </Title>
           <Text>Nada de spam, solo los últimos artículos una vez al mes.</Text>
           <InputContainer>
-            <Input
+            <MaxWidthInput
               type="email"
               placeholder="Tu e-mail acá"
               name="email"
               value={email}
               onChange={handleEmailChange}
-            ></Input>
+            ></MaxWidthInput>
             <Button>{buttonText}</Button>
           </InputContainer>
         </NoMarginContainer>
