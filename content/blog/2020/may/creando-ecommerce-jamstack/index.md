@@ -4,7 +4,7 @@ date: "2020-05-15"
 title: Creando una Aplicación de E-commerce con el JAMstack
 description: Parte 1
 enTitle: Let's build a custom e-commerce with the JAMstack
-enDescription: Part 1
+enDescription: Part 2
 enPostUrl: https://dev.to/patferraggi/let-s-build-a-custom-e-commerce-with-the-jamstack-part-1-5dd7
 thumbnail: ./cover.jpeg
 ---
