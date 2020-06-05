@@ -1,7 +1,7 @@
 ---
 path: "{{year}}/{{month}}/{{slug}}/index"
 date: "2020-06-04"
-title: Como planeo el desarrollo de mi carrera para 2020, review de mitad the año
+title: Como planeo el desarrollo de mi carrera para 2020, review de mitad de año
 description:
 enTitle: Planning my career development for 2020- 6 months review
 enDescription:
