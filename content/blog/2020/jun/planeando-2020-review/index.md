@@ -3,7 +3,7 @@ path: "{{year}}/{{month}}/{{slug}}/index"
 date: "2020-06-05"
 title: Como planeo el desarrollo de mi carrera para 2020, review de mitad de año
 description:
-enTitle: Planning my career development for 2020- 6 months review
+enTitle: Planning my career development for 2020 - 6 months review
 enDescription:
 enPostUrl: https://dev.to/patferraggi/planning-my-career-development-for-2020-6-months-review-58in
 thumbnail: ./2020.jpg
