@@ -1,9 +1,9 @@
 ---
 path: "{{year}}/{{month}}/{{slug}}/index"
 date: "2020-07-09"
-title: Winning a battle against yourself
+title: Ganar una batalla contra ti mismo
 description:
-enTitle: Ganando una batalla contra vos mismo
+enTitle: Winning a battle against yourself
 enDescription:
 enPostUrl: https://dev.to/patferraggi/winning-a-battle-against-yourself-5a68
 thumbnail: ./cover.jpeg
