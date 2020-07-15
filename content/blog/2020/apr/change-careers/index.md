@@ -30,7 +30,7 @@ No estaba contento, aunque estaba progresando en la escuela, estudiaba a medias,
 
 Lo curioso es que siempre he estado alrededor de la tecnología, simplemente no me di cuenta de que podría ser el camino correcto para mí.
 
-Mi padre es ingeniero de software, nuestra relación aún es complicada, por lo que la habia poca atención, todos mis amigos trabajaron en software o IT. Fue uno de esos amigos, Gastón, quien probablemente me conocía mejor que yo, que me dijo muchas veces que el sabia que escribir software era lo indicado para mi.Yo tenia dudas si siquiera podría entenderlo, pero decidí intentarlo. Me dio una breve introducción y obtuve el libro usado en el primer año de especialización en ingeniería en mi universidad y comencé a aprender algoritmos, estructuras de datos y C/C++.
+Mi padre es ingeniero de software, nuestra relación aún es complicada, por lo que nos dabamos poca atención, todos mis amigos trabajaron en software o IT. Fue uno de esos amigos, Gastón, quien probablemente me conocía mejor que yo, que me dijo muchas veces que el sabia que escribir software era lo indicado para mi.Yo tenia dudas si siquiera podría entenderlo, pero decidí intentarlo. Me dio una breve introducción y obtuve el libro usado en el primer año de especialización en ingeniería en mi universidad y comencé a aprender algoritmos, estructuras de datos y C/C++.
 
 1. Me enganché de inmediato.
 2. Sentí que había descubierto un mundo nuevo.
