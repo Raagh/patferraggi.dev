@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: `Patricio Ferraggi Ares`,
     author: `Patricio Ferraggi Ares`,
-    description: `Personal website and blog`,
+    description: `Personal Website and Blog`,
     siteUrl: "https://www.patferraggi.dev",
     social: {
       twitter: `patferraggi`,

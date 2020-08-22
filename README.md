@@ -1,6 +1,6 @@
 # patferraggi.dev
 
-This is my `personal website and blog`.
+This is my `Personal Website and Blog`.
 
 It was designed by my wife `Sofia Toso`, you can check her work [here](https://sofiatoso.com/).
 

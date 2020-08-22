@@ -1,7 +1,7 @@
 {
   "name": "patferraggi.dev",
   "private": false,
-  "description": "Personal website and blog",
+  "description": "Personal Website and Blog",
   "version": "2.0.0",
   "scripts": {
     "build": "gatsby clean && gatsby build",
