@@ -276,3 +276,5 @@ No se preocupen, nos encargaremos de todo antes de que termine esta serie, les p
 Eso fue mucho, lo sé, tampoco entré en detalles de todos los patrones de aplicación usados ​​ya que hubiera sido imposible, pero en cada patrón usado hay un enlace a la guía oficial sobre cómo implementarlo en **ASP.NET Core**, los tutoriales de Microsoft son muy buenos y les darán los detalles que faltan.
 
 Espero que les haya gustado esta primera parte, en la siguiente agregaremos `Actualizar`, `Eliminar`, el endpoint de información combinada y si hay tiempo también comenzaremos a separar mejor las responsabilidades y puliremos nuestro servicio.
+
+Como siempre, si te gustó o no, házmelo saber en los comentarios y compártelo en las redes sociales &#128512;
