@@ -87,13 +87,13 @@ const factory = condition => {
 }
 ```
 
-Como puede ver, las funciones de orden superior nos dan una solución simple nuevamente, en lugar de que el comportamiento sea definido por clases y una herencia, simplemente devolvemos una función que encapsula el comportamiento u objeto deseado.
+Como puedes ver, las funciones de orden superior nos dan una solución simple nuevamente, en lugar de que el comportamiento sea definido por clases y una herencia, simplemente devolvemos una función que encapsula el comportamiento u objeto deseado.
 
 ### Decorator Pattern
 
 > El patrón de decorador es un patrón de diseño que permite agregar comportamiento a un objeto individual, de forma dinámica, sin afectar el comportamiento de otros objetos de la misma clase. El patrón de decorador suele ser útil para adherirse al principio de responsabilidad única, ya que permite dividir la funcionalidad entre clases con áreas de interés únicas.
 
-En los lenguajes de programación orientada a objetos, envuelve un objeto en otro y proporciona una funcionalidad adicional que el original no tenía, sin modificar realmente su implementación, además, puede elegir en tiempo de ejecución qué funcionalidad necesita agregar al objeto existente.
+En los lenguajes de programación orientada a objetos, se envuelve un objeto en otro y proporcionamos una funcionalidad adicional que el original no tenía, sin modificar realmente su implementación, además, puedes elegir en tiempo de ejecución qué funcionalidad necesita agregar al objeto existente.
 
 En FP esto se logra mediante `Composición`, una de las ideas centrales de FP es separar la funcionalidad en pequeñas funciones que se pueden componer para formar otros comportamientos, por lo que en lugar de tener una clase que envuelva a otra, tomamos pequeñas funciones como bloques `LEGO` y los ponemos todos juntos para crear un nuevo comportamiento. Veamos un ejemplo:
 
@@ -116,7 +116,7 @@ const biggerThanThreeAndMapOutput = compose(
 biggerThanThreeAndMapOutput(3)
 ```
 
-En este ejemplo, definimos dos funciones que hacen una pequeña cosa y luego las componen para generar un nuevo comportamiento, mientras se aplique la composición, podemos seguir agregando más funcionalidad a la mezcla &#128512;
+En este ejemplo, definimos dos funciones que hacen una pequeña cosa y luego se componen para generar un nuevo comportamiento, mientras se aplique la composición, podemos seguir agregando más funcionalidad a la mezcla &#128512;
 
 ### Observer Pattern
 
