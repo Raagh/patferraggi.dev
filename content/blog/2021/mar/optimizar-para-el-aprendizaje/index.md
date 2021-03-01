@@ -2,11 +2,11 @@
 path: '{{year}}/{{month}}/{{slug}}/index'
 date: 2021-03-01T19:15:10.002Z
 title: Optimizar para el aprendizaje
-description: '     '
+description: 
 enTitle: Optimize for learning
-enDescription: '      '
+enDescription: 
 enPostUrl: 'https://dev.to/patferraggi/optimize-for-learning-303p'
-thumbnail: learning.jpeg
+thumbnail: cover.jpeg
 ---
 La semana pasada terminé este gran libro que comenzamos a leer en el trabajo para nuestro club de lectura, se llama ["El ingeniero efectivo"](https://www.amazon.com/Effective-Engineer-Engineering-Disproportionate-Meaningful/dp/0996128107), si no lo has leído, definitivamente deberías considerarlo.
 
