@@ -1,5 +1,5 @@
 ---
-path: '{{year}}/{{month}}/{{slug}}/index'
+path: '{{year}}/{{month}}/{{slug}}'
 date: 2021-03-01T19:15:10.002Z
 title: Optimizar para el aprendizaje
 description: '     '
