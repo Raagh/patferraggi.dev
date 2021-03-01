@@ -1,12 +1,12 @@
 ---
-path: '{{year}}/{{month}}/{{slug}}/index'
+path: "{{year}}/{{month}}/{{slug}}/index"
 date: 2021-03-01T19:15:10.002Z
 title: Optimizar para el aprendizaje
 description: 
 enTitle: Optimize for learning
 enDescription: 
-enPostUrl: 'https://dev.to/patferraggi/optimize-for-learning-303p'
-thumbnail: cover.jpeg
+enPostUrl: https://dev.to/patferraggi/optimize-for-learning-303p
+thumbnail: ./cover.jpeg
 ---
 La semana pasada terminé este gran libro que comenzamos a leer en el trabajo para nuestro club de lectura, se llama ["El ingeniero efectivo"](https://www.amazon.com/Effective-Engineer-Engineering-Disproportionate-Meaningful/dp/0996128107), si no lo has leído, definitivamente deberías considerarlo.
 
@@ -35,7 +35,7 @@ Estos son los primeros que me vienen a la mente cuando leo sobre siempre seguir 
 
 ### Elige el trabajo adecuado
 
-A lo largo de mi carrera en el desarrollo de software, siempre me he centrado en elegir el siguiente trabajo que llevaría mis habilidades al siguiente nivel, al principio esto lo hacia inconscientement.
+A lo largo de mi carrera en el desarrollo de software, siempre me he centrado en elegir el siguiente trabajo que llevaría mis habilidades al siguiente nivel, al principio esto lo hacia inconscientemente.
 
 Después de un año y medio en el mismo trabajo, me aburría, cuando eso pasaba, me empezaban a molestar muchas cosas y terminaba cambiando a un nuevo y emocionante rol. Me tomó algunas posiciones darme cuenta de que el problema era que después de ese tiempo dejaba de aprender, mi trabajo se volvia repetitivo, resolviendo errores en los mismos sistemas una y otra vez.
 
@@ -46,7 +46,7 @@ No me malinterpretes, no estoy diciendo que debas elegir un trabajo que no te pa
 
 ### No evites los golpes duros 🥊
 
-¿Sabes cuál es la mejor forma de aprender? al fallar, al ser criticado, por alguien que denuncia tus errores.a
+¿Sabes cuál es la mejor forma de aprender? al fallar, al ser criticado, por alguien que denuncia tus errores.
 
 Cuando eso sucede, no te rindes, no te quejas, solo escuchas. ¿Hay algo esencial que aprender aquí? a estas alturas ya elegiste un trabajo con mucha gente muy capacitada, ¿por qué no aprovechar ese hecho?
 
