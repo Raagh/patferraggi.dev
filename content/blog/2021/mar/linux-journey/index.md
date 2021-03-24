@@ -48,7 +48,7 @@ Después de meses de búsqueda, encontre solo dos opciones que cumplirían más 
 
 Sí, sé que me van a recomendar otra computadora portátil, como una Thinkpad. La Yoga Slim 7Pro con AMD? tal vez la Razr Book? el Slimbook 14? Los he mirado todos y si consideras todas las cosas en la lista, notaras que todas las demás computadoras portátiles no cumplen algo.
 
-## The winner is...
+## El ganador es...
 
 Este viaje comenzó alrededor de junio de 2020, en diciembre todavía no tenía computadora portátil. Estaba atrapado en un ciclo de investigación y espera a que saliera un nuevo modelo o algún proveedor oscuro me ofreciera lo que estaba buscando y que pueda ser entregado a Bélgica. Finalmente, después de unas vacaciones refrescantes, decidí no esperar más y compré mi Dell XPS 9310 i7 32GB 4k 1TB NVME. Es perfecto, ¿verdad?
 
