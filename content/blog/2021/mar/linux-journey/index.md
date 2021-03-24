@@ -5,7 +5,7 @@ title: Nuevo portátil, nuevo sistema operativo. Mi aventura en Linux comienza a
 description:
 enTitle: New laptop, new OS. My adventure going Linux starts here.
 enDescription:
-enPostUrl: https://dev.to/patferraggi/optimize-for-learning-303p
+enPostUrl: https://dev.to/patferraggi/new-laptop-new-os-my-adventure-going-linux-starts-here-4697
 thumbnail: ./cover.jpeg
 ---
 
