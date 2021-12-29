@@ -28,7 +28,7 @@ const IntroWrapper = styled.section`
 export default () => (
   <IntroWrapper id="intro">
     <p>
-      I'm an Argentinian software developer, currently based in Belgium.{" "}
+      I'm an Argentinian software developer, currently based in Spain.{" "}
       {<IcomoonReact iconSet={iconSet} size={"1em"} icon="hand" />} I am
       passionate about software craftsmanship and creating high quality{" "}
       {<IcomoonReact iconSet={iconSet} size={"1em"} icon="cup" />}, user centric
