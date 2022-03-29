@@ -16,7 +16,7 @@ module.exports = {
     `gatsby-image`,
     `gatsby-plugin-offline`,
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-feed-mdx`,
+    `gatsby-plugin-feed-mdx`, 
     {
       resolve: `gatsby-plugin-feed`,
       options: {

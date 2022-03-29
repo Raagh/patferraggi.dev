@@ -75,9 +75,10 @@ export default () => (
     </BackgroundTitle>
     <BackgroundText>
       <p>
-        Over the past 5 years, I ‘ve created a great variety of high quality web
-        business applications using technologies like C#, asp.net core, HTML5,
-        CSS3, Angular, Javascript and Typescript. I focus on software that is
+        Over the past 7+ years, I ‘ve created a great variety of high quality web
+        business applications using technologies like C#, asp.net core, 
+        Node.js, Express.js, Angular, React.js using both JavaScript and TypeScript. 
+        I focus on software that is
         testable, maintainable, reusable and adaptive, requirements for success
         in Agile environments.
       </p>
@@ -85,7 +86,7 @@ export default () => (
       <p>
         I've experience in startup, medium and large enterprises and I'm used to
         working in teams... but also managing my own projects. Some of the
-        companies I've worked for include: Rydoo, Telefonica Argentina, Cencosud
+        companies I've worked for include: Proxyclick, Rydoo, Telefonica Argentina, Cencosud
         and YPF.
       </p>
       <br />
